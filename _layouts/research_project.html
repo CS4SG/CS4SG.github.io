@@ -53,16 +53,21 @@ layout: default
 
 <!---------------------------->
 <h6><b>Code Resources</b></h6>
-<ul class="menu">
+<ol>
 {% for res in site.code %}
     {% if res.tagged_projects contains page.key %}
     {% assign res_links_array = res.code_links | split: "," %}
-        {% for lin in res_links_array %}  
+    <li>
+    {{ res.description }}
+    <ul class="menu">
+        {% for lin in res_links_array %}
           <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
         {% endfor %}
+    </ul>
+    </li>
     {% endif %}
 {% endfor %}
-</ul>
+</ol>
 <hr/>
 
 
