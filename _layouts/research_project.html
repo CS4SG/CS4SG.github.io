@@ -14,6 +14,7 @@ layout: default
 <hr/>
 
 <!---------------------------->
+{% if page.tagged_people %}
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
@@ -34,6 +35,36 @@ layout: default
 {% endfor %}
 </ul>
 <hr/>
+{% endif %}
+<!---------------------------->
+
+<h6><b>Publications</b></h6>
+
+<ul class="noBullets">
+{% for pub in site.publications %}
+    {% if pub.tagged_projects contains page.key %}
+        <li>
+            <a href="{{ pub.url }}">{{ pub.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr/>
+
+<!---------------------------->
+<h6><b>Code Resources</b></h6>
+<ul class="menu">
+{% for res in site.code %}
+    {% if res.tagged_projects contains page.key %}
+    {% assign res_links_array = res.code_links | split: "," %}
+        {% for lin in res_links_array %}  
+          <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</ul>
+<hr/>
+
 
 <!---------------------------->
 
@@ -59,34 +90,6 @@ layout: default
 <hr/>
   
 <!---------------------------->
-<h6><b>Publications</b></h6>
-
-<ul class="menu">
-{% for pub in site.publications %}
-    {% if pub.tagged_projects contains page.key %}
-        <li>
-            <a href="{{ pub.url }}">{{ pub.title }}</a>
-        </li>
-    {% endif %}
-{% endfor %}
-</ul>
-<hr/>
-
-<!---------------------------->
-<h6><b>Code Resources</b></h6>
-<ul class="menu">
-{% for res in site.code %}
-    {% if res.tagged_projects contains page.key %}
-    {% assign res_links_array = res.code_links | split: "," %}
-        {% for lin in res_links_array %}  
-          <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
-        {% endfor %}
-    {% endif %}
-{% endfor %}
-</ul>
-<hr/>
-<!---------------------------->
-
 <h6><b>Funding</b></h6>
 <ul class="menu">
 {% for fund in site.funding %}
