@@ -21,13 +21,17 @@ layout: default
 
 {% if page.news_links %}
 <h6><b>Press release / News</b></h6>
-{% capture news_link %}{{ page.news_links }}{% endcapture %}
-{% assign news_array = news_link | split: "," %}
 <ul class="noBullets">
-  {% for link in news_array %}
-      <li><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
-  {% endfor %}
-  </ul>
+    {% for news in site.event %}
+    {% if news.layout == 'news' %}
+    {% if news.tagged_funding contains page.key %}
+    <li>
+        <a href="{{ news.url }}">{{ news.title }}</a><font style="color:gray;"> : {{ news.date | date: '%B %d, %Y' }}</font>
+    </li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</ul>
 <hr/>
 {% endif %}
 
@@ -108,10 +112,12 @@ layout: default
 <h6><b>Events</b></h6>
 <ul class="menu">
 {% for event in site.event %}
+    {% if event.layout != 'news' %}
     {% if event.tagged_funding contains page.key %}
         <li>
             <a href="{{ event.url }}">{{ event.title }}</a>
         </li>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </ul>
