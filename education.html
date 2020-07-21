@@ -8,6 +8,7 @@ title: Education
 <body>
 
 <!-- ----------------Projects---------------- -->
+{% assign education_string = "" %}
 <center><h3><b>Projects</b></h3>
 <p style="padding-bottom: 8px;">Education Projects description</p> 
 </center>
@@ -19,6 +20,12 @@ title: Education
                 <h4 class="title"><a>{{ education_project.title }}</a></h4>
                 <p class="description">{{ education_project.description | markdownify }}</p>
             </div>
+        
+         <!-- create string with all titles -->
+         {% capture education_string %}{{ education_string | append: education_project.title }}{% endcapture %}
+         {% if forloop.last == false %}
+             {% capture education_string %}{{ education_string | append: "," }}{% endcapture %}
+         {% endif %}
         {% endfor %}
     </div>
 </div>
@@ -32,6 +39,11 @@ title: Education
 <a href="\courses.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">See Courses <i class="bx bx-chevron-right"></i></a></center><br />
 <hr />
 
+    
+ <script>
+     var education_projects = "{{ education_string }}";
+     localStorage.setItem("education_string", education_projects);
+ </script>
 </body>
 
 </html>
