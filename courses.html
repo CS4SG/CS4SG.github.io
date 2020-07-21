@@ -9,6 +9,7 @@ p {
 }
 </style>
 
+{% assign course_string = "" %}
 {% for course in site.courses %}
 
 <div id="{{ course.prefix_number }}">
@@ -73,4 +74,14 @@ p {
 
 <br>
 
+         <!-- create string with all titles -->
+         {% capture course_string %}{{ course_string | append: research_project.title }}{% endcapture %}
+         {% if forloop.last == false %}
+             {% capture course_string %}{{ course_string | append: "," }}{% endcapture %}
+         {% endif %}
 {% endfor %}
+
+ <script>
+     var course_titles = "{{ course_string }}";
+     localStorage.setItem("course_string", course_titles);
+ </script>
