@@ -73,8 +73,6 @@ p {
 </div>
 
 <br>
-
-         <!-- create string with all titles -->
          {% capture course_string %}{{ course_string | append: course.title }}{% endcapture %}
          {% if forloop.last == false %}
              {% capture course_string %}{{ course_string | append: "," }}{% endcapture %}
