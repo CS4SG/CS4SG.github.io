@@ -31,7 +31,67 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-/* education section */
+/*-----------------------------------------------------*/
+
+/* Hides text but will still be read by screen readers. https://webaim.org/techniques/css/invisiblecontent/#:~:text=display%3Anone%20or%20visibility%3A%20hidden,read%20by%20a%20screen%20reader */
+.hide {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+.menu{
+    list-style: none;
+}
+
+.menu li{
+    display: inline;
+    margin: 0px 50px 0px -50px;
+    padding: 0px 10px;
+    border-left: solid 1px black;
+}
+
+.menu li:first-child{
+    border-left: none;
+}
+
+.relatedSection h3 {
+  font-size: 1.17em;
+}
+
+.relatedSection a, .relatedSection p {
+  font-size: 1em;
+}
+
+.responsive {
+  width: 100%;
+  max-width: 1024px;
+  height: auto;
+}
+
+.tagLine {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px 0px 15px;
+}
+
+.tagSpace {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 5px 0px 15px;
+}
+
+ul.noBullets {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/*-------------------- education section ---------------*/
 .gridObj {
   padding: 25px;
   position: relative;
@@ -117,45 +177,6 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-line-clamp: 4;
     overflow: hidden;
   }
-}
-
-ul.noBullets {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.tagLine {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0px -15px 0px 15px;
-}
-
-.tagSpace {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0px 5px 0px 15px;
-}
-
-.menu{
-    list-style: none;
-}
-
-.menu li{
-    display: inline;
-    margin: 0px 50px 0px -50px;
-    padding: 0px 10px;
-    border-left: solid 1px black;
-}
-
-.menu li:first-child{
-    border-left: none;
-}
-
-.responsive {
-  width: 100%;
-  max-width: 1024px;
-  height: auto;
 }
 
 /*--------------------------------------------------------------
