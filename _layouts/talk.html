@@ -37,18 +37,31 @@ function findHostname(url){
 <h6><b>Location: </b></h6>{{ page.locus }}
 <hr/>
 
-{% capture resource_link_string %}{{ page.resource_links }}{% endcapture %}
-{% assign res_link_array = resource_link_string | split: "," %}
-<h6><b>Resource Links</b></h6>
-<ul class="noBullets">
-{% for link in res_link_array %}
-    <li class="noBullets"><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
+{% if page.resource_links %}
+{% assign tag_res = page.resource_links | split: "," %}
+<h6><b>Resources</b></h6>
+<ol>
+{% for tag in tag_res %}
+  {% for resource in site.resource_links %}
+          {% if tag == resource.key %}
+          {% assign res_links_array = resource.link | split: "," %}
+          <li>
+              {{ resource.description }}
+          <ul class="menu">
+          {% for lin in res_links_array %}
+            <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+          {% endfor %}
+          </ul>
+          </li>
+        {% endif %}
+  {% endfor %}
 {% endfor %}
-</ul>
+</ol>
 <hr/>
+{% endif %}
 
 {% assign tag_proj = page.tagged_projects | split: "," %}
-<h6><b>Research Projects</b></h6>
+<h6><b>Related Research Projects</b></h6>
 
 <ul class="menu">
 {% for tag in tag_proj %}
