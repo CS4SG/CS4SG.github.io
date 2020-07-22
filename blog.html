@@ -9,6 +9,9 @@ span, a {
     display: inline-block;
     color: inherit;
 }
+
+.postAuthors {
+}
 </style>
 
 <section class="blog" data-scroll-index="4">
@@ -25,7 +28,7 @@ span, a {
                   <div class="date">
                     <span>{{ post.date | date: '%b %d' }}</span>
                   </div>
-                  <a href="{{ post.url }}"><h5><b>{{ post.title }}</b></h5></a>
+                  <a href="{{ post.url }}"><h2><b>{{ post.title }}</b></h2></a>
                   <p>{{ post.excerpt }}</p>
                   <a class="user"><i class='bx bxs-user'></i></a>
                     
@@ -40,11 +43,11 @@ span, a {
                         {% if all_peop contains tag %}
                             {% for peop in site.people %}
                                 {% if tag == peop.key %}
-                                    <p><a href="{{ peop.link }}" target="_blank">{{ tag }}</a></p>
+                                    <p class="postAuthors"><a href="{{ peop.link }}" target="_blank">{{ tag }}</a></p>
                                 {% endif %}
                             {% endfor %}
                         {% else %}
-                            <p>{{ tag }}</p>
+                            <p class="postAuthors">{{ tag }}</p>
                         {% endif %}
                         {% if forloop.last == false %},&nbsp;{% endif %}
                     {% endfor %}
