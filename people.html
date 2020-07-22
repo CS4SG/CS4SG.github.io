@@ -41,6 +41,10 @@ title: People
 {% assign title_string = "" %}
 <!-- -------------Internal Faculty Section--------------- -->
 {% for peop in site.people %}
+    {% capture title_string %}{{ title_string | append: peop.name }}{% endcapture %}
+    {% if forloop.last == false %}
+        {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
+    {% endif %}
     {% if peop.category == "UB faculty" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
@@ -54,17 +58,10 @@ title: People
     </div>
   </div>
 </div>
-
-<!-- create string with all titles -->
-{% capture title_string %}{{ title_string | append: peop.name }}{% endcapture %}
-{% if forloop.last == false %}
-    {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
-{% endif %}
 <!-- -------------------------------->
 {% endif %}
 {% endfor %}
 <br/><br/>
-{% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
 {% endif %}
 
 
@@ -86,17 +83,11 @@ title: People
   </div>
 </div>
 
-<!-- create string with all titles -->
-{% capture title_string %}{{ title_string | append: peop.name }}{% endcapture %}
-{% if forloop.last == false %}
-    {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
-{% endif %}
 <!-- -------------------------------->
 {% endif %}
 {% endfor %}
 <br/><br/>
 {% endif %}
-{% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
 
 
 {% if status_array contains "Current student" %}
@@ -117,18 +108,11 @@ title: People
   </div>
 </div>
 
-<!-- create string with all titles -->
-{% capture title_string %}{{ title_string | append: peop.name }}{% endcapture %}
-{% if forloop.last == false %}
-    {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
-{% endif %}
 <!-- -------------------------------->
 {% endif %}
 {% endfor %}
 <br/><br/>
 {% endif %}
-
-{% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
     
 
 {% if status_array contains "Former student" %}
@@ -148,28 +132,18 @@ title: People
     </div>
   </div>
 </div>
-
-<!-- create string with all titles -->
-{% capture title_string %}{{ title_string | append: peop.name }}{% endcapture %}
-{% if forloop.last == false %}
-    {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
-{% endif %}
 <!-- -------------------------------->
 {% endif %}
 {% endfor %}
 <br/><br/>
 {% endif %}
-    
-{% capture title_string %}{{ title_string | replace: ",,", "," }}{% endcapture %}
-{% assign num = title_string | size | minus: 1 %}
-{% capture title_string %}{{ title_string | slice: 0, num }}{% endcapture %}
 </div>
 
   </div>
 </section>
-<h6 style="display:none;">{{ title_string }}</h6>
 
 <script>
-    var title_string = '{{ title_string }}';
+    var title_string = "{{ title_string }}";
+    console.log(title_string)
     localStorage.setItem("people_list", title_string);
 </script>
