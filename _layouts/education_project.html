@@ -2,16 +2,31 @@
 layout: default
 ---
 
+<style>
+/* Hides text but will still be read by screen readers. https://webaim.org/techniques/css/invisiblecontent/#:~:text=display%3Anone%20or%20visibility%3A%20hidden,read%20by%20a%20screen%20reader */
+.hide {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+</style>
+
+<h2 class="hide">Page Content</h2> <!-- Heading included for screen readers -->
 {{ content | markdownify }}
 <hr/>
 
+<h2 class="hide">Tagged/Related Items</h2> <!-- Heading included for screen readers -->
 {% if page.tagged_people %}
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
     {% assign all_peop = all_peop | push: peop.key %}
 {% endfor %}
-<h6><b>People</b></h6>
+
+<h3><b>People</b></h3>
 <ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
@@ -32,7 +47,7 @@ layout: default
 
 {% if page.tagged_projects %}
 {% assign tag_array = page.tagged_projects | split: "," %}
-<h6><b>Research Projects</b></h6>
+<h3><b>Research Projects</b></h3>
 
 <ul class="menu">
 {% for tag in tag_array %}
@@ -50,9 +65,9 @@ layout: default
 <hr>
 
 <!---------------------------->
-<h6><b>Publications</b></h6>
+<h3><b>Publications</b></h3>
 
-<ul class="menu">
+<ul class="noBullets">
 {% for pub in site.publications %}
     {% if pub.tagged_education contains page.key %}
         <li>
@@ -65,7 +80,7 @@ layout: default
 <hr/>
 
 <!---------------------------->
-<h6><b>Code Resources</b></h6>
+<h3><b>Code Resources</b></h3>
 
 <ul class="menu">
 {% for code in site.code %}
@@ -81,7 +96,7 @@ layout: default
 
 <!---------------------------->
 
-<h6><b>Funding</b></h6>
+<h3><b>Funding</b></h3>
 
 <ul class="menu">
 {% for fund in site.funding %}
@@ -97,7 +112,7 @@ layout: default
     
 <!---------------------------->
 
-<h6><b>Talks</b></h6>
+<h3><b>Talks</b></h3>
 
 <ul class="menu">
 {% for talk in site.talks %}
@@ -113,7 +128,7 @@ layout: default
     
 <!---------------------------->
 
-<h6><b>Events</b></h6>
+<h3><b>Events</b></h3>
 <ul class="menu">
 {% for event in site.event %}
     {% if event.tagged_projects contains page.key %}
@@ -136,7 +151,7 @@ layout: default
 
 <!---------------------------->
 
-<h6><b>Blog Posts</b></h6>
+<h3><b>Blog Posts</b></h3>
 
 <ul class="menu">
 {% for post in site.posts %}
