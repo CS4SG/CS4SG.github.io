@@ -1,24 +1,15 @@
 ---
 layout: default
 ---
+<h2 class="hide">Page Content</h2> <!-- Hidden heading included for screen readers -->
 
-<style>
-/* Hides text but will still be read by screen readers. https://webaim.org/techniques/css/invisiblecontent/#:~:text=display%3Anone%20or%20visibility%3A%20hidden,read%20by%20a%20screen%20reader */
-.hide {
-position:absolute;
-left:-10000px;
-top:auto;
-width:1px;
-height:1px;
-overflow:hidden;
-}
-</style>
-
-<h2 class="hide">Page Content</h2> <!-- Heading included for screen readers -->
 {{ content | markdownify }}
 <hr/>
 
-<h2 class="hide">Tagged/Related Items</h2> <!-- Heading included for screen readers -->
+<!---------------------------->
+<h2 class="hide">Tagged/Related Items</h2> <!-- Hidden heading included for screen readers -->
+
+<div class="relatedSection">
 {% if page.tagged_people %}
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
@@ -41,10 +32,11 @@ overflow:hidden;
 {% endfor %}
 </ul>
 {% endif %}
+</div>
 <hr/>
 
 <!---------------------------->
-
+<div class="relatedSection">
 {% if page.tagged_projects %}
 {% assign tag_array = page.tagged_projects | split: "," %}
 <h3><b>Research Projects</b></h3>
@@ -62,9 +54,11 @@ overflow:hidden;
 {% endfor %}
 </ul>
 {% endif %}
+</div>
 <hr>
 
 <!---------------------------->
+<div class="relatedSection">
 <h3><b>Publications</b></h3>
 
 <ul class="noBullets">
@@ -76,10 +70,11 @@ overflow:hidden;
     {% endif %}
 {% endfor %}
 </ul>
-
+</div>
 <hr/>
 
 <!---------------------------->
+<div class="relatedSection">
 <h3><b>Code Resources</b></h3>
 
 <ul class="menu">
@@ -91,11 +86,11 @@ overflow:hidden;
     {% endif %}
 {% endfor %}
 </ul>
-
+</div>
 <hr/>
 
 <!---------------------------->
-
+<div class="relatedSection">
 <h3><b>Funding</b></h3>
 
 <ul class="menu">
@@ -107,11 +102,11 @@ overflow:hidden;
     {% endif %}
 {% endfor %}
 </ul>
-
+</div>
 <hr/>
     
 <!---------------------------->
-
+<div class="relatedSection">
 <h3><b>Talks</b></h3>
 
 <ul class="menu">
@@ -123,11 +118,11 @@ overflow:hidden;
     {% endif %}
 {% endfor %}
 </ul>
-
+</div>
 <hr/>
     
 <!---------------------------->
-
+<div class="relatedSection">
 <h3><b>Events</b></h3>
 <ul class="menu">
 {% for event in site.event %}
@@ -147,10 +142,11 @@ overflow:hidden;
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
 
 <!---------------------------->
-
+<div class="relatedSection">
 <h3><b>Blog Posts</b></h3>
 
 <ul class="menu">
@@ -162,7 +158,7 @@ overflow:hidden;
     {% endif %}
 {% endfor %}
 </ul>
-
+</div>
 <hr/>
 
 <!---------------------------->
