@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gridObj #eduDesc {
-  height: 5.8em;
+  height: 5.9em;
   width: 450px;
   margin-bottom: 0;
   display: -webkit-box;
@@ -82,7 +82,25 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 320px) {
+  .gridObj {
+    min-width: 250px;
+    max-width: 2500px;
+    min-height: 200px;
+    max-height: 200px;
+  }
+  
+  .gridObj #eduDesc {
+    width: 200px;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 600px) {
   .gridObj {
     min-width: 400px;
     max-width: 400px;
@@ -91,7 +109,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .gridObj #eduDesc {
-    height: 5.8em;
     width: 350px;
     margin-bottom: 0;
     display: -webkit-box;
