@@ -38,14 +38,19 @@ layout: home
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.description{
-    white-space: nowrap;
+.description {
     overflow: hidden;
-    text-overflow: ellipsis;
     max-width: 74ch;
+    margin: auto;
 }
 
-#event_content{
+@media only screen and (max-width: 768px) {
+    .description {
+        max-width: 30ch;
+    }
+}
+
+#event_content {
     padding: 9px;
     font: 17px Calibri;
     width: 90%;
@@ -56,6 +61,7 @@ layout: home
     margin: 20px 0;
     }
 </style>
+
 <section id="about" class="about">
     <div class="container">
 
@@ -97,14 +103,14 @@ layout: home
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('{{ education_project.url }}', '_self');" style="cursor: pointer;">
                 <i class="icofont-book"></i>
                 <h4>{{ education_project.title }}</h4>
-                <p class="description">{{ education_project.description }}</p>
+                <p class="description">{{ education_project.description | truncate: 74 }}</p>
                 </div>
                 {% endfor %}
                 {% for course in site.courses limit: 2 %}
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('{{ course.url }}', '_self');" style="cursor: pointer;">
                 <i class="icofont-read-book-alt"></i>
                 <h4>{{ course.title }}</h4>
-                <p class="description">{{ course.description }}</p>
+                <p class="description">{{ course.description | truncate: 74 }}</p>
                 </div>
                 {% endfor %}
 
