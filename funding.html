@@ -74,7 +74,7 @@ title: Funding
   }
 </script>
 <!-- -------------------------------------------- -->
-
+{% assign fund_string = "" %}
 <div class="container">
   <ul class="tabs">
     <li class="active" data-target="panel-1">
@@ -108,6 +108,10 @@ title: Funding
           )
         }
         </script>
+        {% capture fund_string %}{{ fund_string | append: fund.grant_title }}{% endcapture %}
+        {% if forloop.last == false %}
+            {% capture fund_string %}{{ fund_string | append: "," }}{% endcapture %}
+        {% endif %}
         {% endfor %}
       </ol>
     </div>
@@ -164,4 +168,9 @@ const removeActiveClass = (el) => {
 	});
 };
 
+</script>
+
+<script>
+  var fund_string = "{{ fund_string }}";
+  localStorage.setItem("fund_string", fund_string);
 </script>
