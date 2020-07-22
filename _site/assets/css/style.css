@@ -28,6 +28,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
 
 /* education section */
@@ -560,7 +561,7 @@ section {
   padding-bottom: 30px;
 }
 
-.section-title h1 {
+.section-title h1, h2 {
   font-size: 32px;
   font-weight: bold;
   position: relative;
@@ -569,7 +570,7 @@ section {
   z-index: 2;
 }
 
-.section-title h1::after {
+.section-title h1::after, h2::after {
   content: "";
   position: absolute;
   left: 50%;
