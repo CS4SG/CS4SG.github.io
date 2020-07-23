@@ -8,6 +8,7 @@ talk_by: Kenneth Joseph
 date: 2020-06-25T19:27
 tagged_projects: Bias in NLP,FAI
 tagged_funding: The best gift ever
+tagged_education: Education 1
 key: Impacts of AI
 ---
 
