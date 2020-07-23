@@ -9,6 +9,7 @@ duration: 2020-06-23
 start: 2020-04-23
 tagged_people: Atri Rudra,Kenneth Joseph
 tagged_projects: Bias in NLP
+tagged_education: Education 1
 key: The best gift ever
 ---
 
