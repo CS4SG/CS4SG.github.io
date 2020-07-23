@@ -18,25 +18,17 @@ p {
     <h2><b>{{ course.prefix_number }} - {{ course.title }}</b></h2>
     
     <!-------------------- Course catalog link ----------------------------------------->
-    <p><a href="{{ course.catalog_link }}">UB Course Catalog page</a> |
+    <p><a href="{{ course.catalog_link }}">UB Course Catalog page</a></p>
 
     <!-------------------- Past website links ------------------------------------------>
-    {% capture link_string %}{{ course.course_webpages }}{% endcapture %}
-    {% assign link_array = link_string | split: "," %}
-            See course webpages from past semesters
-                {% for link in link_array %}
-                    {% if forloop.last == true and forloop.length > 1 %}
-                        and 
-                    {% endif %}
-                    <a href="{{ link }}" target="_blank"> here</a>
-                    {% if forloop.last == true %}
-                        .
-                    {% elsif forloop.last == false and forloop.length > 2 %}
-                        , 
-                    {% endif %}
-                {% endfor %}
-            </p>
-        
+    <p style="display:inline-block;margin-bottom:5px">Webpages from past sessions:&nbsp;</p>
+    <ul class="menu" style="display:inline-block;margin-bottom:5px">
+        {% for link_info in course.course_webpages %}
+            {% assign info_array = link_info | split: "," %}
+            <li><a href="{{ info_array[0] }}" target="_blank">{{ info_array[1] }}</a></li>
+        {% endfor %}
+    </ul>
+            
     <!-------------------- Instructors ------------------------------------------------->
     {% if course.instructors %}
     {% assign tag_people = course.instructors | split: "," %}
