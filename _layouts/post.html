@@ -15,11 +15,12 @@ function findHostname(url){
 <br>
 <br>
 
+<div class="relatedSection">
 <!---------------------------->
-<p><b>Date: </b>{{ page.date | date: '%B %d, %Y' }}</p>
+<h2 style="font-size:1.17em;display:inline-block">Date:&nbsp;</h2><p style="display:inline-block">{{ page.date | date: '%B %d, %Y' }}</p>
 <hr/>
 <!---------------------------->
-<h6><b>Authors:</b></h6>
+<h2 style="font-size:1.17em">Authors:</h2>
 {% assign tag_people = page.authors | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
@@ -41,11 +42,15 @@ function findHostname(url){
 <hr>
 
 <!---------------------------->
+<h2 class="hide">Page Content</h2>
 <p>{{ page.content | markdownify }}</p>
 <hr>
 
 <!---------------------------->
-<h6><b>People</b></h6>
+<h2 class="hide">Tagged/Related Items</h2>
+
+
+<h3>People</h3>
 {% assign people_tag = page.tagged_people | split: "," %}
 {% assign peopLis = "" | split: ',' %}
 {% for peop in site.people %}
@@ -69,7 +74,7 @@ function findHostname(url){
 <!---------------------------->
 
 {% assign tag_array = page.tagged_projects | split: "," %}
-<h6><b>Research Projects</b></h6>
+<h3>Research Projects</h3>
 
 <ul class="menu">
 {% for tag in tag_array %}
@@ -88,7 +93,7 @@ function findHostname(url){
 {% assign edu_tag_array = page.tagged_education | split: "," %}
 {% assign course_tag_array = page.tagged_courses | split: "," %}
 
-<h6><b>Education and Courses</b></h6>
+<h3>Education and Courses</h3>
 <ul class="menu">
 {% for tag in edu_tag_array %}
     {% for education_project in site.education %}
@@ -115,7 +120,7 @@ function findHostname(url){
 
 <!---------------------------->
 {% assign pub_array = page.tagged_publications | split: "," %}
-<h6><b>Publications</b></h6>
+<h3>Publications</h3>
 
 <ul class="menu">
 {% for tag in pub_array %}
@@ -132,7 +137,7 @@ function findHostname(url){
 
 <!---------------------------->
 {% assign code_array = page.tagged_code | split: "," %}
-<h6><b>Code Resources</b></h6>
+<h3>Code Resources</h3>
 
 <ul class="menu">
 {% for tag in code_array %}
@@ -150,7 +155,7 @@ function findHostname(url){
 
 <!---------------------------->
 {% assign funding_array = page.tagged_funding | split: "," %}
-<h6><b>Funding</b></h6>
+<h3>Funding</h3>
 
 <ul class="menu">
 {% for tag in funding_array %}
@@ -167,7 +172,7 @@ function findHostname(url){
 
 <!---------------------------->
 {% assign talks_array = page.tagged_talks | split: "," %}
-<h6><b>Talks</b></h6>
+<h3>Talks</h3>
 
 <ul class="menu">
 {% for tag in talks_array %}
@@ -184,7 +189,7 @@ function findHostname(url){
 
 <!---------------------------->
 {% assign events_array = page.tagged_events | split: "," %}
-<h6><b>Events</b></h6>
+<h3>Events</h3>
 
 <ul class="menu">
 {% for tag in events_array %}
@@ -209,4 +214,6 @@ function findHostname(url){
 {% endfor %}
 </ul>
 <hr>
+
+</div>
 
