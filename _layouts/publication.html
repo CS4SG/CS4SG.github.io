@@ -8,9 +8,15 @@ function findHostname(url){
 }
 </script>
 <div id="contne">
+
+<h2 class="hide">Tagged/Related Items</h2> <!-- Hidden heading included for screen readers -->
+	
 <h1 style="display:none;"><div id="publish_title">{{ page.title }}</div></h1>
 <div id="speak_content">
-<h6><b>Author(s)</b></h6>
+
+{% if page.authors %}
+<div class="relatedSection">
+<h3><b>Author(s)</b></h3>
 {% assign tag_people = page.authors | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
@@ -29,22 +35,30 @@ function findHostname(url){
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr>
-    
+{% endif %}
 <!---------------------------->
 
-<h6 style="display:inline"><b>Published in: </b></h6><p style="display:inline">{{ page.published_in }}</p>
+{% if page.published_in %}
+<div class="relatedSection">
+<h3 style="display:inline"><b>Published in: </b></h3><p style="display:inline">{{ page.published_in }}</p>
+</div>
 <hr>
-
+{% endif %}
 <!---------------------------->
 
+{% if page.date %}
+<div class="relatedSection">
 <b>Date: </b>{{ page.date | date: '%B %d, %Y' }}
+</div>
 <hr>
-
+{% endif %}
 <!---------------------------->
 
+{% if page.links %}
+<div class="relatedSection">
 {% capture link_string %}{{ page.links }}{% endcapture %}
-
 {% assign link_array = link_string | split: "," %}
 
 <h6><b>Links to the paper</b></h6>
@@ -54,15 +68,22 @@ function findHostname(url){
     <li><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
 {% endfor %}
 </ul>
+</div>
 <hr>
-
+{% endif %}
 <!---------------------------->
+
+{% if page.abstract %}
+<div class="relatedSection">
 <h6><b>Abstract</b></h6>
 {{ page.abstract }}
+</div>
 <hr/>
-    
+{% endif %}
 
 <!---------------------------->
+{% if page.tagged_people %}
+<div class="relatedSection">
 <h6><b>People</b></h6>
 {% assign people_tag = page.tagged_people | split: "," %}
 {% assign peopLis = "" | split: ',' %}
@@ -82,9 +103,13 @@ function findHostname(url){
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr>
+{% endif %}
 <!---------------------------->
 
+{% if page.tagged_projects %}
+<div class="relatedSection">
 {% assign tag_array = page.tagged_projects | split: "," %}
 <h6><b>Research Projects</b></h6>
 
@@ -100,13 +125,15 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
-
+</div>
 <hr>
+{% endif %}
 
 <!---------------------------->
+{% if page.tagged_education or page.tagged_courses %}
 {% assign edu_tag_array = page.tagged_education | split: "," %}
 {% assign course_tag_array = page.tagged_courses | split: "," %}
-
+<div class="relatedSection">
 <h6><b>Education and Courses</b></h6>
 <ul class="menu">
 {% for tag in edu_tag_array %}
@@ -130,9 +157,12 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
-
+{% endif %}
+	
 <!---------------------------->
+<div class="relatedSection">
 <h6><b>Code Resources</b></h6>
 <ul class="menu">
 {% for res in site.code %}
@@ -144,10 +174,13 @@ function findHostname(url){
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
 
 
 <!---------------------------->
+{% if page.tagged_funding %}
+<div class="relatedSection">
 {% assign funding_array = page.tagged_funding | split: "," %}
 <h6><b>Funding</b></h6>
 
@@ -162,9 +195,13 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
-
+{% endif %}
 <!---------------------------->
+
+{% if page.tagged_talks %}
+<div class="relatedSection">
 {% assign talks_array = page.tagged_talks | split: "," %}
 <h6><b>Talks</b></h6>
 
@@ -179,9 +216,13 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
-
+{% endif %}
+	
 <!---------------------------->
+{% if page.tagged_events %}
+<div class="relatedSection">
 {% assign events_array = page.tagged_events | split: "," %}
 <h6><b>Events</b></h6>
 
@@ -207,10 +248,12 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
-
+{% endif %}
 <!---------------------------->
 
+{% if page.tagged_events %}
 <h6><b>Blog Posts</b></h6>
 <ul class="menu">
 {% for post in site.posts %}
@@ -222,6 +265,8 @@ function findHostname(url){
 {% endfor %}
 </ul>
 <hr/>
+{% endif %}
+	
 <!---------------------------->
 </div>
 <!---------------------------->
