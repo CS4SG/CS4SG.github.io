@@ -9,12 +9,18 @@ layout: default
     }
 </script>
 
+<h2 class="hide">Page Content</h2> <!-- Hidden heading included for screen readers -->
+
 <div id="speak_content">
 {{ content | markdownify }}
 <hr/>
 
+<h2 class="hide">Tagged/Related Items</h2> <!-- Hidden heading included for screen readers -->
 <!---------------------------->
+    
+
 {% if page.tagged_people %}
+<div class="relatedSection">
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
@@ -34,12 +40,13 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
 {% endif %}
 <!---------------------------->
 
+<div class="relatedSection">
 <h6><b>Publications</b></h6>
-
 <ul class="noBullets">
 {% for pub in site.publications %}
     {% if pub.tagged_projects contains page.key %}
@@ -49,9 +56,11 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
 
 <!---------------------------->
+<div class="relatedSection">
 <h6><b>Code Resources</b></h6>
 <ol>
 {% for res in site.code %}
@@ -68,11 +77,12 @@ layout: default
     {% endif %}
 {% endfor %}
 </ol>
+</div>
 <hr/>
 
 
 <!---------------------------->
-
+<div class="relatedSection">
 <h6><b>Education and Courses</b></h6>
 <ul class="menu">
 {% for education_project in site.education %}
@@ -92,9 +102,11 @@ layout: default
     {% endif %}
 {% endfor %}  
 </ul>
+</div>
 <hr/>
   
 <!---------------------------->
+<div class="relatedSection">
 <h6><b>Funding</b></h6>
 <ul class="menu">
 {% for fund in site.funding %}
@@ -105,10 +117,11 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
     
 <!---------------------------->
-
+<div class="relatedSection">
 <h6><b>Talks</b></h6>
 <ul class="menu">
 {% for talk in site.talks %}
@@ -119,10 +132,11 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
     
 <!---------------------------->
-
+<div class="relatedSection">
 <h6><b>Resources</b></h6>
 <ul class="noBullets">
 {% for res in site.resource_links %}
@@ -134,10 +148,11 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
     
 <!---------------------------->
-
+<div class="relatedSection">
 <h6><b>Events</b></h6>
 <ul class="menu">
 {% for event in site.event %}
@@ -158,9 +173,12 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
-<!---------------------------->
+    
 
+<!---------------------------->
+<div class="relatedSection">
 <h6><b>Blog Posts</b></h6>
 <ul class="menu">
 {% for post in site.posts %}
@@ -171,6 +189,7 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
 <!---------------------------->
 </div>
