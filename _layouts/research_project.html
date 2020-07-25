@@ -26,7 +26,7 @@ layout: default
 {% for peop in site.people %}
     {% assign all_peop = all_peop | push: peop.key %}
 {% endfor %}
-<h6><b>People</b></h6>
+<h3><b>People</b></h3>
 <ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
@@ -46,7 +46,7 @@ layout: default
 <!---------------------------->
 
 <div class="relatedSection">
-<h6><b>Publications</b></h6>
+<h3><b>Publications</b></h3>
 <ul class="noBullets">
 {% for pub in site.publications %}
     {% if pub.tagged_projects contains page.key %}
@@ -61,7 +61,7 @@ layout: default
 
 <!---------------------------->
 <div class="relatedSection">
-<h6><b>Code Resources</b></h6>
+<h3><b>Code Resources</b></h3>
 <ol>
 {% for res in site.code %}
     {% if res.tagged_projects contains page.key %}
@@ -83,7 +83,7 @@ layout: default
 
 <!---------------------------->
 <div class="relatedSection">
-<h6><b>Education and Courses</b></h6>
+<h3><b>Education and Courses</b></h3>
 <ul class="menu">
 {% for education_project in site.education %}
     {% if education_project.tagged_projects contains page.key %}
@@ -107,7 +107,7 @@ layout: default
   
 <!---------------------------->
 <div class="relatedSection">
-<h6><b>Funding</b></h6>
+<h3><b>Funding</b></h3>
 <ul class="menu">
 {% for fund in site.funding %}
     {% if fund.tagged_projects contains page.key %}
@@ -122,7 +122,7 @@ layout: default
     
 <!---------------------------->
 <div class="relatedSection">
-<h6><b>Talks</b></h6>
+<h3><b>Talks</b></h3>
 <ul class="menu">
 {% for talk in site.talks %}
     {% if talk.tagged_projects contains page.key and talk.category == "Internal" %}
@@ -137,7 +137,7 @@ layout: default
     
 <!---------------------------->
 <div class="relatedSection">
-<h6><b>Resources</b></h6>
+<h3><b>Resources</b></h3>
 <ul class="noBullets">
 {% for res in site.resource_links %}
     {% if res.tagged_projects contains page.title %}
@@ -153,7 +153,7 @@ layout: default
     
 <!---------------------------->
 <div class="relatedSection">
-<h6><b>Events</b></h6>
+<h3><b>Events</b></h3>
 <ul class="menu">
 {% for event in site.event %}
     {% if event.tagged_projects contains page.key %}
@@ -179,7 +179,7 @@ layout: default
 
 <!---------------------------->
 <div class="relatedSection">
-<h6><b>Blog Posts</b></h6>
+<h3><b>Blog Posts</b></h3>
 <ul class="menu">
 {% for post in site.posts %}
     {% if post.tagged_projects contains page.key %}
