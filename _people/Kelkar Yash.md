@@ -2,7 +2,7 @@
 layout: people
 name: Yash Kelkar
 category: Current student
-designation: Computer Engineering
+designation: Student, Computer Engineering
 status: active
 link: https://www.buffalo.edu/people/ykelkar
 image: /assets/img/team/KelkarYash.PNG
