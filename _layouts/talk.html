@@ -27,7 +27,7 @@ function findHostname(url){
 <h3 style="display:inline"><b>Speaker: </b></h3>{{ page.talk_by }}<br/>
 {% for peop in site.people %}
     {% if peop.name == page.talk_by %}
-	{{ peop.designation }}<br/>({{ peop.category }})
+	<i style="font-size: small;">{{ peop.designation }}<br/>({{ peop.category }})</i>
     {% endif %}
 {% endfor %}
 </center>
