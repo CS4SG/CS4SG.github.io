@@ -10,17 +10,24 @@ layout: default
 <div id="speak_content">
 
 {% if page.organization %}
-<b>Funding organization: </b><a href="{{ page.org_link }}" target="_blank">{{ page.organization }} <i class="icofont-external-link"></i></a>
+<div class="relatedSection">
+<h3 style="display:inline"><b>Funding organization: </b></h3><a href="{{ page.org_link }}" target="_blank">{{ page.organization }} <i class="icofont-external-link"></i></a>
+</div>
 <hr/>
 {% endif %}
+<!---------------------------->
   
 {% if page.grant_notice %}
-<b>Grant award notice: </b><a href="{{ page.grant_notice }}" target="_blank">Click here to see {{ page.organization }} grant notice <i class="icofont-external-link"></i></a>
+<div class="relatedSection">
+<h3 style="display:inline"><b>Grant award notice: </b><a href="{{ page.grant_notice }}" target="_blank">Click here to see {{ page.organization }} grant notice <i class="icofont-external-link"></i></a></h3>
+</div>
 <hr/>
 {% endif %}
+<!---------------------------->
 
 {% if page.news_links %}
-<h6><b>Press release / News</b></h6>
+<div class="relatedSection">
+<h3><b>Press release / News</b></h3>
 <ul class="noBullets">
     {% for news in site.event %}
     {% if news.layout == 'news' %}
@@ -32,43 +39,56 @@ layout: default
     {% endif %}
     {% endfor %}
 </ul>
-<hr/>
-{% endif %}
-
-{% if page.grants %}
-<b>Grant amount: </b>${{  page.grants }}
-<hr/>
-{% endif %}
-  
-{% if page.tagged_projects %}
-{% assign tag_proj = page.tagged_projects | split: "," %}
-<h6><b>Project(s) Title</b></h6>
-<div class="row">
-{% for tag in tag_proj %}
-  {% for project in site.research_projects %}
-          {% if tag == project.key %}
-          <div class="tagSpace">
-            <a href="{{ project.url }}">{{ project.title }}</a>
-          </div>
-        {% endif %}
-  {% endfor %}
-{% endfor %}
 </div>
 <hr/>
 {% endif %}
+<!---------------------------->
   
-{% if page.start or page.duration %}
-<b>Grant date (range): </b> {{ page.start | date: '%B %d, %Y' }} - {{ page.duration | date: '%B %d, %Y' }}
+{% if page.grants %}
+<div class="relatedSection">
+<h3 style="display:inline"><b>Grant amount: </b></h3>${{  page.grants }}
+</div>
 <hr/>
 {% endif %}
+<!---------------------------->
+
+{% if page.tagged_projects %}
+<div class="relatedSection">
+{% assign tag_array = page.tagged_projects | split: "," %}
+<h3><b>Research Projects</b></h3>
+
+<ul class="menu">
+{% for tag in tag_array %}
+    {% for project in site.research_projects %}
+        {% if tag == project.key %}
+            <li>
+                <a href="{{ project.url }}">{{ project.title }}</a>
+            </li>
+        {% endif %}
+        
+    {% endfor %}
+{% endfor %}
+</ul>
+</div>
+<hr>
+{% endif %}
+  
+{% if page.start or page.duration %}
+<div class="relatedSection">
+<b>Grant date (range): </b> {{ page.start | date: '%B %d, %Y' }} - {{ page.duration | date: '%B %d, %Y' }}
+</div>
+<hr/>
+{% endif %}
+<!---------------------------->
 
 {% if page.tagged_people %}
+<div class="relatedSection">
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
     {% assign all_peop = all_peop | push: peop.key %}
 {% endfor %}
-<h6><b>People</b></h6>
+<h3><b>People</b></h3>
 <ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
@@ -82,10 +102,13 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
 {% endif %}
+<!---------------------------->
 
-<h6><b>Talks</b></h6>
+<div class="relatedSection">
+<h3><b>Talks</b></h3>
 <ul class="menu">
 {% for talk in site.talks %}
     {% if talk.tagged_funding contains page.key %}
@@ -95,9 +118,12 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
+<!---------------------------->
 
-<h6><b>Code Resources</b></h6>
+<div class="relatedSection">
+<h3><b>Code Resources</b></h3>
 <ul class="menu">
 {% for code in site.code %}
     {% if code.tagged_funding contains page.key %}
@@ -107,9 +133,12 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
+<!---------------------------->
 
-<h6><b>Events</b></h6>
+<div class="relatedSection">
+<h3><b>Events</b></h3>
 <ul class="menu">
 {% for event in site.event %}
     {% if event.layout != 'news' %}
@@ -121,9 +150,12 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
-
-<h6><b>Blogs</b></h6>
+<!---------------------------->
+  
+<div class="relatedSection">
+<h3><b>Blogs</b></h3>
 <ul class="menu">
 {% for blog in site.posts %}
     {% if blog.tagged_funding contains page.key %}
@@ -133,8 +165,11 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
-
+<!---------------------------->
+  
+<h2 class="hide">Page Content</h2> <!-- Hidden heading included for screen readers -->
 {{ content | markdownify }}
 
 </div>
