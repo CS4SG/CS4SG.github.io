@@ -16,8 +16,8 @@ function findHostname(url){
 
 
 {% if page.talk_by %}
-<center>
 <div class="relatedSection">
+<center>
 {% for peop in site.people %}
     {% if peop.name == page.talk_by %}
         <img src="{{ peop.image }}" class="speaker_picture" style="border-radius: 50%; width:140px;"/>
@@ -30,8 +30,8 @@ function findHostname(url){
 	{{ peop.designation }}<br/>({{ peop.category }})
     {% endif %}
 {% endfor %}
-</center><br/><br/>
-</div>
+</center>
+</div><br/><br/>
 {% endif %}
 <!-- -------------------------------------- -->
 
