@@ -7,30 +7,40 @@ layout: default
             <center><a href="{{ page.image }}" target="_blank"><img src="{{ page.image }}" class="responsive" /></a></center>
             <hr/>
         {% endif %}
-
+<!---------------------------->
+        
 <div id="speak_content">
 {% if page.date %}
+<div class="relatedSection">
 <b>Date: </b>{{ page.date | date: '%B %d, %Y' }}
+</div>
 <hr/>
 {% endif %}
-
+<!---------------------------->
+    
+<h2 class="hide">Tagged/Related Items</h2> <!-- Hidden heading included for screen readers -->
 {% if page.description %}
 {{ page.description }}
 <hr/>
 {% endif %}
-
+<!---------------------------->
+    
 {% if page.location %}
-<b>Location: </b>{{ page.location }}
+<div class="relatedSection">
+<h3 style="display:inline"><b>Location: </b></h3>{{ page.location }}
+</div>
 <hr/>
 {% endif %}
-
+<!---------------------------->
+    
 {% if page.tagged_people %}
+<div class="relatedSection">
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
     {% assign all_peop = all_peop | push: peop.key %}
 {% endfor %}
-<h6><b>People</b></h6>
+<h3><b>People</b></h3>
 <ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
@@ -44,13 +54,15 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
 {% endif %}
-        
+<!---------------------------->
 
 {% if page.tagged_projects %}
+<div class="relatedSection">
 {% assign tag_array = page.tagged_projects | split: "," %}
-<h6><b>Research Projects</b></h6>
+<h3><b>Research Projects</b></h3>
 
 <ul class="menu">
 {% for tag in tag_array %}
@@ -64,11 +76,14 @@ layout: default
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr/>
 {% endif %}
-
+<!---------------------------->
+    
 {% if page.tagged_education or page.tagged_courses %}
-<b>Education and Courses:</b>
+<div class="relatedSection">
+<h3><b>Education and Courses:</b></h3>
 {% assign edu_array = page.tagged_education | split: "," %}
 {% assign courses_array = page.tagged_courses | split: "," %}
     <ul class="menu">
@@ -86,12 +101,15 @@ layout: default
         {% endif %}
         {% endfor %}
     {% endfor %}
-    </ul>    
+    </ul>  
+</div>
 <hr/>
 {% endif %}
-
+<!---------------------------->
+    
 {% if page.tagged_publications %}
-<b>Publications:</b>
+<div class="relatedSection">
+<h3><b>Publications:</b></h3>
 {% assign publish_array = page.tagged_publications | split: "," %}
   <ul class="menu">
     {% for tag in publish_array %}
@@ -102,6 +120,7 @@ layout: default
        {% endfor %}
     {% endfor %}
   </ul>
+</div>
 <hr/>
 {% endif %}
 
