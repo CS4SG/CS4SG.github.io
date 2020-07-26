@@ -107,7 +107,7 @@ layout: home
                 </div>
                 {% endfor %}
                 {% for course in site.courses limit: 2 %}
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('{{ course.url }}', '_self');" style="cursor: pointer;">
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('{{ course.catalog_link }}', '_blank');" style="cursor: pointer;">
                 <i class="icofont-read-book-alt"></i>
                 <h4>{{ course.title }}</h4>
                 <p class="description">{{ course.description | truncate: 74 }}</p>
