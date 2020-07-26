@@ -17,12 +17,16 @@ body {
 
 a {
   color: #67b0d1;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 a:hover {
   color: #8ec4dd;
   text-decoration: none;
+  font-size: 1em;
+}
+
+p {
   font-size: 1.1em;
 }
 
@@ -75,7 +79,7 @@ overflow:hidden;
 .tagLine {
   display: flex;
   flex-wrap: wrap;
-  margin: 0px -15px 0px 15px;
+  margin: 0px -15px 0px 15spx;
 }
 
 .tagSpace {
@@ -129,12 +133,9 @@ ul.noBullets {
   color: #fff
 }
 
-.gridObj .description {
-  margin-top: 0px;
-}
-
 .gridObj #eduDesc {
-  height: 5.9em;
+  margin-top: 0px;
+  height: 6.6em;
   width: 450px;
   margin-bottom: 0;
   display: -webkit-box;
@@ -816,8 +817,8 @@ section {
   z-index: 1;
   min-width: 250px;
   max-width: 250px;
-  min-height: 275px;
-  max-height: 275px;
+  min-height: 280px;
+  max-height: 280px;
   margin-bottom: 30px;
 }
 
@@ -840,6 +841,7 @@ section {
 }
 
 .services .icon {
+  margin-top: -5px;
   margin-bottom: 15px;
 }
 
@@ -852,7 +854,7 @@ section {
 
 .services .title {
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 1.17em;
 }
 
@@ -861,8 +863,7 @@ section {
 }
 
 .services .description {
-  font-size: 1em;
-  line-height: 28px;
+  margin-top: -5px;
   margin-bottom: 0;
 }
 
@@ -875,7 +876,7 @@ section {
 }
 
 .services #textbox {
-  height: 7.5em;
+  height: 7.9em;
   width: 200px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1002,14 +1003,26 @@ section {
 }
 
 .blog .item .info .user{
-  margin-top: 20px;
   float: left;
-  margin: 10px 0px 0px 0px;
+  margin-top: -1px;
 }
 
 .blog .item .info .user i{
   margin-right: 5px;
   font-size: 14px;
+}
+
+.blog .people {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px -15px -10px 15px;
+  padding: -10px, 0px;
+  line-height: 90%;
+  font-size: 0.90em;
+}
+
+.blog .postAuthors {
+  font-style: italic;
 }
 
 /*--------------------------------------------------------------
