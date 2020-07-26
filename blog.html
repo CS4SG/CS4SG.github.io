@@ -4,16 +4,6 @@ title: Blog
 ---
 <!-- template from https://codepen.io/anupkumar92/pen/bOvYYm -->
 
-<style>
-span, a {
-    display: inline-block;
-    color: inherit;
-}
-
-.postAuthors {
-}
-</style>
-
 <section class="blog" data-scroll-index="4">
     <div class="container">
         <div class="row">
@@ -28,7 +18,7 @@ span, a {
                   <div class="date">
                     <span>{{ post.date | date: '%b %d' }}</span>
                   </div>
-                  <a href="{{ post.url }}"><h2><b>{{ post.title }}</b></h2></a>
+                  <h2><a href="{{ post.url }}"><b>{{ post.title }}</b></a></h2>
                   <p>{{ post.excerpt }}</p>
                   <a class="user"><i class='bx bxs-user'></i></a>
                     
@@ -38,12 +28,12 @@ span, a {
                 {% for peop in site.people %}
                     {% assign all_peop = all_peop | push: peop.key %}
                 {% endfor %}
-                <div class="tagLine" style="margin: 25px -15px -20px 15px">
+                <div class="people">
                     {% for tag in tag_people %}
                         {% if all_peop contains tag %}
                             {% for peop in site.people %}
                                 {% if tag == peop.key %}
-                                    <p class="postAuthors"><a href="{{ peop.link }}" target="_blank">{{ tag }}</a></p>
+                                    <p><a class="postAuthors" href="{{ peop.link }}" target="_blank">{{ tag }}</a></p>
                                 {% endif %}
                             {% endfor %}
                         {% else %}
