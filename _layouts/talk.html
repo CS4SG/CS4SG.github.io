@@ -13,33 +13,55 @@ function findHostname(url){
 }
 </script>
 <div id="speak_content">
+
+
+{% if page.talk_by %}
 <center>
+<div class="relatedSection">
 {% for peop in site.people %}
     {% if peop.name == page.talk_by %}
         <img src="{{ peop.image }}" class="speaker_picture" style="border-radius: 50%; width:140px;"/>
     {% endif %}
 {% endfor %}
     <br/>
-<b>Speaker: </b>{{ page.talk_by }}<br/>
+<h3 style="display:inline"><b>Speaker: </b></h3>{{ page.talk_by }}<br/>
 {% for peop in site.people %}
     {% if peop.name == page.talk_by %}
 	{{ peop.designation }}<br/>({{ peop.category }})
     {% endif %}
 {% endfor %}
 </center><br/><br/>
+</div>
+{% endif %}
+<!-- -------------------------------------- -->
 
+
+<h2 class="hide">Page Content</h2> <!-- Hidden heading included for screen readers -->
 {{ content | markdownify }}
 <hr/>
+<!-- -------------------------------------- -->
 
-<b>Date:</b> {{ page.date | date: '%B %d, %Y' }}
+
+{% if page.date %}
+<div class="relatedSection">
+<h3 style="display:inline"><b>Date:</b></h3> {{ page.date | date: '%B %d, %Y' }}
+</div>
 <hr/>
+{% endif %}
+<!-- -------------------------------------- -->
 
-<h6><b>Location: </b></h6>{{ page.locus }}
+{% if page.locus %}
+<div class="relatedSection">
+<h3 style="display:inline"><b>Location: </b></h3>{{ page.locus }}
+</div>
 <hr/>
-
+{% endif %}
+<!-- -------------------------------------- -->
+	
 {% if page.resource_links %}
+<div class="relatedSection">
 {% assign tag_res = page.resource_links | split: "," %}
-<h6><b>Resources</b></h6>
+<h3><b>Resources</b></h3>
 <ol>
 {% for tag in tag_res %}
   {% for resource in site.resource_links %}
@@ -57,11 +79,15 @@ function findHostname(url){
   {% endfor %}
 {% endfor %}
 </ol>
+</div>
 <hr/>
 {% endif %}
 
+
+{% if page.tagged_projects %}
+<div class="relatedSection">
 {% assign tag_proj = page.tagged_projects | split: "," %}
-<h6><b>Related Research Projects</b></h6>
+<h3><b>Related Research Projects</b></h3>
 
 <ul class="menu">
 {% for tag in tag_proj %}
@@ -74,8 +100,9 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
-
+{% endif %}
 
 </div>
 {%- include narration.html -%}
