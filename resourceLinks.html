@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Code
+title: Resource Links
 ---
 
 <style>
@@ -10,24 +10,24 @@ title: Code
       width: 80%;
       border: 1px solid #ccc;
       border-radius: 10px;
+      align:center;
       text-align:center;
       word-wrap: break-word;
       margin: 20px 0;
     }
     
-.menu{
+#menu{
     list-style: none;
 }
-.menu li{
+#menu li{
     display: inline;
     padding: 0 10px;
     border-left: solid 1px black;
 }
-.menu li:first-child{
+#menu li:first-child{
     border-left: none;
 }
 </style>
-
 <style>
 .collapsible {
   background-color: transparent;
@@ -51,13 +51,6 @@ title: Code
   overflow: hidden;
   background-color: transparent;
 }
-
-input[type=text] {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-}
 </style>
 <script>
 function findHostname(url){
@@ -65,132 +58,45 @@ function findHostname(url){
 	document.write(hostname)
 }
 </script>
-
+{% assign resource_string = "" %}
 <center>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by entering Code Title" title="Type in Code Title">
-<div id="myUL">
-{% for codes in site.code %}
-<label>
-<div id="{{ codes.code_title }}">
-  <div id="codes_content">
-    <h3><a>{{ codes.code_title }}</a></h3>
-    <div style="text-align:left;">
-    {% assign codelink_array = codes.code_links | split: "," %}
-    <h6><b>Code Links</b></h6>
-    <ul class="noBullets">
-	  {% for lin in codelink_array %}  
-	    <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
-    	  {% endfor %}
-    </ul>
-    <button type="button" class="collapsible">Learn more <i class='bx bxs-chevron-down' ></i></button>
-    <div class="content">
-      <ul class="noBullets">
-<!-- -----------------Related Projects----------------- -->
-      {% if codes.tagged_projects %}
-        <li>
-          <b>Projects:</b>
-          {% assign proj_array = codes.tagged_projects | split: "," %}
-          <ul class="menu">
-            {% for tag in proj_array %}
-              {% for project in site.research_projects %}
-                      {% if tag == project.key %}
-                        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
-                    {% endif %}
-              {% endfor %}
-            {% endfor %}
-          </ul>
-        </li>
-      <hr/>
-      {% endif %}
-<!-- ----------------------------------------------- -->	      
-
-	      
-<!-- -----------------Related Authors----------------- -->
-  {% if codes.code_authors %}
-  <li>
-	<b>Author(s)</b>
-	   {% assign tag_people = codes.code_authors | split: "," %}
-	   {% assign all_peop = "" | split: ',' %}
-	   {% for peop in site.people %}
-		   {% assign all_peop = all_peop | push: peop.key %}
-           {% endfor %}
-	<ul class="noBullets">
-	{% for tag in tag_people %}
-	    {% if all_peop contains tag %}
-		{% for peop in site.people %}
-		    {% if tag == peop.key %}
-			<li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag">{{ peop.category }}</label></li>
-		    {% endif %}
-		{% endfor %}
-	    {% else %}
-		<li>{{ tag }}</li>
-	    {% endif %}
-	{% endfor %}
-	</ul>
-        </li>
-    <hr/>
-    {% endif %}
-<!-- ----------------------------------------------- -->
-	      
-
-<!-- -----------------Related Publications----------------- -->
-{% if codes.tagged_publications %}
-    <li>
-	<b>Publications:</b>
-	{% assign publish_array = codes.tagged_publications | split: "," %}
-	  <ul class="menu">
-	    {% for tag in publish_array %}
-	       {% for publications in site.publications %}
-		  {% if tag == publications.key %}
-		     <li><a href="{{ publications.url }}">{{ publications.title }}</a></li>
-		  {% endif %}
-	       {% endfor %}
-	    {% endfor %}
-	  </ul>
-	</li>
-    <hr/>
-{% endif %}
-<!-- ----------------------------------------------- -->
-	      
-	      
-	      
-<!-- -----------------Related Education & Courses----------------- -->
-  {% if codes.tagged_education or codes.tagged_courses %}
-    <li>
-	<b>Education and Courses:</b>
-	{% assign edu_array = codes.tagged_education | split: "," %}
-    {% assign courses_array = codes.tagged_courses | split: "," %}
-	  <ul class="menu">
-	    {% for tag in edu_array %}
-	       {% for edu in site.education %}
-		  {% if tag == edu.key %}
-		     <li><a href="{{ edu.url }}">{{ edu.title }}</a></li>
-		  {% endif %}
-	       {% endfor %}
-	    {% endfor %}
-        {% for tag in courses_array %}
-	       {% for course in site.courses %}
-		  {% if tag == course.key %}
-		     <li><a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a></li>
-		  {% endif %}
-	       {% endfor %}
-	    {% endfor %}
-	  </ul>
-	</li>     
-      <hr/>
-  {% endif %}
-<!-- ----------------------------------------------- -->
-	      
+{% for res in site.resource_links %}
+  <input type="text" value="Links: {{ res.link }} & Description: {{ res.description }}" id="{{ res.resource_title }}" style="position:absolute;left:-1000px;top:-1000px;">
+    <div id="codes_content">
+      <h3>{{ res.resource_title }}<label class="icofont-ui-copy" onclick="copyFunc('{{ res.resource_title }}')" style="float:right; cursor: pointer;" title="Click to copy contents of this resource and share"></label></h3>
+      <div style="text-align:left;">
+        {% assign links_array = res.link | split: "," %}
+        <h6><b>Resource Links</b></h6>
+        <ul class="noBullets">
+          {% for lin in links_array %}  
+            <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+          {% endfor %}
       </ul>
-    {{ codes.description }}
-   </div>
+      <button type="button" class="collapsible">Resource Details <i class='bx bxs-chevron-down' ></i></button>
+        <div class="content">
+          <h6><b>Related Project(s)</b></h6>
+          {% assign tag_proj = res.tagged_projects | split: "," %}
+          <ul class="menu">
+          {% for tag in tag_proj %}
+            {% for project in site.research_projects %}
+                    {% if tag == project.title %}
+			    <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+                  {% endif %}
+            {% endfor %}
+          {% endfor %}
+          </ul>
+          <hr/>
+          {{ res.description }}
+        </div>
+    </div>
   </div>
-  </div>
-</div>
-</label>
+         {% capture resource_string %}{{ resource_string | append: res.resource_title }}{% endcapture %}
+         {% if forloop.last == false %}
+             {% capture resource_string %}{{ resource_string | append: "," }}{% endcapture %}
+         {% endif %}
 {% endfor %}
-</div>
 </center>
+
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
@@ -207,23 +113,15 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-</script>
-
-<script>
-  function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("label");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
+	
+function copyFunc(id) {
+  var copyText = document.getElementById(id);
+  copyText.select();
+  document.execCommand("copy");
 }
 </script>
+
+ <script>
+     var resource_string = "{{ resource_string }}";
+     localStorage.setItem("resource_string", resource_string);
+ </script>
