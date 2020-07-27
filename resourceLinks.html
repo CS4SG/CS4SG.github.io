@@ -51,6 +51,13 @@ title: Resource Links
   overflow: hidden;
   background-color: transparent;
 }
+
+input[type=text] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+}
 </style>
 <script>
 function findHostname(url){
@@ -60,10 +67,13 @@ function findHostname(url){
 </script>
 {% assign resource_string = "" %}
 <center>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by entering Code Title" title="Type in Code Title">
+<div id="myUL">
 {% for res in site.resource_links %}
+<font>
   <input type="text" value="Links: {{ res.link }} & Description: {{ res.description }}" id="{{ res.resource_title }}" style="position:absolute;left:-1000px;top:-1000px;">
     <div id="codes_content">
-      <h3>{{ res.resource_title }}<label class="icofont-ui-copy" onclick="copyFunc('{{ res.resource_title }}')" style="float:right; cursor: pointer;" title="Click to copy contents of this resource and share"></label></h3>
+      <h3><a>{{ res.resource_title }}</a><label class="icofont-ui-copy" onclick="copyFunc('{{ res.resource_title }}')" style="float:right; cursor: pointer;" title="Click to copy contents of this resource and share"></label></h3>
       <div style="text-align:left;">
         {% assign links_array = res.link | split: "," %}
         <h6><b>Resource Links</b></h6>
@@ -94,7 +104,9 @@ function findHostname(url){
          {% if forloop.last == false %}
              {% capture resource_string %}{{ resource_string | append: "," }}{% endcapture %}
          {% endif %}
+  </font>
 {% endfor %}
+</div>
 </center>
 
 
@@ -125,3 +137,22 @@ function copyFunc(id) {
      var resource_string = "{{ resource_string }}";
      localStorage.setItem("resource_string", resource_string);
  </script>
+
+<script>
+  function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("font");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
