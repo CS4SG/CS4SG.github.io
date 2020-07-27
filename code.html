@@ -51,6 +51,13 @@ title: Code
   overflow: hidden;
   background-color: transparent;
 }
+
+input[type=text] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+}
 </style>
 <script>
 function findHostname(url){
@@ -60,10 +67,13 @@ function findHostname(url){
 </script>
 
 <center>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by entering Code Title" title="Type in Code Title">
+<div id="myUL">
 {% for codes in site.code %}
+<label>
 <div id="{{ codes.code_title }}">
   <div id="codes_content">
-    <h3>{{ codes.code_title }}</h3>
+    <h3><a>{{ codes.code_title }}</a></h3>
     <div style="text-align:left;">
     {% assign codelink_array = codes.code_links | split: "," %}
     <h6><b>Code Links</b></h6>
@@ -177,6 +187,8 @@ function findHostname(url){
   </div>
   </div>
 </div>
+</label>
+</div>
 {% endfor %}
 </center>
 
@@ -194,5 +206,24 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
+}
+</script>
+
+<script>
+  function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("label");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
 }
 </script>
