@@ -70,7 +70,7 @@ function findHostname(url){
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by entering Code Title" title="Type in Code Title">
 <div id="myUL">
 {% for codes in site.code %}
-<label>
+<font>
 <div id="{{ codes.code_title }}">
   <div id="codes_content">
     <h3><a>{{ codes.code_title }}</a></h3>
@@ -187,9 +187,9 @@ function findHostname(url){
   </div>
   </div>
 </div>
-</label>
-</div>
+</font>
 {% endfor %}
+</div>
 </center>
 
 <script>
@@ -215,7 +215,7 @@ for (i = 0; i < coll.length; i++) {
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("label");
+    li = ul.getElementsByTagName("font");
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
