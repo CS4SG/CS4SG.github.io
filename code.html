@@ -58,6 +58,58 @@ input[type=text] {
       border: 1px solid #ccc;
       border-radius: 4px;
 }
+
+.container {
+  max-width: 100%;
+  margin: 0rem auto;
+  padding: 0 2rem;
+}
+
+.tabs {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  border: 1px solid #efefef;
+}
+
+.tabs li {
+  text-align: center;
+  background-color: #fcfcfc;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.45s ease-in-out;
+}
+
+.tabs li.active {
+  background-color: #eee;
+}
+
+.tabs li > a {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+.tabs-content {
+  border: 0px solid #eee;
+  border-top: 0;
+}
+
+.tabs-panel {
+  padding: 2rem 1rem;
+  display: none;
+}
+
+.tabs-panel.active {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 <script>
 function findHostname(url){
@@ -66,6 +118,18 @@ function findHostname(url){
 }
 </script>
 
+<div class="container">
+  <ul class="tabs">
+    <li class="active" data-target="panel-1">
+      External Code
+    </li>
+    <li data-target="panel-2">
+      Organization's GitHub Code
+    </li>
+  </ul>
+
+  <div class="tabs-content">
+    <div class="tabs-panel active" id="panel-1">
 <center>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by entering Code Title" title="Type in Code Title">
 <div id="myUL">
@@ -191,6 +255,33 @@ function findHostname(url){
 {% endfor %}
 </div>
 </center>
+</div>
+
+<!-- ------------Organization Github Repos-------------- -->
+<div class="tabs-panel" id="panel-2">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="row" id="repo"></div>
+<script>
+  $.ajax({
+  url: "https://api.github.com/users/c4sgub/repos",
+  jsonp: true,
+  method: "GET",
+  dataType: "json",
+  success: function(res) {
+    for (let e of res){
+      document.getElementById("repo").innerHTML += '<div id="codes_content" style="color:black; text-align:left; width:40%; margin:15px;">\
+    <h6 style="text-align:center;"><a href="'+e.clone_url+'" target="_blank"><b>'+e.name+'</b></a></h6>\
+    <p>'+e.description+'</p>\
+      <span class="github-card__language-icon" style="color: #7A0410;">●</span> '+e.language+'&nbsp; &nbsp;\
+      <i class="fa fa-star" aria-hidden="true">'+e.watchers_count+'</i>&nbsp; &nbsp;\
+      <i class="fa fa-code-fork" aria-hidden="true">'+e.forks_count+'</i></span></div>'
+    }
+  }
+});
+</script>
+</div>
+<!-- -------------------------------------- -->
+
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
@@ -208,6 +299,29 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 </script>
+
+<script>
+  const [tabs, tabsPanels] = [
+    Array.from(document.querySelectorAll(".tabs li")),
+    Array.from(document.querySelectorAll(".tabs-panel"))
+  ];
+  
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = document.querySelector(`#${tab.dataset.target}`);
+      removeActiveClass([tabs, tabsPanels]);
+      tab.classList.add("active");
+      target.classList.add("active");
+    });
+  });
+  
+  const removeActiveClass = (el) => {
+    el.forEach((item) => {
+      item.find((e) => e.classList.contains("active")).classList.remove("active");
+    });
+  };
+  
+  </script>
 
 <script>
   function myFunction() {
