@@ -17,6 +17,7 @@ title: Publications
     <option value="javascript:decide(1)">Search by Author name</option>
     <option value="javascript:decide(2)">Search by Date</option>
 </select>
+{% assign publication_string = "" %}
 <div id="embed"></div>
 <hr/>
 <ol id="myUL">
@@ -34,11 +35,19 @@ title: Publications
     {% endif %}
     </li>
     <hr />
+    
+         <!-- create string with all titles -->
+         {% capture publication_string %}{{ publication_string | append: pub.title }}{% endcapture %}
+         {% if forloop.last == false %}
+             {% capture publication_string %}{{ publication_string | append: "," }}{% endcapture %}
+         {% endif %}
 {% endfor %}
 </ol>
-<script>
 
-</script>
+ <script>
+     var publication_string = "{{ publication_string }}";
+     localStorage.setItem("publication_string", publication_string);
+ </script>
 
 <script>
 var myDiv = $('#desc');
