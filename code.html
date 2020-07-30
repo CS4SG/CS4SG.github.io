@@ -275,7 +275,11 @@ function findHostname(url){
 <!-- ------------Organization Github Repos-------------- -->
 <div class="tabs-panel" id="panel-2">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="row" id="repo"></div>
+<div class="row">
+  <div class="d-flex flex-wrap justify-content-center">
+    <div id="repo"></div>
+  </div>
+</div>
 <script>
   $.ajax({
   url: "https://api.github.com/users/c4sgub/repos",
@@ -285,12 +289,12 @@ function findHostname(url){
   success: function(res) {
     for (let e of res){
       appender(e.name)
-      document.getElementById("repo").innerHTML += '<div id="codes_content" style="color:black; text-align:left; width:40%; margin:15px;">\
-    <h6 style="text-align:center;"><a href="'+e.clone_url+'" target="_blank"><b>'+e.name+'</b></a></h6>\
-    <p>'+e.description+'</p>\
+      document.getElementById("repo").innerHTML += '<div class="gridObj" data-aos="fade-up" style="cursor: pointer;">\
+    <h6 style="text-align:center;"><a href="'+e.clone_url+'" target="_blank" style="color:#000000;"><b>'+e.name+'</b></a></h6>\
+    <center><p>'+e.description+'</p>\
       <span class="github-card__language-icon" style="color: #7A0410;">●</span> '+e.language+'&nbsp; &nbsp;\
       <i class="fa fa-star" aria-hidden="true">'+e.watchers_count+'</i>&nbsp; &nbsp;\
-      <i class="fa fa-code-fork" aria-hidden="true">'+e.forks_count+'</i></span></div>'
+      <i class="fa fa-code-fork" aria-hidden="true">'+e.forks_count+'</i></span></center></div>'
     }
     localStorage.setItem("code_string", code_string);
   }
