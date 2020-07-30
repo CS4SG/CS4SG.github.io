@@ -289,8 +289,8 @@ function findHostname(url){
   success: function(res) {
     for (let e of res){
       appender(e.name)
-      document.getElementById("repo").innerHTML += '<div class="gridObj" data-aos="fade-up" style="cursor: pointer;">\
-    <h6 style="text-align:center;"><a href="'+e.clone_url+'" target="_blank" style="color:#000000;"><b>'+e.name+'</b></a></h6>\
+      document.getElementById("repo").innerHTML += '<div class="gridObj" data-aos="fade-up" style="cursor: pointer;" onclick="window.open(`'+e.clone_url+'`)">\
+    <h6 style="text-align:center;"><b>'+e.name+'</b></h6>\
     <center><p style="font-size: medium; font-style: italic;">'+e.description+'</p>\
       <span class="github-card__language-icon" style="color: #7A0410;">●</span> '+e.language+'&nbsp; &nbsp;\
       <i class="fa fa-star" aria-hidden="true">'+e.watchers_count+'</i>&nbsp; &nbsp;\
