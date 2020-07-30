@@ -12,6 +12,15 @@ title: Funding
   padding: 0 2rem;
 }
 
+h4 {
+  display: inline;
+  font-size: 1.17em;
+}
+
+p {
+  display: inline;
+}
+
 .tabs {
   list-style: none;
   padding-left: 0;
@@ -78,9 +87,11 @@ title: Funding
 <div class="container">
   <ul class="tabs">
     <li class="active" data-target="panel-1">
+      <h2 class="hide">Current</h2>
       Current
     </li>
     <li data-target="panel-2">
+      <h2 class="hide">Past</h2>
       Past
     </li>
   </ul>
@@ -90,17 +101,17 @@ title: Funding
         {% for fund in site.funding %}
         <script>if (find_status("{{ fund.duration | date: '%m-%d-%Y' }}")){
           document.write(
-            '<li>\
-              <a href="{{ fund.url }}"><b>{{ fund.grant_title }}</b></a>\
+             '<li>\
+              <h3><a href="{{ fund.url }}">{{ fund.grant_title }}</a></h3>\
             <ul>\
             <li>\
-                <b>Funding organization: </b>{{ fund.organization }}\
+              <h4>Funding organization:&nbsp;</h4><p>{{ fund.organization }}</p>\
             </li>\
             <li>\
-              <b>Grant amount: </b>${{  fund.grants }}\
+              <h4>Grant amount:&nbsp;</h4><p>${{ fund.grants }}</p>\
             </li>\
             <li>\
-              <b>Grant date (range): </b> {{ fund.start | date: "%B %d, %Y" }} - {{ fund.duration | date: "%B %d, %Y" }}\
+              <h4>Grant date (range):&nbsp;</h4><p>{{ fund.start | date: "%B %d, %Y" }} - {{ fund.duration | date: "%B %d, %Y" }}</p>\
             </li>\
             </ul>\
             </li>\
@@ -123,16 +134,16 @@ title: Funding
       <script>if (!(find_status("{{ fund.duration | date: '%m-%d-%Y' }}"))){
         document.write(
           '<li>\
-            <a href="{{ fund.url }}"><b>{{ fund.grant_title }}</b></a>\
+            <h3><a href="{{ fund.url }}">{{ fund.grant_title }}</a></h3>\
           <ul>\
           <li>\
-              <b>Funding organization: </b>{{ fund.organization }}\
+            <h4>Funding organization:&nbsp;</h4><p>{{ fund.organization }}</p>\
           </li>\
           <li>\
-            <b>Grant amount: </b>${{  fund.grants }}\
+            <h4>Grant amount:&nbsp;</h4><p>${{ fund.grants }}</p>\
           </li>\
           <li>\
-            <b>Grant date (range): </b> {{ fund.start | date: "%B %d, %Y" }} - {{ fund.duration | date: "%B %d, %Y" }}\
+            <h4>Grant date (range):&nbsp;</h4><p>{{ fund.start | date: "%B %d, %Y" }} - {{ fund.duration | date: "%B %d, %Y" }}</p>\
           </li>\
           </ul>\
           </li>\

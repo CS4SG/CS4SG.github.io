@@ -11,17 +11,25 @@ title: Blog
         {% for post in site.posts %}
             <div class="col-md-6 col-lg-4">
               <div class="item">
+              
+                <h3 class="hide">Featured Image</h3>
                 <div class="img">
                   <img src="{% if post.image %}{{ post.image }}{% else %}assets/img/default_blog_post.png{% endif %}" alt="{{ post.image_description }}">
                 </div>
+                
                 <div class="info">
                   <div class="date">
+                    <h3 class="hide">Date</h3>
                     <span>{{ post.date | date: '%b %d' }}</span>
                   </div>
+                  
                   <h2><a href="{{ post.url }}"><b>{{ post.title }}</b></a></h2>
-                  <p>{{ post.excerpt }}</p>
-                  <a class="user"><i class='bx bxs-user'></i></a>
+                  
+                  <h3 class="hide">Post Excerpt</h3>
+                    <p>{{ post.excerpt }}</p>
                     
+                  <h3 class="hide">Authors</h3>
+                  <a class="user"><i class='bx bxs-user'></i></a>
                 {% if post.authors %}
                 {% assign tag_people = post.authors | split: "," %}
                 {% assign all_peop = "" | split: ',' %}

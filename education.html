@@ -9,14 +9,17 @@ title: Education
 
 <!-- ----------------Projects---------------- -->
 {% assign education_string = "" %}
-<center><div><h2><b>Projects</b></h2></div></center>
+<h2 style="text-align:center;font-size:1.5em">Projects</h2>
 
 <div class="row">
     <div class="d-flex flex-wrap justify-content-center">
         {% for education_project in site.education %}
             <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '{{ education_project.url }}';" style="cursor: pointer;">
                 <h3 class="title"><a>{{ education_project.title }}</a></h3>
-                <div id="eduDesc"> <p class="description">{{ education_project.description | markdownify }}</p></div>
+                <div id="eduDesc">
+                    <h3 class="hide">Description</h3>
+                    <p class="description">{{ education_project.description | markdownify }}</p>
+                </div>
             </div>
         
          <!-- create string with all titles -->
@@ -31,8 +34,11 @@ title: Education
 <hr />
 
 <!-- ----------------Courses Page---------------- -->
-<center><h3><b>Courses</b></h3><br>
-<a href="\courses.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">See all courses <i class="bx bx-chevron-right"></i></a></center><br />
+<div style="text-align:center">
+    <h3>Courses</h3>
+    <br>
+    <a href="\courses.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">See all courses <i class="bx bx-chevron-right"></i></a>
+</div>
 <!-------------------------------------------------->
     
  <script>

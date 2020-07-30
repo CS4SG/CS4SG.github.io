@@ -29,6 +29,10 @@ title: Code
 </style>
 
 <style>
+a {
+  font-size: 1.1em;
+}
+
 .collapsible {
   background-color: transparent;
   color: #999999;
@@ -120,17 +124,21 @@ function findHostname(url){
 
 {% assign code_string = "" %}
 
+<h2 class="hide">GitHub Page Link</h2>
 <p style="text-align: center;">Link to organization's GitHub page: <a href="https://github.com/c4sgub" target="_blank">https://github.com/c4sgub</a></p>
+<!-- ----------------------------------------------- -->
 <div class="container">
   <ul class="tabs">
     <li class="active" data-target="panel-1">
+      <h2 class="hide">External Code</h2>
       External Code
     </li>
     <li data-target="panel-2">
+      <h2 class="hide">CS4SG GitHub Code</h2>
       Organization's GitHub Code
     </li>
   </ul>
-
+<!-- ----------------------------------------------- -->
   <div class="tabs-content">
     <div class="tabs-panel active" id="panel-1">
 <center>
@@ -143,19 +151,24 @@ function findHostname(url){
     <h3><a>{{ codes.code_title }}</a></h3>
     <div style="text-align:left;">
     {% assign codelink_array = codes.code_links | split: "," %}
-    <h6><b>Code Links</b></h6>
+    <h4>Description</h4>
+    <p>{{ codes.description }}</p>
+    <h4>Code Links</h4>
     <ul class="noBullets">
 	  {% for lin in codelink_array %}  
 	    <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
     	  {% endfor %}
     </ul>
     <button type="button" class="collapsible">Learn more <i class='bx bxs-chevron-down' ></i></button>
+ <!-- ----------------------------------------------- -->   
+    
     <div class="content">
       <ul class="noBullets">
+      
 <!-- -----------------Related Projects----------------- -->
       {% if codes.tagged_projects %}
         <li>
-          <b>Projects:</b>
+          <h5>Projects:</h5>
           {% assign proj_array = codes.tagged_projects | split: "," %}
           <ul class="menu">
             {% for tag in proj_array %}
@@ -168,14 +181,12 @@ function findHostname(url){
           </ul>
         </li>
       <hr/>
-      {% endif %}
-<!-- ----------------------------------------------- -->	      
-
+      {% endif %}      
 	      
 <!-- -----------------Related Authors----------------- -->
   {% if codes.code_authors %}
   <li>
-	<b>Author(s)</b>
+	<h5>Author(s)</h5>
 	   {% assign tag_people = codes.code_authors | split: "," %}
 	   {% assign all_peop = "" | split: ',' %}
 	   {% for peop in site.people %}
@@ -197,13 +208,11 @@ function findHostname(url){
         </li>
     <hr/>
     {% endif %}
-<!-- ----------------------------------------------- -->
-	      
 
 <!-- -----------------Related Publications----------------- -->
 {% if codes.tagged_publications %}
     <li>
-	<b>Publications:</b>
+	<h5>Publications:</h5>
 	{% assign publish_array = codes.tagged_publications | split: "," %}
 	  <ul class="menu">
 	    {% for tag in publish_array %}
@@ -217,14 +226,11 @@ function findHostname(url){
 	</li>
     <hr/>
 {% endif %}
-<!-- ----------------------------------------------- -->
-	      
-	      
 	      
 <!-- -----------------Related Education & Courses----------------- -->
   {% if codes.tagged_education or codes.tagged_courses %}
     <li>
-	<b>Education and Courses:</b>
+	<h5>Education and Courses:</h5>
 	{% assign edu_array = codes.tagged_education | split: "," %}
     {% assign courses_array = codes.tagged_courses | split: "," %}
 	  <ul class="menu">
@@ -247,15 +253,14 @@ function findHostname(url){
       <hr/>
   {% endif %}
 <!-- ----------------------------------------------- -->
-	      
       </ul>
-    {{ codes.description }}
    </div>
   </div>
   </div>
 </div>
 </font>
 
+<!-- ----------------------------------------------- -->
 {% capture code_string %}{{ code_string | append: codes.code_title }}{% endcapture %}
 {% if forloop.last == false %}
     {% capture code_string %}{{ code_string | append: "," }}{% endcapture %}
