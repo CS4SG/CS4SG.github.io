@@ -398,6 +398,11 @@ ul.noBullets {
 
 .mobile-nav-toggle i {
   color: #DADADA;
+  transition: 0.3s;
+}
+
+.mobile-nav-toggle i:hover {
+  color: #949494;
 }
 
 .mobile-nav {
