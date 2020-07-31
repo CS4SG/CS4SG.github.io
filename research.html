@@ -4,53 +4,47 @@ title: Research
 ---
 
 <html lang="en">
-
+<style>
+  .center p {
+    text-align: left;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 1.5em;
+  }
+</style>
 <body>
 
-<!-- ----------------Projects---------------- -->
-<center><h3><b>Projects</b></h3></center>
-<p style="padding-bottom: 8px;">Our group actively works on projects covering a broad range of exciting, cutting-edge topics including AI, big data, bioinformatics, cloud services, computing research, crypto-currency, cyber security, machine learning, Internet of Things, self-driving cars, smartphones, and 5G wireless.</p>
- <!-- ======= Research Section ======= -->
-    <div class="row">
-        {% assign sorted = site.research_projects | sort: 'date' | reverse %}
-        {% for research_project in sorted limit:4  %}
-            <!-- create boxes to display on research page -->
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '{{ research_project.url }}';" style="cursor: pointer;">
-                <div class="icon-box" data-aos="fade-up">
-                <div class="icon"><i class='bx bxs-report'></i></div>
-                    <h4 class="title"><a>{{ research_project.title }}</a></h4>
-                    <div id="textbox"><p class="description">{{ research_project.description | markdownify }}</p></div>
-                </div>
-            </div>
-            <!-- -------------------------------->
-        {% endfor %}
-    </div>
-    <center><a href="\research_project.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">See all&nbsp;<i class="icofont-rounded-double-right"></i></a></center><br />
-<hr />
- 
-<!-- ----------------Publications---------------- -->
-<center><h3><b>Publications</b></h3>
-<p style="padding-bottom: 8px;">To publish is to make content available to the general public. We try our best to keep everyone updated with the help of our publications page. Click on the button below for more information.</p>
-<a href="\publications.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">See all&nbsp;<i class="icofont-rounded-double-right"></i></a></center><br />
-<hr />
- 
-<!-- ----------------Funding---------------- -->
-<center><h3><b>Funding</b></h3>
-<p style="padding-bottom: 8px;">To know more about the funding/grants we've received, please click the button below.</p>
-<a href="\funding.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">See all&nbsp;<i class="icofont-rounded-double-right"></i></a></center><br />
-<hr />
- 
-<!-- ----------------Talks---------------- -->
-<center><h3><b>Talks</b></h3>
-<p style="padding-bottom: 8px;">Keep yourself updated with the latest discussions. To access all the talks, please click the button below.</p>
-<a href="\talks.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">See all&nbsp;<i class="icofont-rounded-double-right"></i></a></center><br />
-<hr />
- 
-<!-- ----------------Code---------------- -->
-<center><h3><b>Code</b></h3>
-<p style="padding-bottom: 8px;">Please click the button below to access all code resources utilized by the organization.</p>
-<a href="\code.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">See all&nbsp;<i class="icofont-rounded-double-right"></i></a></center><br />
-<hr />
+<!-- ---------------------Projects------------------------ -->
+<div class="center">
+  
+  <h2 class="hide">Links to other research sections</h2>
+  <div class="d-flex flex-row flex-wrap justify-content-center">
+    <a href="\research_project.html" class="sectionbutton" style="background-color:#fff; color:#67b0d1; border:1px solid; border-color:#67b0d1">All projects&nbsp;<i class="icofont-rounded-double-right"></i></a>
+    <a href="\publications.html" class="sectionbutton">Publications&nbsp;<i class="icofont-rounded-double-right"></i></a>
+    <a href="\funding.html" class="sectionbutton">Funding&nbsp;<i class="icofont-rounded-double-right"></i></a>
+    <a href="\talks.html" class="sectionbutton">Talks&nbsp;<i class="icofont-rounded-double-right"></i></a>
+    <a href="\code.html" class="sectionbutton">Code&nbsp;<i class="icofont-rounded-double-right"></i></a>
+  </div>
+  <hr>
+  
+  <h2>Projects</h2>
+    <p style="padding-bottom: 8px;">Our group actively works on projects covering a broad range of exciting, cutting-edge topics including AI, big data, bioinformatics, cloud services, computing research, crypto-currency, cyber security, machine learning, Internet of Things, self-driving cars, smartphones, and 5G wireless.</p>
+</div>
+
+<div class="row">
+  {% assign sorted = site.research_projects | sort: 'date' | reverse %}
+    {% for research_project in sorted limit:4  %}
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '{{ research_project.url }}';" style="cursor: pointer;">
+        <div class="icon-box" data-aos="fade-up">
+          <div class="icon"><i class='bx bxs-report'></i></div>
+            <h4 class="title"><a>{{ research_project.title }}</a></h4>
+              <div id="textbox"><p class="description">{{ research_project.description | markdownify }}</p></div>
+        </div>
+      </div>
+    {% endfor %}
+</div>
 
 </body>
 
