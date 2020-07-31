@@ -93,7 +93,7 @@ overflow:hidden;
 
 .sectionbutton:hover {
   background-color:transparent;
-  border:2px #67b0d1;
+  border: 2px solid #67b0d1;
   color:#67b0d1;
 }
 
