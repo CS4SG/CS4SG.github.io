@@ -1,11 +1,15 @@
 ---
 layout: default
-title: NEWS
+title: News
 ---
 <html>
 <!-- template from https://codepen.io/anupkumar92/pen/bOvYYm -->
   <body>
 <style>
+    h2 {
+      font-size: 1.5em;
+    }
+    
     input[type=text], select {
         width: 80%;
         padding: 12px;
@@ -13,12 +17,13 @@ title: NEWS
         border-radius: 4px;
     }
     span, a {
-    display: inline-block;
-    color: inherit;
+      display: inline-block;
+      color: inherit;
     }
 </style>
 
-<center>
+<div style="text-align:center">
+  <h2 class="hide">Search</h2>
   <select onchange= "location = this.value;">
     <option selected value="">-- Select a method to search --</option>
     <option value="javascript:javascript:decide(1)">Search by News Title</option>
@@ -27,7 +32,7 @@ title: NEWS
   <br/><br/>
   <div id="embed"></div>
   <hr/>
-</center>
+</div>
 
 
 <section class="blog" data-scroll-index="4">
@@ -39,17 +44,24 @@ title: NEWS
       
           <div class="col-md-6 col-lg-4">
             <div class="item">
+            
               <label>
+              
               <div class="img">
                 <img src="{% if post.image %}{{ post.image }}{% else %}/assets/img/default_news.png{% endif %}" alt="{{ news.title }}">
               </div>
+              
               <div class="info">
+              
                 <div class="date">
-                  <span><a>{{ post.date | date: '%b %d' }}</a></span>
+                  <h3 class="hide">Date</h3>
+                    <span><a>{{ post.date | date: '%b %d' }}</a></span>
                 </div>
-                <h5><b><a href="{{ post.url }}">{{ post.title }}</a></b></h5>
+                
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                
+                <h3 class="hide">Authors</h3>
                 <a class="user"><i class='bx bxs-user'></i></a>
-                  
               {% if post.tagged_people %}
               {% assign tag_people = post.tagged_people | split: "," %}
               {% assign all_peop = "" | split: ',' %}

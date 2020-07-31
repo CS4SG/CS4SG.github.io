@@ -366,16 +366,18 @@ body{
 
 <div style="border: 1px solid #ccc;">
 <div class="cm-address-bar-search" clear>
-	<div class="address-search">
+	<h2 class="hide">Search by address</h2>
+    <div class="address-search">
 		<div class="pos"><input type="text" class="address-search-input"><div class="cm-button address-button"><i class="fas fa-arrow-right"></i></div><div class="address-short-btn"></div></div>
 	</div>
-	<div class="search-file-and-folder">
+	<h2 class="hide">Search by title</h2>
+    <div class="search-file-and-folder">
 		<div class="pos"><input placeholder="Search.." type="text" class="files-search-input"><div class="cm-button file-search-button"><i class="fas fa-search"></i></div></div>
 	</div>
 </div>
 <div class="theme-structure big-file-manager">
     <ul>
-        <li data-file-icon="folder"><b>Images</b>
+        <li data-file-icon="folder"><h3 class="hide">Images Folder</h3><b>Images</b>
             <ul>
             {% assign image_extensions = ".jpg,.png,.ai,.bmp,.gif,.ico,.jpeg,.ps,.psd,.svg,.tif,.tiff" %}
 	    {% assign images = image_extensions | split: "," %}
@@ -387,7 +389,7 @@ body{
             {% endfor %}
             </ul>
         </li>
-        <li data-file-icon="folder"><b>Documents & Presentations</b>
+        <li data-file-icon="folder"><h3 class="hide">Documents and Presentations Folder</h3><b>Documents &amp; Presentations</b>
             <ul>
             {% assign docs_extensions = ".key,.odp,.pps,.ppt,.pptx,.ods,.xls,.xlsm,.xlsx,.doc,.docx,.odt,.pdf,.rtf,.tex,.txt,.wpd" %}
 	    {% assign docs = docs_extensions | split: "," %}
@@ -399,7 +401,9 @@ body{
             {% endfor %}
             </ul>
         </li>
-        <li data-file-icon="folder" onclick="window.open('\/resourceLinks.html');"><b>Link Resources</b></li>
+        <li data-file-icon="folder" onclick="window.open('\/resourceLinks.html');">
+          <h3 class="hide">Link Resources Folder</h3><b>Link Resources</b>
+        </li>
     </ul>
 </div>
 </div>
