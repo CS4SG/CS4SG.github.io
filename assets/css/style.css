@@ -91,6 +91,12 @@ overflow:hidden;
   text-align: center;
 }
 
+.sectionbutton:hover {
+  background-color:transparent;
+  border:2px #67b0d1;
+  color:#67b0d1;
+}
+
 .tagLine {
   display: flex;
   flex-wrap: wrap;
