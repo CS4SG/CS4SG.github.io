@@ -61,7 +61,7 @@ function findHostname(url){
     {% if peopLis contains tag %}
         {% for peop in site.people %}
             {% if tag == peop.key %}
-                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag">{{ peop.category }}</label></li>
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
     {% else %}
