@@ -7,6 +7,7 @@ title: Talks
   <div class="d-flex flex-wrap justify-content-center">
   
     {% for talk in site.talks %}
+    {% if talk.category == 'Internal' %}
       {% capture talk_string %}{{ talk_string | append: talk.title }}{% endcapture %}
       {% if forloop.last == false %}
         {% capture talk_string %}{{ talk_string | append: "," }}{% endcapture %}
@@ -45,7 +46,7 @@ title: Talks
         </table>
         
       </div>
-      
+      {% endif %}
     {% endfor %}
     
   </div>
