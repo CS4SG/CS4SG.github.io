@@ -137,11 +137,7 @@ layout: home
             <div class="owl-carousel testimonials-carousel">
             {% for event in sorted %}
             <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;"  onclick="window.open('{{ event.url }}', '_self');">
-                {% if event.image %}
-                <img src="{{ event.image }}" alt='{{ event.title }}' style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;">
-                {% else %}
-                <img src="/assets/img/default_news.png" alt='{{ event.title }}' style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;">
-                {% endif %}
+                <img src="{% if event.image %}{{ event.image }}{% else %}/assets/img/default_news.png{% endif %}" alt='{{ event.title }}' style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;">
                 <div class="container">
                     <b>{{ event.title }}</b>
                     <p>{{ event.date | date: '%B %d, %Y' }}</p>
@@ -154,7 +150,7 @@ layout: home
       <h3>Latest Event</h3>
       {% for event in sorted limit:1 %}
           <div class="event_container" onclick="window.open('{{ event.url }}','_self')">
-              <div class="event_bg" style="background-image: url('{{ event.image }}')" alt='{{ event.title }}'></div>
+              <div class="event_bg" style="background-image: url('{% if event.image %}{{ event.image }}{% else %}/assets/img/default_news.png{% endif %}')" alt='{{ event.title }}'></div>
               <div class="event_info">
                 <div class="event_title">
                   <h4>{{ event.title }}</h4>
