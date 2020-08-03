@@ -1818,3 +1818,97 @@ section {
   color:white;
   font-size: 12px;
 }
+
+
+/* ------------Latest Event Homepage------------ */
+@mixin object($w, $h, $bg){
+  width: $w;
+  height: $h;
+  background: $bg;
+}
+
+@mixin flex_center(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
+}
+
+.event_container{
+  display: flex;
+  @include object(100%, 230px, #FFF);
+  max-width: 750px;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.25), 0 8px 8px 0 rgba(0,0,0,.15);
+  margin: 20px 0;  
+  .event_bg{
+    @include object(40%, 100%, #333);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  .event_info{
+    @include object(60%, 100%, null);
+    padding: 10px 20px;
+    .event_title{
+      display: flex;
+      @include object(100%, 50px, null);
+      align-items: center;
+      h4{
+        font-size: 26px;
+        font-family: 'Quicksand', sans-serif;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .event_desc{
+      display: flex;
+      @include object(100%, calc(100% - 100px), null);
+      
+      .p{
+        font-size: 16px;
+        font-weight: 500;
+        color: #565861;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .event_footer{
+      display: flex;
+      @include object(100%, 50px, null);
+      align-items: center;
+      justify-content: space-between;
+      .event_date p{
+        font-size: 15px;
+        font-weight: 600;
+        color: #333;
+      }
+    }
+  }
+}
+
+// mobile screen
+@media screen and (max-width: 575px){
+  .event_container{
+    @include object(100%, 480px, #FFF);
+    flex-direction: column;
+    .event_bg{
+      @include object(100%, 250px, null);
+      min-height: 250px;
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 0;
+    }
+    .event_info{
+      @include object(100%, 230px, null);
+    }
+  }
+}
+/* -------------------------------- */
