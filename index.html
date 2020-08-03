@@ -150,7 +150,7 @@ layout: home
       <h3>Latest Event</h3>
       {% for event in sorted limit:1 %}
           <div class="event_container" onclick="window.open('{{ event.url }}','_self')">
-              <div class="event_bg" style="background-image: url('{% if event.image %}{{ event.image }}{% else %}/assets/img/default_news.png{% endif %}')" alt='{{ event.title }}'></div>
+              <div class="event_bg" style="background-image: url('{% if event.image %}{{ event.image }}{% else %}/assets/img/default_news.png{% endif %}')"></div>
               <div class="event_info">
                 <div class="event_title">
                   <h4>{{ event.title }}</h4>
