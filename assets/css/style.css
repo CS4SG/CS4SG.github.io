@@ -1824,7 +1824,7 @@ section {
 @mixin object($w, $h, $bg){
   width: $w;
   height: $h;
-  background: $bg;
+  background: #fff;
 }
 
 @mixin flex_center(){
