@@ -149,7 +149,9 @@ layout: home
             </div>
             {% endfor %}
             </div>
+            
       <center>
+      <h3>Latest Event</h3>
       {% for event in sorted limit:1 %}
           <div class="event_container" onclick="window.open('{{ event.url }}','_self')">
               <div class="event_bg" style="background-image: url('{{ event.image }}')" alt='{{ event.title }}'></div>
