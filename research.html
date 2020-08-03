@@ -78,9 +78,8 @@ title: Research
   <h2>Talks</h2>
   <div class="row">
     <div class="d-flex flex-wrap justify-content-center">
-    {% assign sorted_talks = site.talks | sort: 'date' | reverse %}
+    {% assign sorted_talks = site.talks | sort: 'category' | reverse %}
       {% for talk in sorted_talks limit:2 %}
-        
         <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '{{ talk.url }}';" style="cursor: pointer;">
           <h2 class="title"><a>{{ talk.title }}</a></h2>
           
