@@ -51,14 +51,14 @@ overflow:hidden;
 }
 
 .menu{
-    list-style: none;
+  list-style: none;
 }
 
 .menu li{
-    display: inline;
-    margin: 0px 50px 0px -50px;
-    padding: 0px 10px;
-    border-left: solid 1px black;
+  display: inline;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 10px;
+  border-left: solid 1px #444444;
 }
 
 .menu li:first-child{
@@ -73,22 +73,119 @@ overflow:hidden;
   font-size: 1em;
 }
 
-.responsive {
-  width: 100%;
-  max-width: 1024px;
-  height: auto;
+/*---------------- individual blog post layout ----------------*/
+.postbyline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 0px 0px 10px;
+  line-height: 90%;
+  font-size: 0.90em;
+  font-style: italic;
 }
 
+.postdate {
+  width: 100%;
+}
+
+.postimage {
+  max-width: 240px;
+  height: auto;
+  margin: 0px 10px;
+}
+
+.postimagebyline {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+#postbylineonly {
+  border: none;
+}
+
+@media only screen and (max-width: 599px) {
+  .postbyline {
+    margin: 30px 0px -10px 0px;
+  }
+  
+  .postimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .postimagebyline {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .postbyline {
+    border-left: solid 1px #444444;
+  }
+  
+  .postimage {
+    max-width: 320px;
+    min-width: 320px;
+  }
+  
+  .postimagebyline {
+    flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .postbyline {
+    border-left: solid 1px #444444;
+  }
+  
+  .postimage {
+    max-width: 480px;
+    min-width: 480px;
+    float: left;
+  }
+  
+  .postimagebyline {
+    flex-wrap: nowrap;
+  }
+}
+
+#postsections {
+  font-size: 0.9em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#postsections h3 {
+  margin-top: 20px;
+}
+#postsections hr {
+  width: 0%;
+}
+
+/*-----------------------------------------------------*/
+
 .sectionbutton {
-  text-decoration:none;
+  text-decoration: none;
   border-radius: 10px;
-  background-color:#67b0d1;
-  border:0px;
-  color:#ffffff;
+  background-color: #67b0d1;
+  border: 2px solid #67b0d1;
+  color: #ffffff;
   font-weight: bold;
   padding:10px;
   margin: 20px;
   text-align: center;
+  transition: 0.3s;
+}
+
+.sectionbutton:hover {
+  background-color: transparent;
+  border: 2px solid #67b0d1;
+  color: #67b0d1;
 }
 
 .tagLine {
@@ -105,7 +202,7 @@ overflow:hidden;
 
 ul.noBullets {
   list-style-type: none;
-  margin: 0px;
+  margin-left: 10px;
   padding: 0px;
 }
 
@@ -1811,3 +1908,97 @@ section {
   color:white;
   font-size: 12px;
 }
+
+
+/* ------------Latest Event Homepage------------ */
+@mixin object($w, $h, $bg){
+  width: $w;
+  height: $h;
+  background: #fff;
+}
+
+@mixin flex_center(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
+}
+
+.event_container{
+  display: flex;
+  @include object(100%, 230px, #FFF);
+  max-width: 750px;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.25), 0 8px 8px 0 rgba(0,0,0,.15);
+  margin: 20px 0;  
+  .event_bg{
+    @include object(40%, 100%, #333);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  .event_info{
+    @include object(60%, 100%, null);
+    padding: 10px 20px;
+    .event_title{
+      display: flex;
+      @include object(100%, 50px, null);
+      align-items: center;
+      h4{
+        font-size: 26px;
+        font-family: 'Quicksand', sans-serif;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .event_desc{
+      display: flex;
+      @include object(100%, calc(100% - 100px), null);
+      
+      .p{
+        font-size: 16px;
+        font-weight: 500;
+        color: #565861;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .event_footer{
+      display: flex;
+      @include object(100%, 50px, null);
+      align-items: center;
+      justify-content: space-between;
+      .event_date p{
+        font-size: 15px;
+        font-weight: 600;
+        color: #333;
+      }
+    }
+  }
+}
+
+// mobile screen
+@media screen and (max-width: 575px){
+  .event_container{
+    @include object(100%, 480px, #FFF);
+    flex-direction: column;
+    .event_bg{
+      @include object(100%, 250px, null);
+      min-height: 250px;
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 0;
+    }
+    .event_info{
+      @include object(100%, 230px, null);
+    }
+  }
+}
+/* -------------------------------- */
