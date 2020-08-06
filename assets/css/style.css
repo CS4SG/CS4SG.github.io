@@ -51,14 +51,14 @@ overflow:hidden;
 }
 
 .menu{
-    list-style: none;
+  list-style: none;
 }
 
 .menu li{
-    display: inline;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 10px;
-    border-left: solid 1px black;
+  display: inline;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 10px;
+  border-left: solid 1px #444444;
 }
 
 .menu li:first-child{
@@ -73,18 +73,108 @@ overflow:hidden;
   font-size: 1em;
 }
 
-.responsive {
-  width: 100%;
-  max-width: 1024px;
-  height: auto;
+/*---------------- individual blog post layout ----------------*/
+.postbyline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 0px 0px 10px;
+  line-height: 90%;
+  font-size: 0.90em;
+  font-style: italic;
 }
 
+.postdate {
+  width: 100%;
+}
+
+.postimage {
+  max-width: 240px;
+  height: auto;
+  margin: 0px 10px;
+}
+
+.postimagebyline {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+#postbylineonly {
+  border: none;
+}
+
+@media only screen and (max-width: 599px) {
+  .postbyline {
+    margin: 30px 0px -10px 0px;
+  }
+  
+  .postimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .postimagebyline {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .postbyline {
+    border-left: solid 1px #444444;
+  }
+  
+  .postimage {
+    max-width: 320px;
+    min-width: 320px;
+  }
+  
+  .postimagebyline {
+    flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .postbyline {
+    border-left: solid 1px #444444;
+  }
+  
+  .postimage {
+    max-width: 480px;
+    min-width: 480px;
+    float: left;
+  }
+  
+  .postimagebyline {
+    flex-wrap: nowrap;
+  }
+}
+
+#postsections {
+  font-size: 0.9em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#postsections h3 {
+  margin-top: 20px;
+}
+#postsections hr {
+  width: 0%;
+}
+
+/*-----------------------------------------------------*/
+
 .sectionbutton {
-  text-decoration:none;
+  text-decoration: none;
   border-radius: 10px;
-  background-color:#67b0d1;
+  background-color: #67b0d1;
   border: 2px solid #67b0d1;
-  color:#ffffff;
+  color: #ffffff;
   font-weight: bold;
   padding:10px;
   margin: 20px;
@@ -93,9 +183,9 @@ overflow:hidden;
 }
 
 .sectionbutton:hover {
-  background-color:transparent;
+  background-color: transparent;
   border: 2px solid #67b0d1;
-  color:#67b0d1;
+  color: #67b0d1;
 }
 
 .tagLine {
@@ -112,7 +202,7 @@ overflow:hidden;
 
 ul.noBullets {
   list-style-type: none;
-  margin: 0px;
+  margin-left: 10px;
   padding: 0px;
 }
 
