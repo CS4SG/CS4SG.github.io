@@ -8,38 +8,40 @@ function findHostname(url){
 	document.write(hostname)
 }
 </script>
+<div class="postimagebyline">
+{% if page.image %}
+  <img class="postimage" src="{{ "https://cs4sg.github.io/" | append: page.image }}" alt="{{ page.image_description }}">
+{% endif %}
+<br><br>
 
-<center>
-    <img src="{{ "https://cs4sg.github.io/" | append: page.image }}" alt="{{ page.image_description }}" class="responsive">
-</center>
-<br>
-<br>
-
-<div class="relatedSection">
 <!---------------------------->
-<h2 style="font-size:1.17em;display:inline-block">Date:&nbsp;</h2><p style="display:inline-block">{{ page.date | date: '%B %d, %Y' }}</p>
-<hr/>
-<!---------------------------->
-<h2 style="font-size:1.17em">Authors:</h2>
-{% assign tag_people = page.authors | split: "," %}
-{% assign all_peop = "" | split: ',' %}
-{% for peop in site.people %}
+<h2 class="hide">Byline (Authors &amp; Date)</h2>
+  {% assign tag_people = page.authors | split: "," %}
+  {% assign all_peop = "" | split: ',' %}
+  {% for peop in site.people %}
     {% assign all_peop = all_peop | push: peop.key %}
-{% endfor %}
-<ul class="noBullets">
-{% for tag in tag_people %}
-    {% if all_peop contains tag %}
-        {% for peop in site.people %}
+  {% endfor %}
+  <div class="postbyline">
+    <p class="postdate">{{ page.date | date: '%B %d, %Y' }}</p>
+    <br>
+    
+    <p>By&nbsp;</p>
+      {% for tag in tag_people %}
+        {% if all_peop contains tag %}
+          {% for peop in site.people %}
             {% if tag == peop.key %}
-                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
+              <p><a href="{{ peop.link }}" target="_blank">{{ tag }}</a></p>
             {% endif %}
-        {% endfor %}
-    {% else %}
-        <li>{{ tag }}</li>
-    {% endif %}
-{% endfor %}
-</ul>
-<hr>
+          {% endfor %}
+        {% else %}
+          <p>{{ tag }}</p>
+        {% endif %}
+        {% if forloop.last == false %},&nbsp;{% endif %}
+      {% endfor %}    
+    
+  </div>
+</div>
+
 
 <!---------------------------->
 <h2 class="hide">Page Content</h2>
@@ -47,9 +49,10 @@ function findHostname(url){
 <hr>
 
 <!---------------------------->
-<h2 class="hide">Tagged/Related Items</h2>
+<h2 style="font-size:1.17em; text-align:center">Tags</h2>
+<div class="relatedSection" id="postsections">
 
-
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 <h3>People</h3>
 {% assign people_tag = page.tagged_people | split: "," %}
 {% assign peopLis = "" | split: ',' %}
@@ -61,7 +64,7 @@ function findHostname(url){
     {% if peopLis contains tag %}
         {% for peop in site.people %}
             {% if tag == peop.key %}
-                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag" style="font-size: 0.7em"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
     {% else %}
@@ -69,11 +72,13 @@ function findHostname(url){
     {% endif %}
 {% endfor %}
 </ul>
+</div>
 <hr>
 
 <!---------------------------->
 
 {% assign tag_array = page.tagged_projects | split: "," %}
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 <h3>Research Projects</h3>
 
 <ul class="menu">
@@ -87,12 +92,13 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
 
 <!---------------------------->
 {% assign edu_tag_array = page.tagged_education | split: "," %}
 {% assign course_tag_array = page.tagged_courses | split: "," %}
-
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 <h3>Education and Courses</h3>
 <ul class="menu">
 {% for tag in edu_tag_array %}
@@ -116,10 +122,12 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
 
 <!---------------------------->
 {% assign pub_array = page.tagged_publications | split: "," %}
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 <h3>Publications</h3>
 
 <ul class="menu">
@@ -133,10 +141,12 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
 
 <!---------------------------->
 {% assign code_array = page.tagged_code | split: "," %}
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 <h3>Code Resources</h3>
 
 <ul class="menu">
@@ -151,10 +161,12 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
 
 <!---------------------------->
 {% assign funding_array = page.tagged_funding | split: "," %}
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 <h3>Funding</h3>
 
 <ul class="menu">
@@ -168,10 +180,12 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
 
 <!---------------------------->
 {% assign talks_array = page.tagged_talks | split: "," %}
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 <h3>Talks</h3>
 
 <ul class="menu">
@@ -185,10 +199,12 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
 
 <!---------------------------->
 {% assign events_array = page.tagged_events | split: "," %}
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 <h3>Events</h3>
 
 <ul class="menu">
@@ -213,6 +229,7 @@ function findHostname(url){
     {% endfor %}
 {% endfor %}
 </ul>
+</div>
 <hr>
 
 </div>
