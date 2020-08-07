@@ -6,7 +6,7 @@ title: Research
 <html lang="en">
 <style>
   .center p {
-    text-align: left;
+    text-align: center;
   }
   
   h2 {
@@ -26,8 +26,8 @@ title: Research
 <div class="row d-flex flex-wrap justify-content-center">
   {% assign sorted = site.research_projects | sort: 'date' | reverse %}
     {% for research_project in sorted limit:4  %}
-      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '{{ research_project.url }}';" style="cursor: pointer;">
-        <div class="icon-box" data-aos="fade-up">
+      <div onclick="window.location.href = '{{ research_project.url }}';" style="cursor: pointer;">
+        <div class="icon-box gridObj" data-aos="fade-up">
           <div class="icon"><i class="icofont-unique-idea"></i></div>
             <h4 class="title"><a>{{ research_project.title }}</a></h4>
               <div id="textbox"><p class="description">{{ research_project.description | markdownify }}</p></div>
@@ -44,8 +44,8 @@ title: Research
 <div class="row d-flex flex-wrap justify-content-center">
     {% assign sorted_publ = site.publications | sort: 'date' | reverse %}
       {% for publ in sorted_publ limit:4  %}
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '{{ publ.url }}';" style="cursor: pointer;">
-          <div class="icon-box" data-aos="fade-up">
+        <div onclick="window.location.href = '{{ publ.url }}';" style="cursor: pointer;">
+          <div class="icon-box gridObj" data-aos="fade-up">
             <div class="icon"><i class="icofont-papers"></i></div>
               <h4 class="title"><a>{{ publ.title }}</a></h4>
                 <div id="textbox"><p class="description">{{ publ.abstract | markdownify }}</p></div>
@@ -61,8 +61,8 @@ title: Research
   <div class="row d-flex flex-wrap justify-content-center">
     {% assign sorted_fund = site.funding | sort: 'date' | reverse %}
       {% for fund in sorted_fund limit:4  %}
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '{{ fund.url }}';" style="cursor: pointer;">
-          <div class="icon-box" data-aos="fade-up">
+        <div onclick="window.location.href = '{{ fund.url }}';" style="cursor: pointer;">
+          <div class="icon-box gridObj" data-aos="fade-up">
             <div class="icon"><i class="icofont-award"></i></div>
               <h4 class="title"><a>{{ fund.grant_title }}</a></h4>
               <i style="text-align: center;">{{ fund.organization }}</i><br/>
@@ -123,8 +123,8 @@ title: Research
   <div class="row d-flex flex-wrap justify-content-center">
     {% assign sorted_code = site.code | sort: 'date' | reverse %}
       {% for code in sorted_code limit:4  %}
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '\/code.html#{{ code.code_title }}';" style="cursor: pointer;">
-          <div class="icon-box" data-aos="fade-up">
+        <div onclick="window.location.href = '\/code.html#{{ code.code_title }}';" style="cursor: pointer;">
+          <div class="icon-box gridObj" data-aos="fade-up">
             <div class="icon"><i class="icofont-code"></i></div>
             <h4 class="title"><a>{{ code.code_title }}</a></h4>
             <div id="textbox"><p class="description">{{ code.description | markdownify }}</p></div>
