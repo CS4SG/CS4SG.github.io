@@ -142,9 +142,8 @@ overflow:hidden;
   }
   
   .postimage {
-    max-width: 480px;
-    min-width: 480px;
-    float: left;
+    max-width: 320px;
+    min-width: 320px;
   }
   
   .postimagebyline {
@@ -153,7 +152,7 @@ overflow:hidden;
 }
 
 #postsections {
-  font-size: 0.9em;
+  font-size: 0.8em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
