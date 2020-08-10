@@ -155,8 +155,29 @@ layout: default
 </div>
 <hr>
 {% endif %}
-<!---------------------------->    
+<!---------------------------->
+{% if page.tagged_talks %}
+{% assign talks_array = page.tagged_talks | split: "," %}
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+<h3>Talks</h3>
+
+<ul class="menu">
+{% for tag in talks_array %}
+    {% for talk in site.talks %}
+        {% if tag == talk.key and talk.category == "Internal" %}
+            <li>
+                <a href="{{ talk.url }}">{{ talk.title }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
+</div>
+<hr>
+{% endif %}
+<!---------------------------->
     
+
 </div>
 </div>
 {%- include narration.html -%}
