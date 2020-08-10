@@ -4,13 +4,7 @@ layout: default
 <html>
     <body>
         <div id="speak_content">
-        {% if page.image %}
-            <center><a href="{{ page.image }}" target="_blank"><img src="{{ page.image }}" class="responsive" /></a><br/>
-            <font style="font-size: small;">Image Source:</font>&nbsp;<i style="font-size: small; color: #9F9F9F;">{{ page.image }}</i>
-            </center>
-            <hr/>
-        {% endif %}
-        
+            
         <div class="postimagebyline">
             {% if page.image %}
                 <a href="{{ page.image }}" target="_blank"><img src="{{ page.image }}" class="postimage" alt="{{ page.title }}" /></a>
@@ -26,6 +20,8 @@ layout: default
         {% endif %}
         </div>
         </div>
+        <br/>
+        <hr/>
 <!---------------------------->
 
 
