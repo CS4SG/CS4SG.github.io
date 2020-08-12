@@ -5,7 +5,7 @@ title: News and Events
 <html lang="en">
 
 <body>
-<h2 style="text-align:center;font-size:1.5em">News</h2>
+<h2 style="text-align:center; font-size:1.5em">News</h2>
 <div class="container">
   <div class="row mt-5 mb-5">
 {% assign sorted = site.event | sort: 'date' | reverse %}
@@ -42,7 +42,7 @@ title: News and Events
 <br>
 <hr>
 
-<h2 style="text-align:center;font-size:1.5em">External Talks</h2>
+<h2 style="text-align:center; font-size:1.5em">External Talks</h2>
 <div class="row">
   <div class="d-flex flex-wrap justify-content-center">
     {% assign sorted_talks = site.talks | sort: 'category' %}
@@ -90,7 +90,7 @@ title: News and Events
 </div><br><hr/>
 
 
-  <h2>Internal Talks</h2>
+  <h2 style="text-align:center; font-size:1.5em">Internal Talks</h2>
   <div class="row">
     <div class="d-flex flex-wrap justify-content-center">
     {% assign sorted_talks = site.talks | sort: 'category' | reverse %}
