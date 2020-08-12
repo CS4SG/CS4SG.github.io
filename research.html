@@ -75,50 +75,6 @@ title: Research
   <br/><br/><hr/><br/>
 
 
-  <h2>Talks</h2>
-  <div class="row">
-    <div class="d-flex flex-wrap justify-content-center">
-    {% assign sorted_talks = site.talks | sort: 'category' | reverse %}
-      {% for talk in sorted_talks limit:2 %}
-        <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '{{ talk.url }}';" style="cursor: pointer;">
-          <h2 class="title"><a>{{ talk.title }}</a></h2>
-          
-          <table>
-            <tr>
-            
-              <td style="width:30%;">
-                {% for peop in site.people %}
-                  {% if peop.name == talk.talk_by %}
-                    <h3 class="hide">Speaker photo</h3>
-                    <img src="{{ peop.image }}"  style="border-radius: 50%; width:100px; margin-right:60px;"/>
-                  {% endif %}
-                {% endfor %}
-              </td>
-              
-              <td>
-                <div style="text-align:left; display:inline;">	
-                  <ul class="noBullets">
-                    <li>
-                      <h3 class="hide">Date</h3>
-                        <i class="icofont-ui-calendar"></i> {{ talk.date | date: '%B %d, %Y' }}
-                    </li>
-                    <li>
-                      <h3 style="display:inline; font-size:1em">Speaker: </h3>{{ talk.talk_by }}
-                    </li>
-                  </ul>
-                </div>
-              </td>
-              
-            </tr>
-          </table>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-  <a href="\talks.html" class="sectionbutton">All Talks&nbsp;<i class="icofont-rounded-double-right"></i></a>
-  <br/><br/><hr/><br/>
-
-
   <h2>Code</h2><br/>
   <div class="row d-flex flex-wrap justify-content-center">
     {% assign sorted_code = site.code | sort: 'date' | reverse %}
