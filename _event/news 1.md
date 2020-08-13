@@ -4,8 +4,7 @@ title: news 1
 date: 2020-06-21
 location: University at Buffalo
 tagged_people: Atri Rudra,Kenneth Joseph
-tagged_projects: Bias in NLP,FAI
-tagged_education: Education 1,Education 2
+tagged_projects: Bias in NLP,FAI,Education 1,Education 2
 tagged_courses: 
 tagged_publications: paper3,Publication 1
 tagged_funding: The best gift ever
