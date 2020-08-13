@@ -2,11 +2,9 @@ url: "https://cs4sg.github.io/" # the base hostname & protocol for your site, e.
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "" # the name of your site, e.g. ACME Corp.
 collections:
-    research_projects:
+    projects:
         output: true
     event:
-        output: true
-    education:
         output: true
     courses:
         output: false
