@@ -79,11 +79,11 @@ function findHostname(url){
 
 {% assign tag_array = page.tagged_projects | split: "," %}
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-<h3>Research Projects</h3>
+<h3>Projects</h3>
 
 <ul class="menu">
 {% for tag in tag_array %}
-    {% for project in site.research_projects %}
+    {% for project in site.projects %}
         {% if tag == project.key %}
             <li>
                 <a href="{{ project.url }}">{{ project.title }}</a>
@@ -96,7 +96,7 @@ function findHostname(url){
 <hr>
 
 <!---------------------------->
-{% assign edu_tag_array = page.tagged_education | split: "," %}
+<!-- {% assign edu_tag_array = page.tagged_education | split: "," %}
 {% assign course_tag_array = page.tagged_courses | split: "," %}
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
 <h3>Education and Courses</h3>
@@ -123,7 +123,7 @@ function findHostname(url){
 {% endfor %}
 </ul>
 </div>
-<hr>
+<hr> -->
 
 <!---------------------------->
 {% assign pub_array = page.tagged_publications | split: "," %}

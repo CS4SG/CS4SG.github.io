@@ -55,11 +55,11 @@ layout: default
 {% if page.tagged_projects %}
 <div class="relatedSection">
 {% assign tag_array = page.tagged_projects | split: "," %}
-<h3><b>Research Projects</b></h3>
+<h3><b>Projects</b></h3>
 
 <ul class="menu">
 {% for tag in tag_array %}
-    {% for project in site.research_projects %}
+    {% for project in site.projects %}
         {% if tag == project.key %}
             <li>
                 <a href="{{ project.url }}">{{ project.title }}</a>

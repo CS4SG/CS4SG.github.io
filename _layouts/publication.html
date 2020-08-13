@@ -111,11 +111,11 @@ function findHostname(url){
 {% if page.tagged_projects %}
 <div class="relatedSection">
 {% assign tag_array = page.tagged_projects | split: "," %}
-<h3><b>Research Projects</b></h3>
+<h3><b>Projects</b></h3>
 
 <ul class="menu">
 {% for tag in tag_array %}
-    {% for project in site.research_projects %}
+    {% for project in site.projects %}
         {% if tag == project.key %}
             <li>
                 <a href="{{ project.url }}">{{ project.title }}</a>
@@ -130,7 +130,7 @@ function findHostname(url){
 {% endif %}
 
 <!---------------------------->
-{% if page.tagged_education or page.tagged_courses %}
+<!-- {% if page.tagged_education or page.tagged_courses %}
 {% assign edu_tag_array = page.tagged_education | split: "," %}
 {% assign course_tag_array = page.tagged_courses | split: "," %}
 <div class="relatedSection">
@@ -159,7 +159,7 @@ function findHostname(url){
 </ul>
 </div>
 <hr>
-{% endif %}
+{% endif %} -->
 	
 <!---------------------------->
 <div class="relatedSection">
