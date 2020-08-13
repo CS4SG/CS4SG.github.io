@@ -24,13 +24,13 @@ title: Research
 
 
 <div class="row d-flex flex-wrap justify-content-center">
-  {% assign sorted = site.research_projects | sort: 'date' | reverse %}
-    {% for research_project in sorted limit:4  %}
-      <div onclick="window.location.href = '{{ research_project.url }}';" style="cursor: pointer;">
+  {% assign sorted = site.projects | sort: 'date' | reverse %}
+    {% for project in sorted limit:4  %}
+      <div onclick="window.location.href = '{{ project.url }}';" style="cursor: pointer;">
         <div class="icon-box gridObj" data-aos="fade-up">
           <div class="icon"><i class="icofont-unique-idea"></i></div>
-            <h4 class="title"><a>{{ research_project.title }}</a></h4>
-              <div id="textbox"><p class="description">{{ research_project.description | markdownify }}</p></div>
+            <h4 class="title"><a>{{ project.title }}</a></h4>
+              <div id="textbox"><p class="description">{{ project.description | markdownify }}</p></div>
         </div>
       </div>
     {% endfor %}
