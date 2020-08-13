@@ -101,7 +101,7 @@ function findHostname(url){
                 {% assign tag_proj = res.tagged_projects | split: "," %}
                 <ul class="menu">
                   {% for tag in tag_proj %}
-                    {% for project in site.research_projects %}
+                    {% for project in site.projects %}
                       {% if tag == project.title %}
 			            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
                       {% endif %}

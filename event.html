@@ -42,11 +42,11 @@ title: News and Events
 <br>
 <hr>
 
-<h2 style="text-align:center; font-size:1.5em">External Talks</h2>
+<h2 style="text-align:center; font-size:1.5em">Guest Speakers (External Talks)</h2>
 <div class="row">
   <div class="d-flex flex-wrap justify-content-center">
-    {% assign sorted_talks = site.talks | sort: 'category' %}
-    {% for talk in sorted_talks limit:2 %}
+    {% assign external_talks = site.talks | where: "category", "External" | sort: 'date' | reverse %}
+    {% for talk in external_talks | limit:2 %}
       
       <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '{{ talk.url }}';" style="cursor: pointer;">
         <h2 class="title"><a>{{ talk.title }}</a></h2>
@@ -93,8 +93,8 @@ title: News and Events
   <h2 style="text-align:center; font-size:1.5em">Internal Talks</h2>
   <div class="row">
     <div class="d-flex flex-wrap justify-content-center">
-    {% assign sorted_talks = site.talks | sort: 'category' | reverse %}
-      {% for talk in sorted_talks limit:2 %}
+    {% assign internal_talks = site.talks | where: "category", "Internal" | sort: 'date' | reverse %}
+      {% for talk in internal_talks limit:2 %}
         <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '{{ talk.url }}';" style="cursor: pointer;">
           <h2 class="title"><a>{{ talk.title }}</a></h2>
           
