@@ -46,7 +46,7 @@ title: News and Events
 <div class="row">
   <div class="d-flex flex-wrap justify-content-center">
     {% assign external_talks = site.talks | where: "category", "External" | sort: 'date' | reverse %}
-    {% for talk in external_talks | limit:2 %}
+    {% for talk in external_talks limit:2 %}
       
       <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '{{ talk.url }}';" style="cursor: pointer;">
         <h2 class="title"><a>{{ talk.title }}</a></h2>
