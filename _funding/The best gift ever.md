@@ -8,8 +8,7 @@ grants: 100000
 duration: 2020-06-23
 start: 2020-04-23
 tagged_people: Atri Rudra,Kenneth Joseph
-tagged_projects: Bias in NLP
-tagged_education: Education 1
+tagged_projects: Bias in NLP,Education 1,Education3,FAI
 key: The best gift ever
 ---
 
