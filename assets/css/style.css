@@ -381,7 +381,6 @@ ul.noBullets {
   position: relative;
   white-space: nowrap;
   float: left;
-  margin-top: -10px;
   background: rgba(255, 255, 255, 0.2);
 }
 
