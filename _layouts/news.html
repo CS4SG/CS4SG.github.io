@@ -14,7 +14,7 @@ layout: default
         <p class="postdate">{{ page.date | date: '%B %d, %Y' }}</p>
         {% endif %}
         {% if page.location %}
-        <b>Location: </b>{{ page.location }}
+        <b>Location:&nbsp;</b>{{ page.location }}
         {% endif %}
         </div>
         </div>
@@ -60,153 +60,176 @@ layout: default
         {% endfor %}
       </ul>
   </div>
-  <hr>
   {% endif %}
 
-{% if page.tagged_people %}
-<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-<h3>People</h3>
-{% assign people_tag = page.tagged_people | split: "," %}
-{% assign peopLis = "" | split: ',' %}
-{% for peop in site.people %}
-{% assign peopLis = peopLis | push: peop.key %}
-{% endfor %}
-<ul class="noBullets">
-{% for tag in people_tag %}
-    {% if peopLis contains tag %}
-        {% for peop in site.people %}
-            {% if tag == peop.key %}
-                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag" style="font-size: 0.7em"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
-            {% endif %}
-        {% endfor %}
-    {% else %}
-        <li>{{ tag }}</li>
-    {% endif %}
-{% endfor %}
-</ul>
-</div>
-<hr>
-{% endif %}
-    
-<!---------------------------->
-{% if page.tagged_projects %}
-{% assign tag_array = page.tagged_projects | split: "," %}
-<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-<h3>Projects</h3>
-
-<ul class="menu">
-{% for tag in tag_array %}
-    {% for project in site.projects %}
-        {% if tag == project.key %}
-            <li>
+  <!--Projects-->
+  {% if page.tagged_projects %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_projects | split: "," %}
+    <h3>Projects</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for project in site.projects %}
+            {% if tag == project.key %}
+              <li>
                 <a href="{{ project.url }}">{{ project.title }}</a>
-            </li>
-        {% endif %}
-    {% endfor %}
-{% endfor %}
-</ul>
-</div>
-<hr>
-{% endif %}
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
     
-<!---------------------------->
-<!-- {% if page.tagged_education or page.tagged_courses %}
-{% assign edu_tag_array = page.tagged_education | split: "," %}
-{% assign course_tag_array = page.tagged_courses | split: "," %} 
-<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-<h3>Education and Courses</h3>
-<ul class="menu">
-{% for tag in edu_tag_array %}
-    {% for education_project in site.education %}
-        {% if tag == education_project.key %}
-        <li>
-            <a href="{{ education_project.url }}">{{ education_project.title }}</a>
-        </li>
-        {% endif %}
-    {% endfor %}
-{% endfor %}
-</ul>
-<ul class="menu">
-{% for tag in course_tag_array %}
-    {% for course in site.courses %}
-        {% if tag == course.key %}
-        <li>
-            <a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a>
-        </li>
-        {% endif %}
-    {% endfor %}
-{% endfor %}
-</ul>
-</div>
-<hr>
-{% endif %} -->
-    
-<!---------------------------->
-{% if page.tagged_publications %}
-{% assign pub_array = page.tagged_publications | split: "," %}
-<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-<h3>Publications</h3>
-
-<ul class="menu">
-{% for tag in pub_array %}
-    {% for pub in site.publications %}
-        {% if tag == pub.key %}
-            <li>
+  <!--Publications-->
+  {% if page.tagged_publications %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_publications | split: "," %}
+    <h3>Publications</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for pub in site.publications %}
+            {% if tag == pub.key %}
+              <li>
                 <a href="{{ pub.url }}">{{ pub.title }}</a>
-            </li>
-        {% endif %}    
-    {% endfor %}
-{% endfor %}
-</ul>
-</div>
-<hr>            
-{% endif %}           
-            
-<!---------------------------->
-{% if page.tagged_funding %}
-{% assign funding_array = page.tagged_funding | split: "," %}
-<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-<h3>Funding</h3>
-
-<ul class="menu">
-{% for tag in funding_array %}
-    {% for grant in site.funding %}
-        {% if tag == grant.key %}
-            <li>
-                <a href="{{ grant.url }}">{{ grant.title }}</a>
-            </li>
-        {% endif %}
-    {% endfor %}
-{% endfor %}
-</ul>
-</div>
-<hr>
-{% endif %}
-<!---------------------------->
-{% if page.tagged_talks %}
-{% assign talks_array = page.tagged_talks | split: "," %}
-<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-<h3>Talks</h3>
-
-<ul class="menu">
-{% for tag in talks_array %}
-    {% for talk in site.talks %}
-        {% if tag == talk.key and talk.category == "Internal" %}
-            <li>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+  
+  <!--Code-->
+  {% if page.tagged_code %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_code | split: "," %}
+    <h3>Code Resources</h3>
+      <ol class="codetags">
+        {% for tag in tag_array %}
+          {% for res in site.code %}
+            {% if tag == res.key %}
+              {% assign res_links_array = res.code_links | split: "," %}
+              <li>
+                {{ res.description }}
+                <ul class="menu">
+                  {% for lin in res_links_array %}
+                    <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ol>
+  </div>
+  {% endif %}
+  
+  <!--Teaching Resources-->
+  {% if page.tagged_teaching_resources %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_teaching_resources | split: "," %}
+    <h3>Teaching Resources</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for resource in site.teaching_resources %}
+            {% if tag == resource.key %}
+              <li>
+                <a href="{{ resource.url }}">{{ resource.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+  
+  <!--Courses-->
+  {% if page.tagged_courses %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_courses | split: "," %}
+    <h3>Courses</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for course in site.courses %}
+            {% if tag == course.key %}
+              <li>
+                <a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+    
+    
+  <!--Funding-->
+  {% if page.tagged_funding %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_funding | split: "," %}
+    <h3>Funding</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for grant in site.funding %}
+            {% if tag == grant.key %}
+              <li>
+                <a href="{{ grant.url }}">{{ grant.organization }}</a>: US$ {{ grant.grants }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+  
+  <!--Talks-->
+  {% if page.tagged_talks %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_talks | split: "," %}
+    <h3>Talks</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for talk in site.talks %}
+            {% if tag == talk.key and talk.category == "Internal" %}
+              <li>
                 <a href="{{ talk.url }}">{{ talk.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %} 
+  
+  <!--Blog Posts-->
+  {% assign counter = "" %}
+  {% for post in site.posts %}
+    {% if post.tagged_events contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <h3>Blog Posts</h3>
+      <ul class="menu">
+        {% for post in site.posts %}
+          {% if post.tagged_events contains page.key %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
             </li>
-        {% endif %}
-    {% endfor %}
-{% endfor %}
-</ul>
+          {% endif %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+  
 </div>
-<hr>
-{% endif %}
 <!---------------------------->
     
-
 </div>
-</div>
+<br>
 {%- include narration.html -%}
 
 </body>

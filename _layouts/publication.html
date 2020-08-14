@@ -84,30 +84,6 @@ function findHostname(url){
 <!---------------------------->
 <div class="relatedSection">
 
-  <!--People-->
-  {% if page.tagged_people %}
-    <h3>People</h3>
-    {% assign people_tag = page.tagged_people | split: "," %}
-    {% assign peopLis = "" | split: ',' %}
-    {% for peop in site.people %}
-      {% assign peopLis = peopLis | push: peop.key %}
-    {% endfor %}
-      <ul class="noBullets">
-        {% for tag in people_tag %}
-          {% if peopLis contains tag %}
-            {% for peop in site.people %}
-              {% if tag == peop.key %}
-                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
-              {% endif %}
-            {% endfor %}
-          {% else %}
-            <li>{{ tag }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    <hr>
-  {% endif %}
-
   <!--Projects-->
   {% if page.tagged_projects %}
     {% assign tag_array = page.tagged_projects | split: "," %}
