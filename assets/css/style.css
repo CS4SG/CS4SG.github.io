@@ -40,6 +40,11 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 
+ol.codetags {
+  margin-left: 30px;
+  line-height: 180%;
+}
+
 /* Hides text but will still be read by screen readers. https://webaim.org/techniques/css/invisiblecontent/#:~:text=display%3Anone%20or%20visibility%3A%20hidden,read%20by%20a%20screen%20reader */
 .hide {
 position:absolute;
