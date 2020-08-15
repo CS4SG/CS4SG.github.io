@@ -86,7 +86,4 @@ p {
          {% endif %}
 {% endfor %}
 
- <script>
-     var course_titles = "{{ course_string }}";
-     localStorage.setItem("course_string", course_titles);
- </script>
+<div class="myData" data-x='{{ course_string }}' style="display: none;"></div>
