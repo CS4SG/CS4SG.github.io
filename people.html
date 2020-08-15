@@ -133,7 +133,7 @@ title: People
 <br/><br/>
 {% endif %}
     
-
+<div class="myData" data-x="{{ title_string }}" style="display: none;"></div>
 {% if status_array contains "Former student" %}
 <h2 id="subhead"><span><strong>Former Students</strong></span></h2>
 <!-- -------------Students Section--------------- -->
@@ -164,5 +164,3 @@ title: People
     var title_string = "{{ title_string }}";
     localStorage.setItem("people_list", title_string);
 </script>
-</div>
-<div class="myData" data-x="{{ title_string }}" style="display: none;"></div>
