@@ -1,0 +1,197 @@
+---
+layout: default
+---
+
+<script>
+    function findHostname(url){
+        var hostname = (new URL(url)).hostname;
+        document.write(hostname)
+    }
+</script>
+
+<h2 class="hide">Page Content</h2> <!-- Hidden heading included for screen readers -->
+
+<div id="speak_content">
+{{ content | markdownify }}
+<hr/>
+
+<h2 class="hide">Tagged/Related Items</h2> <!-- Hidden heading included for screen readers -->
+<!---------------------------->
+    
+
+{% if page.tagged_people %}
+<div class="relatedSection">
+{% assign tag_people = page.tagged_people | split: "," %}
+{% assign all_peop = "" | split: ',' %}
+{% for peop in site.people %}
+    {% assign all_peop = all_peop | push: peop.key %}
+{% endfor %}
+<h3><b>People</b></h3>
+<ul class="noBullets">
+{% for tag in tag_people %}
+    {% if all_peop contains tag %}
+        {% for peop in site.people %}
+            {% if tag == peop.name %}
+            <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <li>{{ tag }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+</div>
+<hr/>
+{% endif %}
+<!---------------------------->
+
+<div class="relatedSection">
+<h3><b>Publications</b></h3>
+<ul class="noBullets">
+{% for pub in site.publications %}
+    {% if pub.tagged_projects contains page.key %}
+        <li>
+            <a href="{{ pub.url }}">{{ pub.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+</div>
+<hr/>
+
+<!---------------------------->
+<div class="relatedSection">
+<h3><b>Code Resources</b></h3>
+<ol>
+{% for res in site.code %}
+    {% if res.tagged_projects contains page.key %}
+    {% assign res_links_array = res.code_links | split: "," %}
+    <li>
+    {{ res.description }}
+    <ul class="menu">
+        {% for lin in res_links_array %}
+          <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+        {% endfor %}
+    </ul>
+    </li>
+    {% endif %}
+{% endfor %}
+</ol>
+</div>
+<hr/>
+
+
+<!---------------------------->
+<div class="relatedSection">
+<h3><b>Education and Courses</b></h3>
+<ul class="menu">
+{% for education_project in site.education %}
+    {% if education_project.tagged_projects contains page.key %}
+        <li>
+            <a href="{{ education_project.url }}">{{ education_project.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+<ul class="menu">
+{% for course in site.courses %}
+    {% if course.tagged_projects contains page.key %}
+        <li>
+            <a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}  
+</ul>
+</div>
+<hr/>
+  
+<!---------------------------->
+<div class="relatedSection">
+<h3><b>Funding</b></h3>
+<ul class="menu">
+{% for fund in site.funding %}
+    {% if fund.tagged_projects contains page.key %}
+        <li>
+            <a href="{{ fund.url }}">{{ fund.organization }}</a>: US$ {{ fund.grants }}
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+</div>
+<hr/>
+    
+<!---------------------------->
+<div class="relatedSection">
+<h3><b>Talks</b></h3>
+<ul class="menu">
+{% for talk in site.talks %}
+    {% if talk.tagged_projects contains page.key and talk.category == "Internal" %}
+        <li>
+            <a href="{{ talk.url }}">{{ talk.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+</div>
+<hr/>
+    
+<!---------------------------->
+<div class="relatedSection">
+<h3><b>Resources</b></h3>
+<ul class="noBullets">
+{% for res in site.resource_links %}
+    {% if res.tagged_projects contains page.title %}
+    {% assign res_links_array = res.link | split: "," %}
+        {% for lin in res_links_array %}  
+          <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</ul>
+</div>
+<hr/>
+    
+<!---------------------------->
+<div class="relatedSection">
+<h3><b>Events</b></h3>
+<ul class="menu">
+{% for event in site.event %}
+    {% if event.tagged_projects contains page.key %}
+        <li>
+            <a href="{{ event.url }}">{{ event.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+
+<ul class="menu">
+{% for talk in site.talks %}
+    {% if talk.tagged_projects contains page.key and talk.category == "External" %}
+        <li>
+            <a href="{{ talk.url }}">{{ talk.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+</div>
+<hr/>
+    
+
+<!---------------------------->
+<div class="relatedSection">
+<h3><b>Blog Posts</b></h3>
+<ul class="menu">
+{% for post in site.posts %}
+    {% if post.tagged_projects contains page.key %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+</div>
+<hr/>
+<!---------------------------->
+</div>
+
+{%- include narration.html -%}

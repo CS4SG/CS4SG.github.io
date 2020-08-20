@@ -1,0 +1,62 @@
+---
+layout: default
+title: Blog
+---
+<!-- template from https://codepen.io/anupkumar92/pen/bOvYYm -->
+
+<section class="blog" data-scroll-index="4">
+    <div class="container">
+        <div class="row">
+        
+        {% for post in site.posts %}
+            <div class="col-md-6 col-lg-4">
+              <div class="item">
+              
+                <h3 class="hide">Featured Image</h3>
+                <div class="img">
+                  <img src="{% if post.image %}{{ post.image }}{% else %}assets/img/default_blog_post.png{% endif %}" alt="{{ post.image_description }}">
+                </div>
+                
+                <div class="info">
+                  <div class="date">
+                    <h3 class="hide">Date</h3>
+                    <span>{{ post.date | date: '%b %d' }}</span>
+                  </div>
+                  
+                  <h2><a href="{{ post.url }}"><b>{{ post.title }}</b></a></h2>
+                  
+                  <h3 class="hide">Post Excerpt</h3>
+                    <p>{{ post.excerpt }}</p>
+                    
+                  <h3 class="hide">Authors</h3>
+                  <a class="user"><i class='bx bxs-user'></i></a>
+                {% if post.authors %}
+                {% assign tag_people = post.authors | split: "," %}
+                {% assign all_peop = "" | split: ',' %}
+                {% for peop in site.people %}
+                    {% assign all_peop = all_peop | push: peop.key %}
+                {% endfor %}
+                <div class="people">
+                    {% for tag in tag_people %}
+                        {% if all_peop contains tag %}
+                            {% for peop in site.people %}
+                                {% if tag == peop.key %}
+                                    <p><a class="postAuthors" href="{{ peop.link }}" target="_blank">{{ tag }}</a></p>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            <p class="postAuthors">{{ tag }}</p>
+                        {% endif %}
+                        {% if forloop.last == false %},&nbsp;{% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                </div>
+              </div>
+            </div>
+        {% endfor %}
+        
+        </div>
+    </div>
+</section>

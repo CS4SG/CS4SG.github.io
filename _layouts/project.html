@@ -1,0 +1,267 @@
+---
+layout: default
+---
+
+<script>
+    function findHostname(url){
+        var hostname = (new URL(url)).hostname;
+        document.write(hostname)
+    }
+</script>
+
+<h2 class="hide">Page Content</h2> <!-- Hidden heading included for screen readers -->
+
+<div id="speak_content">
+{{ content | markdownify }}
+<hr/>
+
+<!---------------------------->
+<h2 class="hide">Tagged/Related Items</h2> <!-- Hidden heading included for screen readers -->
+<div class="relatedSection">
+
+  <!--People-->
+  {% if page.tagged_people %}
+    <h3>People</h3>
+    {% assign people_tag = page.tagged_people | split: "," %}
+    {% assign peopLis = "" | split: ',' %}
+    {% for peop in site.people %}
+      {% assign peopLis = peopLis | push: peop.key %}
+    {% endfor %}
+      <ul class="noBullets">
+        {% for tag in people_tag %}
+          {% if peopLis contains tag %}
+            {% for peop in site.people %}
+              {% if tag == peop.key %}
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            <li>{{ tag }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
+  <!--Publications-->
+  {% assign counter = "" %}
+  {% for pub in site.publications %}
+    {% if pub.tagged_projects contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Publications</h3>
+      <ul class="noBullets">
+        {% for pub in site.publications %}
+          {% if pub.tagged_projects contains page.key %}
+            <li>
+              <a href="{{ pub.url }}">{{ pub.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
+  <!--Resources-->
+  {% assign counter = "" %}
+  {% for resource in site.resource_links %}
+    {% if resource.tagged_projects contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Resources</h3>
+      <ul class="noBullets">
+        {% for resource in site.resource_links %}
+          {% if resource.tagged_projects contains page.key %}
+            {% assign res_links_array = resource.link | split: "," %}
+              {% for lin in res_links_array %}
+                <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+              {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+
+  <!--Code-->
+  {% assign counter = "" %}
+  {% for res in site.code %}
+    {% if res.tagged_projects contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Code Resources</h3>
+      <ol class="codetags">
+        {% for res in site.code %}
+          {% if res.tagged_projects contains page.key %}
+            {% assign res_links_array = res.code_links | split: "," %}
+            <li>
+              {{ res.description }}
+              <ul class="menu">
+                {% for lin in res_links_array %}
+                  <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+    <hr>
+  {% endif %}
+
+  <!--Teaching Resources-->
+  {% assign counter = "" %}
+  {% for resource in site.teaching_resources %}
+    {% if resource.tagged_projects contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Teaching Resources</h3>
+      <ul class="noBullets">
+        {% for resource in site.teaching_resources %}
+          {% if resource.tagged_projects contains page.key %}
+            <li>
+              <a href="{{ resource.url }}">{{ resource.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
+  <!--Courses-->
+  {% assign counter = "" %}
+  {% for course in site.courses %}
+    {% if course.tagged_projects contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Courses</h3>
+      <ul class="noBullets">
+        {% for course in site.courses %}
+          {% if course.tagged_projects contains page.key %}
+            <li>
+              <a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+
+  <!--Funding-->
+  {% assign counter = "" %}
+  {% for grant in site.funding %}
+    {% if grant.tagged_projects contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Funding</h3>
+      <ul class="menu">
+        {% for grant in site.funding %}
+          {% if grant.tagged_projects contains page.key %}
+            <li>
+              <a href="{{ grant.url }}">{{ grant.organization }}</a>: US$ {{ grant.grants }}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+    
+  <!--Talks-->
+  {% assign counter = "" %}
+  {% for talk in site.talks %}
+    {% if talk.tagged_projects contains page.key and talk.category == "Internal" %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Talks</h3>
+      <ul class="menu">
+        {% for talk in site.talks %}
+          {% if talk.tagged_projects contains page.key and talk.category == "Internal" %}
+            <li>
+              <a href="{{ talk.url }}">{{ talk.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
+  <!--Events (News & External Talks)-->
+  {% assign counter = "" %}
+  {% for event in site.event %}
+    {% if event.tagged_projects contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  {% for talk in site.talks %}
+    {% if talk.tagged_projects contains page.key and talk.category == "External" %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Events</h3>
+      <ul class="menu">
+        {% for event in site.event %}
+          {% if event.tagged_projects contains page.key %}
+            <li>
+              <a href="{{ event.url }}">{{ event.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+        {% for talk in site.talks %}
+          {% if talk.tagged_projects contains page.key and talk.category == "External" %}
+            <li>
+              <a href="{{ talk.url }}">{{ talk.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+    
+  <!--Blog Posts-->
+  {% assign counter = "" %}
+  {% for post in site.posts %}
+    {% if post.tagged_projects contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Blog Posts</h3>
+      <ul class="menu">
+        {% for post in site.posts %}
+          {% if post.tagged_projects contains page.key %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
+</div>
+<!---------------------------->
+</div>
+
+{%- include narration.html -%}

@@ -1,0 +1,223 @@
+---
+layout: default
+---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="assets/js/cropper.js"></script>
+<script>
+    recrop("speaker_picture", 30, 30);
+</script>
+<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
+<div id="speak_content">
+
+
+{% if page.talk_by %}
+<div class="relatedSection">
+<center>
+{% for peop in site.people %}
+    {% if peop.name == page.talk_by %}
+        <img src="{{ peop.image }}" class="speaker_picture" style="border-radius: 50%; width:140px;"/>
+    {% endif %}
+{% endfor %}
+    <br/>
+<h3 style="display:inline"><b>Speaker: </b></h3>{{ page.talk_by }}<br/>
+{% for peop in site.people %}
+    {% if peop.name == page.talk_by %}
+	<i style="font-size: small;">{{ peop.designation }}<br/>({{ peop.category }})</i>
+    {% endif %}
+{% endfor %}
+</center>
+</div><br/><br/>
+{% endif %}
+<!-- -------------------------------------- -->
+
+
+<h2 class="hide">Page Content</h2> <!-- Hidden heading included for screen readers -->
+{{ content | markdownify }}
+<hr/>
+<!-- -------------------------------------- -->
+
+
+{% if page.date %}
+<div class="relatedSection">
+<h3 style="display:inline"><b>Date:</b></h3> {{ page.date | date: '%B %d, %Y' }}
+</div>
+<hr/>
+{% endif %}
+<!-- -------------------------------------- -->
+
+{% if page.locus %}
+<div class="relatedSection">
+<h3 style="display:inline"><b>Location: </b></h3>{{ page.locus }}
+</div>
+<hr/>
+{% endif %}
+<!-- -------------------------------------- -->
+<div class="relatedSection">
+
+  <!--Projects-->
+  {% if page.tagged_projects %}
+    {% assign tag_array = page.tagged_projects | split: "," %}
+    <h3>Projects</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for project in site.projects %}
+            {% if tag == project.key %}
+              <li>
+                <a href="{{ project.url }}">{{ project.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
+  <!--Publications-->
+  {% if page.tagged_publications %}
+    {% assign tag_array = page.tagged_publications | split: "," %}
+    <h3>Publications</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for pub in site.publications %}
+            {% if tag == pub.key %}
+              <li>
+                <a href="{{ pub.url }}">{{ pub.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
+  <!--Code-->
+  {% if page.tagged_code %}
+    {% assign tag_array = page.tagged_code | split: "," %}
+    <h3>Code Resources</h3>
+      <ol class="codetags">
+        {% for tag in tag_array %}
+          {% for res in site.code %}
+            {% if tag == res.key %}
+              {% assign res_links_array = res.code_links | split: "," %}
+              <li>
+                {{ res.description }}
+                <ul class="menu">
+                  {% for lin in res_links_array %}
+                    <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ol>
+    <hr/>
+  {% endif %}
+  
+  <!--Teaching Resources-->
+  {% if page.tagged_teaching_resources %}
+    {% assign tag_array = page.tagged_teaching_resources | split: "," %}
+    <h3>Teaching Resources</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for resource in site.teaching_resources %}
+            {% if tag == resource.key %}
+              <li>
+                <a href="{{ resource.url }}">{{ resource.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
+  <!--Courses-->
+  {% if page.tagged_courses %}
+    {% assign tag_array = page.tagged_courses | split: "," %}
+    <h3>Courses</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for course in site.courses %}
+            {% if tag == course.key %}
+              <li>
+                <a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
+  <!--Funding-->
+  {% if page.tagged_funding %}
+    {% assign tag_array = page.tagged_funding | split: "," %}
+    <h3>Funding</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for grant in site.funding %}
+            {% if tag == grant.key %}
+              <li>
+                <a href="{{ grant.url }}">{{ grant.organization }}</a>: US$ {{ grant.grants }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+
+  <!--Events (News & External Talks)-->
+  {% assign counter = "" %}
+  {% for event in site.event %}
+    {% if event.tagged_talks contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+
+  {% if counter.size > 0 %}
+    <h3>Events</h3>
+      <ul class="menu">
+        {% for event in site.event %}
+          {% if event.tagged_talks contains page.key %}
+            <li>
+              <a href="{{ event.url }}">{{ event.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+
+  <!--Blog Posts-->
+  {% assign counter = "" %}
+  {% for post in site.posts %}
+    {% if post.tagged_talks contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Blog Posts</h3>
+      <ul class="menu">
+        {% for post in site.posts %}
+          {% if post.tagged_talks contains page.key %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
+</div>
+<!-- -------------------------------------- -->
+</div>
+{%- include narration.html -%}

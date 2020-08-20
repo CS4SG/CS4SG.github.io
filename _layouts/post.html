@@ -1,0 +1,252 @@
+---
+layout: default
+---
+
+<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
+<div class="postimagebyline">
+{% if page.image %}
+  <img class="postimage" src="{{ "https://cs4sg.github.io/" | append: page.image }}" alt="{{ page.image_description }}">
+{% endif %}
+<br><br>
+
+<!---------------------------->
+<h2 class="hide">Byline (Authors &amp; Date)</h2>
+  {% assign tag_people = page.authors | split: "," %}
+  {% assign all_peop = "" | split: ',' %}
+  {% for peop in site.people %}
+    {% assign all_peop = all_peop | push: peop.key %}
+  {% endfor %}
+  <div class="postbyline">
+    <p class="postdate">{{ page.date | date: '%B %d, %Y' }}</p>
+    <br>
+    
+    <p>By&nbsp;</p>
+      {% for tag in tag_people %}
+        {% if all_peop contains tag %}
+          {% for peop in site.people %}
+            {% if tag == peop.key %}
+              <p><a href="{{ peop.link }}" target="_blank">{{ tag }}</a></p>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <p>{{ tag }}</p>
+        {% endif %}
+        {% if forloop.last == false %},&nbsp;{% endif %}
+      {% endfor %}    
+    
+  </div>
+</div>
+
+
+<!---------------------------->
+<h2 class="hide">Page Content</h2>
+<p>{{ page.content | markdownify }}</p>
+<hr>
+
+<!---------------------------->
+<h2 style="font-size:1em; text-align:center">Tags</h2>
+<div class="relatedSection postsections">
+
+  <!--People-->
+  {% if page.tagged_people %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <h3>People</h3>
+    {% assign people_tag = page.tagged_people | split: "," %}
+    {% assign peopLis = "" | split: ',' %}
+    {% for peop in site.people %}
+      {% assign peopLis = peopLis | push: peop.key %}
+    {% endfor %}
+      <ul class="noBullets">
+        {% for tag in people_tag %}
+          {% if peopLis contains tag %}
+            {% for peop in site.people %}
+              {% if tag == peop.key %}
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            <li>{{ tag }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+
+  <!--Projects-->
+  {% if page.tagged_projects %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_projects | split: "," %}
+    <h3>Projects</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for project in site.projects %}
+            {% if tag == project.key %}
+              <li>
+                <a href="{{ project.url }}">{{ project.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+    
+  <!--Publications-->
+  {% if page.tagged_publications %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_publications | split: "," %}
+    <h3>Publications</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for pub in site.publications %}
+            {% if tag == pub.key %}
+              <li>
+                <a href="{{ pub.url }}">{{ pub.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+  
+  <!--Code-->
+  {% if page.tagged_code %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_code | split: "," %}
+    <h3>Code Resources</h3>
+      <ol class="codetags">
+        {% for tag in tag_array %}
+          {% for res in site.code %}
+            {% if tag == res.key %}
+              {% assign res_links_array = res.code_links | split: "," %}
+              <li>
+                {{ res.description }}
+                <ul class="menu">
+                  {% for lin in res_links_array %}
+                    <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ol>
+  </div>
+  {% endif %}
+  
+  <!--Teaching Resources-->
+  {% if page.tagged_teaching_resources %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_teaching_resources | split: "," %}
+    <h3>Teaching Resources</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for resource in site.teaching_resources %}
+            {% if tag == resource.key %}
+              <li>
+                <a href="{{ resource.url }}">{{ resource.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+  
+  <!--Courses-->
+  {% if page.tagged_courses %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_courses | split: "," %}
+    <h3>Courses</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for course in site.courses %}
+            {% if tag == course.key %}
+              <li>
+                <a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+    
+    
+  <!--Funding-->
+  {% if page.tagged_funding %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_funding | split: "," %}
+    <h3>Funding</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for grant in site.funding %}
+            {% if tag == grant.key %}
+              <li>
+                <a href="{{ grant.url }}">{{ grant.organization }}</a>: US$ {{ grant.grants }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+  
+  <!--Talks-->
+  {% if page.tagged_talks %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_talks | split: "," %}
+    <h3>Talks</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for talk in site.talks %}
+            {% if tag == talk.key and talk.category == "Internal" %}
+              <li>
+                <a href="{{ talk.url }}">{{ talk.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+  
+  <!--Events (News & External Talks)-->
+  {% if page.tagged_events or page.tagged_talks %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign event_array = page.tagged_events | split: "," %}
+    {% assign talk_array = page.tagged_talks | split: "," %}
+    <h3>Events</h3>
+      <ul class="menu">
+        {% for tag in event_array %}
+          {% for event in site.event %}
+            {% if tag == event.key %}
+              <li>
+                <a href="{{ event.url }}">{{ event.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        {% for tag in talk_array %}
+          {% for talk in site.talks %}
+            {% if tag == talk.key and talk.category == "External" %}
+              <li>
+                <a href="{{ talk.url }}">{{ talk.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
+
+
+
+</div>
+

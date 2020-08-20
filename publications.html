@@ -1,0 +1,84 @@
+---
+layout: default
+title: Publications
+---
+<style>
+    h3 {
+      display: inline;
+      font-size: 1em;
+      font-family: "Open Sans", sans-serif;
+    }
+    
+    input[type=text], select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<h2 class="hide">Search</h2>
+<select onchange= "location = this.value;">
+    <option selected value="">-- Select a method to search --</option>
+    <option value="javascript:javascript:decide(0)">Search by Publication Title</option>
+    <option value="javascript:decide(1)">Search by Author name</option>
+    <option value="javascript:decide(2)">Search by Date</option>
+</select>
+{% assign publication_string = "" %}
+<div id="embed"></div>
+<hr/>
+<ol id="myUL">
+{% for pub in site.publications %}
+    <li>
+      <h2 style="font-size:1.5em"><a href="{{ pub.url }}">{{ pub.title }}</a></h2>
+        {% if pub.authors %}
+          <h3>Author(s):&nbsp;</h3><a>{{ pub.authors }}</a><br/>
+        {% endif %}
+        {% if pub.abstract %}
+          <h3>Abstract:&nbsp;</h3><div id="desc" style="display:inline">{{ pub.abstract }}</div><br>
+        {% endif %}
+        {% if pub.date %}
+          <h3>Date:&nbsp;</h3><a>{{ pub.date | date: '%B %d, %Y' }}</a>
+        {% endif %}
+    </li>
+    <hr />
+    
+         <!-- create string with all titles -->
+         {% capture publication_string %}{{ publication_string | append: pub.title }}{% endcapture %}
+         {% if forloop.last == false %}
+             {% capture publication_string %}{{ publication_string | append: "," }}{% endcapture %}
+         {% endif %}
+{% endfor %}
+</ol>
+
+<div class="myData" data-x='{{ publication_string }}'></div>
+
+<script>
+var myDiv = $('#desc');
+myDiv.text(myDiv.text().substring(0,250)+'...')
+</script>
+
+
+<script>
+    function myFunction(num) {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[num];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+
+        function decide(n){
+            var l = ["Publication Title", "Author name", "Date"]
+            document.getElementById("embed").innerHTML = '<input type="text" id="myInput" onkeyup="myFunction('+n+')" placeholder="Enter '+l[n]+'" title="Type in a name">'
+        }
+</script>

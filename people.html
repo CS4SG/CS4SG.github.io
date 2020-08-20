@@ -1,0 +1,162 @@
+---
+layout: default
+title: People
+---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="assets/js/cropper.js"></script>
+<script>
+    recrop("team_picture", 600, 600);
+</script>
+
+<style>
+  h2 {
+    font-size: 1.5em;
+    position: relative;
+    padding-bottom: 30px;
+    z-index: 2;
+  }
+        
+  h3 {
+    font-size: 1em;
+  }
+        
+  #subhead {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 0px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+  } 
+
+  #subhead span { 
+    background:#fff; 
+    padding:0 10px; 
+  }
+</style>
+
+<section id="team" class="team">
+  <div class="container">
+
+    <div style="text-align:center" data-aos="fade-in" data-aos-delay="100">
+    
+      <p style="margin-top: -50px;">We are a group of world class faculty, diverse community of students, scholars, and collaborators with the mission to make Computer Science more accessible for the welfare of the society.</p><br/>
+      {% assign status_array = "" %}
+      {% for peop in site.people %}
+        {% capture status_array %}{{ status_array | append: peop.category }}{% endcapture %}
+        {% if forloop.last == false %}
+            {% capture status_array %}{{ status_array | append: "," }}{% endcapture %}
+        {% endif %}
+      {% endfor %}
+
+      
+
+<div class="row">
+{% assign title_string = "" %}
+
+<!-- -------------Internal Faculty Section--------------- -->
+{% if status_array contains "UB faculty" %}
+  <h2 id="subhead"><span><strong>Internal Faculty</strong></span></h2>
+
+{% for peop in site.people %}
+    {% capture title_string %}{{ title_string | append: peop.name }}{% endcapture %}
+    {% if forloop.last == false %}
+        {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
+    {% endif %}
+    
+    {% if peop.category == "UB faculty" %}
+    
+      <div class="col-lg-4 col-md-6">
+        <div class="member" data-aos="fade-up">
+          <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
+            <div class="member-info">
+              <h3><a href="{{ peop.link }}" style="text-decoration:none; color:black;" target="_blank">{{ peop.name }}</a></h3>
+                <span class="designation">{{ peop.designation }}</span><br>
+                <div class="social">
+                  {{ peop.social }}<br/>{{ peop.status }}
+                </div>
+            </div>
+        </div>
+      </div>
+
+    {% endif %}
+    
+{% endfor %}
+{% endif %}
+<br/><br/>
+<div class="myData" data-x='{{ title_string }}'></div>
+<!-- -------------External Faculty Section--------------- -->
+{% if status_array contains "External collaborator" %}
+  <h2 id="subhead"><span><strong>External Collaborators</strong></span></h2>
+
+{% for peop in site.people %}
+    {% if peop.category == "External collaborator" %}
+  <div class="col-lg-4 col-md-6">
+    <div class="member" data-aos="fade-up">
+      <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
+      <div class="member-info">
+        <h3><a href="{{ peop.link }}" style="text-decoration:none; color:black;" target="_blank">{{ peop.name }}</a></h3>
+          <span class="designation">{{ peop.designation }}</span><br>
+          <div class="social">
+            {{ peop.social }}<br/>{{ peop.status }}
+          </div>
+      </div>
+    </div>
+  </div>
+
+    {% endif %}
+{% endfor %}
+<br/><br/>
+{% endif %}
+
+
+{% if status_array contains "Current student" %}
+<h2 id="subhead"><span><strong>Current Students</strong></span></h2>
+<!-- -------------Students Section--------------- -->
+{% for peop in site.people %}
+    {% if peop.category == "Current student" %}
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
+    <div class="member-info">
+      <h3><a href="{{ peop.link }}" style="text-decoration:none; color:black;" target="_blank">{{ peop.name }}</a></h3>
+      <span class="designation">{{ peop.designation }}</span><br>
+      <div class="social">
+        {{ peop.social }}<br/>{{ peop.status }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- -------------------------------->
+{% endif %}
+{% endfor %}
+<br/><br/>
+{% endif %}
+
+    
+{% if status_array contains "Former student" %}
+<h2 id="subhead"><span><strong>Former Students</strong></span></h2>
+<!-- -------------Students Section--------------- -->
+{% for peop in site.people %}
+    {% if peop.category == "Former student" %}
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
+    <div class="member-info">
+      <h3><a href="{{ peop.link }}" style="text-decoration:none; color:black;" target="_blank">{{ peop.name }}</a></h3>
+      <span class="designation">{{ peop.designation }}</span><br>
+      <div class="social">
+        {{ peop.social }}<br/>{{ peop.status }}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -------------------------------->
+{% endif %}
+{% endfor %}
+<br/><br/>
+{% endif %}
+</div>
+    </div>
+  </div>
+</section>
