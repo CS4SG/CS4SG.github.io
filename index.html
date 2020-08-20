@@ -63,27 +63,25 @@ layout: home
 </style>
 
 <section id="about" class="about">
-    <div class="container">
+    <div class="container" style="text-align:center">
 
         <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-        <h2>Research</h2>
+        <h2>Projects</h2>
         </div>
-        <center>
         <div style="padding-bottom: 6px;">Our faculty and students actively work on projects covering a broad range of exciting, cutting-edge topics including AI, big data, bioinformatics, cloud services, computing research, crypto-currency, cyber security, machine learning, Internet of Things, self-driving cars, smartphones, and 5G wireless.</div> 
         <br/>
         <div class="owl-carousel testimonials-carousel">
-            {% for research_project in site.research_projects %}
-                <div class="scrollTemplate" onclick="window.open('{{ research_project.url }}', '_self');" style="cursor: pointer;">{{ research_project.title }}</div>
+            {% for project in site.projects %}
+                <div class="scrollTemplate" onclick="window.open('{{ project.url }}', '_self');" style="cursor: pointer;">{{ project.title }}</div>
             {% endfor %}
         </div><br/>
-        <a href="\research.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">Research Homepage <i class="icofont-circled-right"></i></a>
-        </center>
+        <a href="/projects.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">Projects Page <i class="icofont-circled-right"></i></a>
     </div>
 </section>
 
 
 
-<!-- ======= Education Section ======= -->
+<!-- ======= Education Section =======
 <section id="educate" class="educate">
     <div class="container">
         <div class="row no-gutters">
@@ -115,19 +113,19 @@ layout: home
                 {% endfor %}
 
             </div>
-            </div><!-- End .content-->
+            </div>
         </div>
         </div>
 
     </div>
-    </section><!-- End Education Section -->
+    </section> End Education Section -->
 
 
 
 
 
 <!-- ======= Events Section ======= -->
-<section id="testimonials" class="testimonials section-bg">
+<section id="testimonials" class="testimonials ">
     <div class="container">
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
@@ -153,18 +151,51 @@ layout: home
             <h3>Latest Event</h3>
             {% for event in sorted limit:1 %}
             <h4><b><a href="{{ event.url }}">{{ event.title }}</a></b></h4>
-            <p style="text-align: left;">{{ event.date | date: '%B %d, %Y' }}<hr/>
-                <div id="desc" style="text-align: left; margin-bottom: 5px;">{{ event.description }}</div>
-            </p>
+            <p style="text-align: left;">{{ event.date | date: '%B %d, %Y' }}</p><hr/>
+            <p id="desc" style="text-align: left; margin-bottom: 5px;">{{ event.description }}</p>
             {% endfor %}
             </div>
             <br/>
-            <a href="\event.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">All Events <i class="icofont-circled-right"></i></a>
+            <a href="/event.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">All Events <i class="icofont-circled-right"></i></a>
         </center>
       </div>
     </div>
 </section>
 
+
+<!-- ======= Blog Section ======= -->
+<section id="educate" class="educate">
+    <div class="container">
+        <div class="row no-gutters">
+        <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="content">
+            <h3>Our Blog</h3>
+            <p><i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Addressing retention, diversity, and persistence in computing through educational approaches are targeted. Overall, the objective is developing a skilled and diverse workforce in computing for Social Good for the future.
+            </p><p><a href="https://engineering.buffalo.edu/computer-science-engineering/research/research-areas/computing-education.html" style="text-decoration:none;" target="_blank">~ Department of Computer Science and Engineering, UB</a></p><br>
+            <a href="/blog.html" class="educate-btn">See all blog posts <i class="bx bx-chevron-right"></i></a>
+            </div>
+        </div>
+        <div class="col-xl-7 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+            <h4>Latest posts</h4>
+            <div class="row">
+                {% assign sorted = site.posts | sort: 'date' | reverse %}
+                {% for post in sorted limit:4 %}
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('{{ post.url }}', '_self');" style="cursor: pointer;">
+                <i class="icofont-book"></i>
+                <h4>{{ post.title }}</h4>
+                <p class="description">{{ post.excerpt }}</p>
+                </div>
+                {% endfor %}
+
+            </div>
+            </div><!-- End .content-->
+        </div>
+        </div>
+
+    </div>
+</section><!-- End Education Section -->
 
 <!-- ======= People Section ======= -->
 
