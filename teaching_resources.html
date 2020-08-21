@@ -2,4 +2,9 @@
 layout: default
 title: Teaching Resources
 ---
-<p>Placeholder text</p>
+
+{% for resource in site.teaching_resources %}
+  {% if resource.path contains "index.html" %}
+  <p><a href="{{ resource.url }}">{{ resource.folder }}</a></p>
+  {% endif %}
+{% endfor %}
