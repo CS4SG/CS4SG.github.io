@@ -1,0 +1,11 @@
+/_teaching_resources	
+	/Resource1
+		Gears.JPG
+		index.html
+		Simple Page 2.html
+		Simple Page.md
+		teachingresource-structure.txt
+	/Resource2
+		Black-White-Grid.PNG
+		index.html
+		Open_Sans.zip
