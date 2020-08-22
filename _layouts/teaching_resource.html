@@ -2,27 +2,78 @@
 layout: default
 ---
 <html>
-<h2>Related files</h2>
-<!-- Files that have yaml front matter aka have their own page on the website -->
-<ul class="noBullets">
-{% for file in site.teaching_resources %}
-  {% if file.path contains page.folder %}
-    {% unless file.path contains "index.html" %}
-    <li><a href="{{ file.url }}">{{ file.title }}</a></li>
-    {% endunless %}
-  {% endif %}
-{% endfor %}
-<!-- Files that have no yaml front matter e.g. images, zip files, plain text files -->
-{% for collection in site.collections %}
-  {% if collection.label == "teaching_resources" %}
-    {% for file in collection.files %}
-      {% if file.path contains page.folder %}
-        {% assign fixedpath = file.path | replace_first: "_", "/" %}
-        <li><a href="{{ site.url | append: fixedpath }}" target="_blank">{{ file.basename }}</a></li>
-      {% endif %}
+
+  <h2 class="hide">Description</h2>
+    <p>{{ content | markdownify }}</p>
+  
+  <h2 class="hide">Files</h2>
+    <ul class="noBullets">
+      <!-- Files that have yaml front matter aka have their own page on the website -->
+      {% for file in site.teaching_resources %}
+        {% if file.path contains page.key %}
+          {% unless file.path contains "index.html" %}
+            <li><i class='bx bxs-right-arrow'></i>&nbsp;<a href="{{ file.url }}">{{ file.title }}</a></li>
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+      <!-- Files that have no yaml front matter e.g. images, zip files, plain text files -->
+      {% for collection in site.collections %}
+        {% if collection.label == "teaching_resources" %}
+          {% for file in collection.files %}
+            {% if file.path contains page.key %}
+              {% assign fixedpath = file.path | replace_first: "_", "/" %}
+              <li><i class='bx bxs-right-arrow'></i>&nbsp;<a href="{{ site.url | append: fixedpath }}" target="_blank">{{ file.basename }}</a></li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+<!---------------------------->
+<div class="relatedSection">
+
+  <!--People-->
+  {% if page.tagged_people %}
+    <hr>
+    <h3>People</h3>
+    {% assign people_tag = page.tagged_people | split: "," %}
+    {% assign peopLis = "" | split: ',' %}
+    {% for peop in site.people %}
+      {% assign peopLis = peopLis | push: peop.key %}
     {% endfor %}
+      <ul class="noBullets">
+        {% for tag in people_tag %}
+          {% if peopLis contains tag %}
+            {% for peop in site.people %}
+              {% if tag == peop.key %}
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            <li>{{ tag }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
   {% endif %}
-{% endfor %}
-</ul>
+  
+  <!--Projects-->
+  {% if page.tagged_projects %}
+    {% assign tag_array = page.tagged_projects | split: "," %}
+    <hr>
+    <h3>Projects</h3>
+      <ul class="menu">
+        {% for tag in tag_array %}
+          {% for project in site.projects %}
+            {% if tag == project.key %}
+              <li>
+                <a href="{{ project.url }}">{{ project.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  {% endif %}
+  
+</div>
 </html>
 
