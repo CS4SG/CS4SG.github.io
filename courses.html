@@ -80,7 +80,7 @@ p {
 </div>
 
 <br>
-         {% capture course_string %}{{ course_string | append: course.prefix_number }}{% endcapture %}
+         {% capture course_string %}{{ course_string | append: course.key }}{% endcapture %}
          {% if forloop.last == false %}
              {% capture course_string %}{{ course_string | append: "," }}{% endcapture %}
          {% endif %}
