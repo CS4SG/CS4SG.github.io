@@ -8,6 +8,5 @@ links: https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjr3_Df9vLpAhVTCc0KHRlI
 abstract: This is a sample abstract
 tagged_people: Atri Rudra,Varun Chandola
 tagged_projects: Machine Learning,Bias in NLP,Education 1,Education 2
-tagged_courses: ABC101,XYZ202
 key: Paper3
 ---
