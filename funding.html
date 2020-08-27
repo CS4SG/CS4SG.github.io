@@ -119,7 +119,7 @@ p {
           )
         }
         </script>
-        {% capture fund_string %}{{ fund_string | append: fund.grant_title }}{% endcapture %}
+        {% capture fund_string %}{{ fund_string | append: fund.key }}{% endcapture %}
         {% if forloop.last == false %}
             {% capture fund_string %}{{ fund_string | append: "," }}{% endcapture %}
         {% endif %}
