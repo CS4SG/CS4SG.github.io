@@ -257,7 +257,7 @@ function findHostname(url){
 </font>
 
 <!-- ----------------------------------------------- -->
-{% capture code_string %}{{ code_string | append: codes.code_title }}{% endcapture %}
+{% capture code_string %}{{ code_string | append: codes.key }}{% endcapture %}
 {% if forloop.last == false %}
     {% capture code_string %}{{ code_string | append: "," }}{% endcapture %}
 {% endif %}
