@@ -58,7 +58,7 @@ title: People
   <h2 id="subhead"><span><strong>Internal Faculty</strong></span></h2>
 
 {% for peop in site.people %}
-    {% capture title_string %}{{ title_string | append: peop.name }}{% endcapture %}
+    {% capture title_string %}{{ title_string | append: peop.key }}{% endcapture %}
     {% if forloop.last == false %}
         {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
     {% endif %}
