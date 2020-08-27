@@ -12,7 +12,7 @@ title: Projects
     }
 </style>
 <h2 class="hide">Search</h2>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by entering Research Title or Title Keywords. (Example: Bias) etc." title="Type in Research Title">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by entering a project's title or title keywords. (Example: Bias) etc." title="Type in Project Title">
 
 <div id="myUL">
 {% assign title_string = "" %}
@@ -30,7 +30,7 @@ title: Projects
         </div>
 
          <!-- create string with all titles -->
-         {% capture title_string %}{{ title_string | append: project.title }}{% endcapture %}
+         {% capture title_string %}{{ title_string | append: project.key }}{% endcapture %}
          {% if forloop.last == false %}
              {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
          {% endif %}
