@@ -160,24 +160,6 @@ function findHostname(url){
     
     <div class="content">
       <ul class="noBullets">
-      
-<!-- -----------------Related Projects----------------- -->
-      {% if codes.tagged_projects %}
-        <li>
-          <h5>Projects:</h5>
-          {% assign proj_array = codes.tagged_projects | split: "," %}
-          <ul class="menu">
-            {% for tag in proj_array %}
-              {% for project in site.projects %}
-                      {% if tag == project.key %}
-                        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
-                    {% endif %}
-              {% endfor %}
-            {% endfor %}
-          </ul>
-        </li>
-      <hr/>
-      {% endif %}      
 	      
 <!-- -----------------Related Authors----------------- -->
   {% if codes.code_authors %}
@@ -204,6 +186,24 @@ function findHostname(url){
         </li>
     <hr/>
     {% endif %}
+	      
+<!-- -----------------Related Projects----------------- -->
+      {% if codes.tagged_projects %}
+        <li>
+          <h5>Projects:</h5>
+          {% assign proj_array = codes.tagged_projects | split: "," %}
+          <ul class="menu">
+            {% for tag in proj_array %}
+              {% for project in site.projects %}
+                      {% if tag == project.key %}
+                        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+                    {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </ul>
+        </li>
+      <hr/>
+      {% endif %}      	      
 
 <!-- -----------------Related Publications----------------- -->
 {% if codes.tagged_publications %}
