@@ -321,7 +321,11 @@ function findHostname(url){
     <div id="repo"></div>
   </div>
 </div>
+<div class="myData" data-x='' style="display:none;"></div>
 <script>
+  var code_string = "{{ code_string }}";
+  var code_array = code_string.split(",")
+
   $.ajax({
   url: "https://api.github.com/users/c4sgub/repos",
   jsonp: true,
@@ -329,7 +333,7 @@ function findHostname(url){
   dataType: "json",
   success: function(res) {
     for (let e of res){
-      appender(e.name)
+      code_array = code_array.push(e.name)
       document.getElementById("repo").innerHTML += '<div class="gridObj" data-aos="fade-up" style="cursor: pointer;" onclick="window.open(`'+e.clone_url+'`)">\
     <h6 style="text-align:center;"><b>'+e.name+'</b></h6>\
     <center><p style="font-size: medium; font-style: italic;">'+(e.description != null ? e.description : "")+'</p>\
@@ -337,12 +341,13 @@ function findHostname(url){
       <i class="fa fa-star" aria-hidden="true"> '+e.watchers_count+'</i>&nbsp; &nbsp;\
       <i class="fa fa-code-fork" aria-hidden="true"> '+e.forks_count+'</i></span></center></div>'
     }
+    console.log(code_array.toString())
+    $('#myData').data('x',code_array.toString());
   }
 });
 </script>
 </div>
 <!-- -------------------------------------- -->
-<div class="myData" data-x='{{ code_string }}'></div>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
