@@ -3,7 +3,7 @@ layout: default
 title: Blog
 ---
 <!-- template from https://codepen.io/anupkumar92/pen/bOvYYm -->
-
+{% assign blog_string = "" %}
 <section class="blog" data-scroll-index="4">
     <div class="container">
         <div class="row">
@@ -55,8 +55,15 @@ title: Blog
                 </div>
               </div>
             </div>
+         <!-- create string with all titles -->
+         {% capture blog_string %}{{ blog_string | append: post.key }}{% endcapture %}
+         {% if forloop.last == false %}
+             {% capture blog_string %}{{ blog_string | append: "," }}{% endcapture %}
+         {% endif %}
+         <!-- -------------------------------->
         {% endfor %}
         
         </div>
     </div>
 </section>
+<div class="myData" data-x='{{ blog_string }}'></div>
