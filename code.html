@@ -342,7 +342,7 @@ function findHostname(url){
 </script>
 </div>
 <!-- -------------------------------------- -->
-<div class="myData" data-x=''></div>
+<div class="myData" data-x='{{ code_string }}'></div>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
@@ -401,13 +401,4 @@ for (i = 0; i < coll.length; i++) {
         }
     }
 }
-</script>
-
-<script>
-  var code_string = "{{ code_string }}";
-  function appender(name){
-    code_string = code_string.concat(","+name)
-    $('#myData').data('x',code_string);
-    console.log($('#myData').data('x'))
-  }
 </script>
