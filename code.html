@@ -223,6 +223,51 @@ function findHostname(url){
     <hr/>
 {% endif %}
 	      
+<!--Teaching Resources-->
+  {% assign counter = "" %}
+  {% for resource in site.teaching_resources %}
+    {% if resource.tagged_code contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Teaching Resources</h3>
+      <ul class="noBullets">
+        {% for resource in site.teaching_resources %}
+          {% if resource.tagged_code contains page.key %}
+            <li>
+              <a href="{{ resource.url }}">{{ resource.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
+  <!--Courses-->
+  {% assign counter = "" %}
+  {% for course in site.courses %}
+    {% if course.tagged_code contains page.key %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Courses</h3>
+      <ul class="noBullets">
+        {% for course in site.courses %}
+          {% if course.tagged_code contains page.key %}
+            <li>
+              <a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+	      
+	      
 <!-- -----------------Related Education & Courses----------------- -->
   <!-- {% if codes.tagged_education or codes.tagged_courses %}
     <li>
