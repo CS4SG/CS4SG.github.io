@@ -34,6 +34,7 @@ title: News
   <hr/>
 </div>
 
+{% assign news_string = "" %}
 
 <section class="blog" data-scroll-index="4">
   <div class="container" id="myUL">
@@ -88,6 +89,13 @@ title: News
               </label>
             </div>
           </div>
+        
+         <!-- create string with all titles -->
+         {% capture news_string %}{{ news_string | append: post.key }}{% endcapture %}
+         {% if forloop.last == false %}
+             {% capture news_string %}{{ news_string | append: "," }}{% endcapture %}
+         {% endif %}
+         <!-- -------------------------------->
           {% endif %}
       {% endfor %}
       
