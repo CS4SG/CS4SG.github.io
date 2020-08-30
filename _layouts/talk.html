@@ -57,6 +57,33 @@ function findHostname(url){
 <hr/>
 {% endif %}
 <!-- -------------------------------------- -->
+	
+{% if page.resource_links %}
+<div class="relatedSection">
+{% assign tag_res = page.resource_links | split: "," %}
+<h3><b>Resources</b></h3>
+<ol>
+{% for tag in tag_res %}
+  {% for resource in site.resource_links %}
+          {% if tag == resource.key %}
+          {% assign res_links_array = resource.link | split: "," %}
+          <li>
+              {{ resource.description }}
+          <ul class="menu">
+          {% for lin in res_links_array %}
+            <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+          {% endfor %}
+          </ul>
+          </li>
+        {% endif %}
+  {% endfor %}
+{% endfor %}
+</ol>
+</div>
+<hr/>
+{% endif %}
+<!-- -------------------------------------- -->
+	
 <div class="relatedSection">
 
   <!--Projects-->
