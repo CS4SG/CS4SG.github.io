@@ -5,7 +5,7 @@ title: Teaching Resources
 
 {% for resource in site.teaching_resources %}
   {% if resource.path contains "index.html" %}
-    <h2><a href="{{ resource.url }}">{{ resource.key }}</a></h2>
-      <p>{{ resource.content || markdownify }}</p>
+  <h2><a href="{{ resource.url }}">{{ resource.key }}</a></h2><br>
+  {{ resource.content || markdownify }}
   {% endif %}
 {% endfor %}
