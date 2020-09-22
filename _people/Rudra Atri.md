@@ -2,7 +2,7 @@
 layout: people
 name: Atri Rudra
 category: UB faculty
-designation: Associate Professor, Computer Science and Engineering
+designation: Professor, Computer Science and Engineering
 status: active
 link: https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/atri-rudra.html
 image: /assets/img/team/team-3.jpg
