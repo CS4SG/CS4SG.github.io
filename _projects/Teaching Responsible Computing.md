@@ -47,6 +47,10 @@ This in-class activity on improving Internet access in Cattaraugus county was an
 
 #### Greedy algorithm problem
 
+[Greedy algorithms](https://en.wikipedia.org/wiki/Greedy_algorithm) is perhaps the basic algorithmich technique. CSE 331 covers greedy algorithms for bit over 2 week period. One of the homework problems for greedy algorithms (which is a classical covering an interval with minimum number of fixed width intervals that can "slide" as needed) asks the students to provide high speed Internet coverage on a straight line using wireless network towers. The problem is connected to the in-class discussion on access to high speed Internet from the first lecture.
+
+This [page has the details on the actual problem]({{ site.url | append: "assets/resources/cse331/greedy/problem.html"}}).
+
 #### Dynamic programming problem
 
 #### Coding project
