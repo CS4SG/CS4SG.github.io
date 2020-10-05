@@ -6,7 +6,17 @@ tagged_people: Matthew Bolton,Varun Chandola,Kenneth Joseph,Jonathan Manes,Atri 
 key: Teaching Responsible Computing
 ---
 
-# Project Overview
+## Project Overview
 Computing is ubiquitous in our daily lives. Increasingly computing makes decisions in our lives starting from the mundane (e.g. Netflix recommending  us movies/TV shows), to the somewhat more relevant (e.g. algorithms deciding which ads Google shows you) to the downright worrisome (e.g. automated systems deciding the risk of a person who is arrested committing a crime in the future). 
 
 While we have (and continue to) educate our computing students on the  technical aspects of building computing systems that are used in our daily lives, there has been relatively less focus on incorporating ethics and responsible computing in such courses. Our project aims to incorporate ethics and more generally responsible computing in a wide range of computing courses.
+
+While most of our work in this project has been in incorporating responsible computing in our [courses](#courses), we have also created [grading rubric](#rubric) for ethical/responsible computing related assignments.
+
+## <a name="courses">Courses
+
+TBD: Details on courses
+
+## <a name="rubric">Grading Rubric
+
+TBD: Details on the grading rubric

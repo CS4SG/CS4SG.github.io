@@ -1,0 +1,11 @@
+*.class
+*.DS_Store
+.DS_Store
+.idea/
+*.out
+*.pyc
+*.exe
+json.txt
+.ht*
+*.swp
+*.bak
