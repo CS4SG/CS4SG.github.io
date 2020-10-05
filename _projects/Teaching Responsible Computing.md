@@ -32,11 +32,11 @@ Next, we provide bit more details on the ethical and/or responsible computing as
 
 ### Algorithms course (CSE 331)
 
-There are multiple activities/assignments in CSE 331 that all have the common thread of accessing high speed Internet. The main reason for this choice was because this is an issue all of our students could appreciate at a personal level. COVID hit _after_ we implemented/ran these activities in Fall 2019. In future iterations we plan to incorporate increased awarness of the structural inequalities when it comes to access to high speed Internet (see e.g. this [Netgain Partnership](https://www.netgainpartnership.org/)  webinar on [Broadband Access in the US](https://www.netgainpartnership.org/events/covid19/broadband-access-in-the-us)) that has been grought to the fore by the pandemic.
+There are multiple activities/assignments in CSE 331 that all have the common thread of accessing high speed Internet. The main reason for this choice was because this is an issue all of our students could appreciate at a personal level. COVID hit _after_ we implemented/ran these activities in Fall 2019. In future iterations we plan to incorporate increased awareness of the structural inequalities when it comes to access to high speed Internet (see e.g. this [Netgain Partnership](https://www.netgainpartnership.org/)  webinar on [Broadband Access in the US](https://www.netgainpartnership.org/events/covid19/broadband-access-in-the-us)) that has been brought to the fore by the pandemic.
 
 Below we provide an overview of four activities/assignments that we piloted in Fall 2019 
 
-#### In class discussion on imporving broadband access in WNY
+#### In class discussion on improving broadband access in WNY
 
 The introductory lecture asks students to think about how they would improve broadband access in [Cattaraugus county](https://en.wikipedia.org/wiki/Cattaraugus_County,_New_York) (which is one county over from [Erie](https://en.wikipedia.org/wiki/Erie_County,_New_York), which is where [Buffalo](https://en.wikipedia.org/wiki/Buffalo,_New_York) resides). Students are asked to talk in small groups in the lecture to think about both technical as well as societal issues as they think about how to solve the whole problem. 
 
@@ -52,7 +52,7 @@ This in-class activity on improving Internet access in Cattaraugus county was an
 #### Coding project
 
 
-### Captsone course (CSE 442)
+### Capstone course (CSE 442)
 
 ### Machine learning course (CSE 474)
 
