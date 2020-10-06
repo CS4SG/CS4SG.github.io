@@ -7,7 +7,7 @@ key: Teaching Responsible Computing
 ---
 
 ## Project Overview
-Computing is ubiquitous in our daily lives. Increasingly computing makes decisions in our lives starting from the mundane (e.g. Netflix recommending  us movies/TV shows), to the somewhat more relevant (e.g. algorithms deciding which ads Google shows you) to the downright worrisome (e.g. automated systems deciding the risk of a person who is arrested committing a crime in the future). 
+Computing is ubiquitous in our daily lives. Increasingly computing makes decisions in our lives starting from the mundane (e.g. Netflix recommending  us movies/TV shows or sensors dispensing soap), to the somewhat more relevant (e.g. algorithms deciding which ads Google shows you or a car parking itself) to the downright worrisome (e.g. automated systems deciding the risk of a person who is arrested committing a crime in the future or automated "killer drones"). 
 
 While we have (and continue to) educate our computing students on the  technical aspects of building computing systems that are used in our daily lives, there has been relatively less focus on incorporating ethics and responsible computing in such courses. Our project aims to incorporate ethics and more generally responsible computing in a wide range of computing courses.
 
@@ -24,7 +24,7 @@ We have currently targeted a mix of courses: three required courses (spanning th
 - _Existing elective_
     - Machine learning course ([CSE 474](http://www.cse.buffalo.edu/~chandola/machinelearning.html)): Students worked in a group project exploring bias in data driven criminal risk assessment
 - _New course_
-    - [Algorithms and Society](http://www-student.cse.buffalo.edu/~atri/algo-and-society/spr20/index.html): Course that had separate sections for CSE and non-CSE majors (but seated in the same room). The goal was to give non-CSE students a non-trivial understanding of various stages of the ML pipeline and for CSE students to get a deep dive into societal implications of machine learning systems. The class was a mix of lectures and discussions.
+    - [Algorithms and Society](http://www-student.cse.buffalo.edu/~atri/algo-and-society/spr20/index.html): This course has separate sections for CSE and non-CSE majors (but seated in the same room). The goal is to give non-CSE students a non-trivial understanding of various stages of the ML pipeline and for CSE students to get a deep dive into societal implications of machine learning systems. The class is a [mix of lectures and discussions](http://www-student.cse.buffalo.edu/~atri/algo-and-society/spr20/schedule.html).
 
 Next, we provide bit more details on the ethical and/or responsible computing assignments that we created as part of our existing courses:
 
