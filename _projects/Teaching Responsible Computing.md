@@ -45,7 +45,7 @@ Here are all the relevant material for week 1 of the module:
 * [Lecture slides for week 1](https://drive.google.com/drive/folders/1Oht3EaDvrxrpRGyX_1LgOLnXpiVUz_rP?usp=sharing) _(Link needs to be updated to specific slides for just the week 1 lecture)_
 * [Material for week 1 activity](https://drive.google.com/drive/folders/1YXrFL2iYX9iFJx6Uv-9_aItWtkeduiJh?usp=sharing)
 
-#### Week 2 material
+##### Week 2 material
 
 _(Description text needed: please provide a brief overview of the week 2 material)_
 
@@ -65,7 +65,7 @@ _(Description text needed: please provide a brief overview of the week 1 materia
 Here are all the relevant material for week 1 of the module:
 * _(Links needed for the material: ideally at least lecture slides and some activity material)_
 
-#### Week 2 material
+##### Week 2 material
 
 _(Description text needed: please provide a brief overview of the week 2 material)_
 
