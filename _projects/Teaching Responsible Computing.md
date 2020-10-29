@@ -13,7 +13,7 @@ While we have (and continue to) educate our computing students on the  technical
 
 While most of our work in this project has been in incorporating responsible computing in our [courses](#courses), we have also created [grading rubric](#rubric) for ethical/responsible computing related assignments.
 
-## <a name="courses">Courses
+## <a name="courses">Courses</a>
 
 We have currently targeted a mix of courses: three required courses (spanning the first year, sophomore and senior year) for the BS Computer Science degree, one popular elective and created one new elective. Here is a quick overview of the courses that we targeted:
 
@@ -30,7 +30,49 @@ Next, we provide bit more details on the ethical and/or responsible computing as
 
 ### First year seminar (CSE 199)
 
-### Algorithms course (CSE 331)
+The first year seminar is composed of  six two-weeks modules (consisting of four lectures and two in-class activities) and we picked two modules in the first year seminar.
+
+#### History, Society and Diversity module
+
+_(Description text needed: please provide a brief overview of the module)_
+
+##### Week 1 material
+
+_(Description text needed: please provide a brief overview of the week 1 material)_
+
+Here are all the relevant material for week 1 of the module:
+* [Lecture videos for week 1](https://ub.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=53f4d538-94d9-4268-8d37-ac150015b63f)
+* [Lecture slides for week 1](https://drive.google.com/drive/folders/1Oht3EaDvrxrpRGyX_1LgOLnXpiVUz_rP?usp=sharing) _(Link needs to be updated to specific slides for just the week 1 lecture)_
+* [Material for week 1 activity](https://drive.google.com/drive/folders/1YXrFL2iYX9iFJx6Uv-9_aItWtkeduiJh?usp=sharing)
+
+#### Week 2 material
+
+_(Description text needed: please provide a brief overview of the week 2 material)_
+
+Here are all the relevant material for week 2 of the module:
+* [Lecture videos for week 2](https://ub.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=7a1d778a-dd02-45a4-a370-ac4000f5b298)
+* [Lecture slides for week 2](https://drive.google.com/drive/folders/1Oht3EaDvrxrpRGyX_1LgOLnXpiVUz_rP?usp=sharing) _(Link needs to be updated to specific slides for just the week 2 lecture)_
+* [Material for week 2 activity](https://drive.google.com/drive/folders/13yfQG_ukE_bOQYfCyfyqXiOITY65pL2W?usp=sharing)
+
+#### Social Media and Machine Learning module
+
+_(Description text needed: please provide a brief overview of the module)_
+
+##### Week 1 material
+
+_(Description text needed: please provide a brief overview of the week 1 material)_
+
+Here are all the relevant material for week 1 of the module:
+* _(Links needed for the material: ideally at least lecture slides and some activity material)_
+
+#### Week 2 material
+
+_(Description text needed: please provide a brief overview of the week 2 material)_
+
+Here are all the relevant material for week 2 of the module:
+* _(Links needed for the material: ideally at least lecture slides and some activity material)_
+
+### <a name="cse331">Algorithms course (CSE 331)</a>
 
 There are multiple activities/assignments in CSE 331 that all have the common thread of accessing high speed Internet. The main reason for this choice was because this is an issue all of our students could appreciate at a personal level. COVID-19 hit _after_ we implemented/ran these activities in Fall 2019. In future iterations we plan to incorporate increased awareness of the structural inequalities when it comes to access to high speed Internet (see e.g. this [Netgain Partnership](https://www.netgainpartnership.org/)  webinar on [Broadband Access in the US](https://www.netgainpartnership.org/events/covid19/broadband-access-in-the-us)) that has been brought to the fore by the pandemic.
 
@@ -65,10 +107,39 @@ This project was created from scratch. One constraint we put in early was to mak
 
 
 
-### Capstone course (CSE 442)
+### <a name="cse442">Capstone course (CSE 442)</a>
+
+The capstone course includes responsible computing in  at least two components: an in-class activity and the capstone project itself.
+
+#### In-class activity
+
+Students review a made-up dossier of government data to identify if an individual should be added to the government’s No-Fly list. Students must then discuss biases in the data provided and, finally, how they would respond if their job assigned them to the team automating this analysis.
+
+_(If need be, the text above can be expanded on)_
+
+Here are all the relevant material for the activity:
+* _(Links needed for the material: ideally at least the "sheet" the students get)_
+
+#### Capstone project
+
+_(Description needed)_
+
+_(If possible, would be good to add some course material as well)_
 
 ### Machine learning course (CSE 474)
 
-## <a name="rubric">Grading Rubric
+The machine learning course introduced a new coding group project exploring bias in data driven criminal risk assessment. We used the [COMPAS recidivism dataset](https://www.propublica.org/datastore/dataset/compas-recidivism-risk-score-data-and-analysis) and data driven criminal risk assessment. There already had been [media coverage of this topic](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) and so we figured we could use the coverage to introduce the topic to the students.
 
-TBD: Details on the grading rubric
+_(Bit more text on what the actual project entails would be good)_
+
+_(It  would be good to add (a link) to the relevant project description)_
+
+## <a name="rubric">Grading Rubric</a>
+
+We created a rubric to assess ethics related assignments, which was then used in both [CSE 331](#cse331) and [CSE 442](#cse442). Somewhat interestingly, when we started assessing student work the rubric was not effective. The problem was not with the rubric or student work, but that the  assignments discussed ethical issues but did not require students perform any analysis. We first used this rubric while rewriting existing assignments and creating ones to make certain they require students respond to the ethical issues they raised. Once this was complete, we then presented the rubric to teach students the different criteria for them to consider when evaluating the ethics of a situation and, finally, to evaluate their responses.
+
+_(If need be, the text above can be expanded on)_
+
+_(Need a link to the rubric itself)_
+
+
