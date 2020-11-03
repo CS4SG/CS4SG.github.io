@@ -73,7 +73,7 @@ Here are all the relevant material for week 1 of the module:
 In the second week, we turn to social media, taking another critical lens as we chart the history of social media, its benefits (e.g. as a space for [networked counterpublics](https://onlinelibrary.wiley.com/doi/abs/10.1111/jcom.12185)) and its many, many failings.
 
 Here are all the relevant material for week 2 of the module:
-* [Lecture Slides for week 1]({{ site.url | append: "assets/resources/cse199/societal-computing/week_2_slides.pdf"}})
+* [Lecture Slides for week 2]({{ site.url | append: "assets/resources/cse199/societal-computing/week_2_slides.pdf"}})
 * [Week 2 assignment](https://docs.google.com/document/d/1ceubk3sRtbOfluykNZtWQbQaZS2_X0O2ccEcEIJ_vxw/edit)
 * [Week 2 recitation activity](https://docs.google.com/document/d/10N7VnfAPHU4SPGfuBq4DlIefNmpSQPwUzmPUgnZnqKI/edit)
 
