@@ -1,0 +1,24 @@
+---
+layout: project
+title: Services for Foster Youth
+description: FAI grant from NSF and Amazon
+tagged_people: Varun Chandola,Huei-Yen ,Krithika Raj Dorai Raj,Yuhao Du,Yanbo Guo,Seventy Hall,Jacqueline Hannan,Prakshal Jain,Isys Johnson,Kenneth Joseph,Hope Kara,Atri Rudra,Melanie Sage,Hannah Wilcox,Connor Wurst,Jason Yan
+key: Services for Foster Youth
+---
+
+# Improving service allocation in sociotechnical systems
+# Project Overview 
+There are more than 400,000 youth in foster care in the US, and each year more than 20,000 age out of foster care without reunifying with their families. The outcomes for these youth are poor. By age 19, only 59% finish high school, 20% have been homeless, and 27% of males have been incarcerated. These outcomes have significant and costly impacts for the youth and for society. Fortunately, youth in foster care are potentially eligible to receive services, such as vocational training, that may improve their chances at positive life outcomes. However, caseworkers are typically only able to identify youth for these services after the youth experiences a relevant need or crisis. To address this problem, this project will develop an algorithm to assist caseworkers in identifying youth in need of services before crises occur, and to allocate those services in a fair and just way. Critically, the algorithm will be informed at every step by inputs from foster youth and caseworkers. The methods developed will free resources for foster care agencies that are chronically underfunded and understaffed, increase procedural transparency and accountability in decision-making, and provide a critical tool to identify youth who need services before crises occur.
+
+In developing the service recommendation algorithm, three fundamental research objectives will be addressed. First, methods will be developed to help domain experts identify and mitigate hard-to-find social biases in training data. Second, methods will be developed to identify multiple perspectives of fairness (e.g. from foster youth and case workers) with respect to service allocation decisions. Finally, a method will be developed to recommend service allocation strategies for foster youth in ways that balance the goal of ensuring fair distribution, according to multiple perspectives on fairness, and the goal of increasing the odds of positive life outcomes of all youth. All approaches will be evaluated extensively, with tight integration with multiple stakeholders in foster care. We will also provide evidence of the generality of our methods to other domains and provable bounds on their efficiency and accuracy. Stakeholder integration includes a partnership with a local foster care agency servicing over 10,000 youth per year, and a Youth Advisory Council of youth with experience in foster care who will play an important role in model development.
+
+
+# Intellectual Approach 
+
+The literature on algorithmic bias has, to date, been largely and necessarily descriptive and post-hoc. Machine learning has become so widely adopted, so rapidly, in so many different places, that scholars have largely been relegated to efforts to bring the problems with such systems already in use to light.  Such problems are myriad, and while some avenues of research into algorithmic bias may be more fruitful than others \cite{}, there is still a need for pursuit of measurements, both qualitative and quantitative, that explore and expose the problems that arise with the implementation of machine learning systems in sociotechnical systems.
+
+However, for each industry, decision, and social process that has already been “disrupted” by machine learning, there are many more still to come.  This disruption, in many cases, will happen by choice - individuals and organizations will succumb to the tantalizing possibility of technological determinism and opt to seek solutions to their problems in machine learning tools.  However, in other settings, (often marginalized) individuals will have their lives disrupted by the choices of others who force technology upon them.  
+
+In both of these cases, but particularly in the latter, it is important for research on algorithmic bias to turn towards prescriptive research questions, ones that can be used to help forecast the fallout likely to come from implementing a given machine learning tool in a given system. Specifically, there is a need for research that can help address the question, what will the effect be of replacing a particular function within a sociotechnical system with a machine learning algorithm? That is, can we predict the long-term effects of our predictions? Addressing this question requires, at the very least, 1) an understanding of the existing sociotechnical system in which the new technology will be embedded, 2) a theory of change for how the new tool will disrupt that system.  
+
+

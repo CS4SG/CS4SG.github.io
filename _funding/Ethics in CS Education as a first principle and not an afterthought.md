@@ -4,7 +4,7 @@ layout: funds
 organization: Mozilla Foundation
 org_link: https://foundation.mozilla.org/en/initiatives/responsible-cs/
 grant_notice: https://foundation.mozilla.org/en/initiatives/responsible-cs/winners/
-grants: 150,000
+grants: 150,000.00
 duration: 2021-05-12
 start: 2019-04-11
 tagged_projects: Teaching Responsible Computing

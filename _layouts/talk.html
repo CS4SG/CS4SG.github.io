@@ -57,6 +57,15 @@ function findHostname(url){
 <hr/>
 {% endif %}
 <!-- -------------------------------------- -->
+
+{% if page.location_link %}
+<div class="relatedSection">
+<h3 style="display:inline"><b>Location Link: </b></h3><a href="{{ page.location_link }}"><script>findHostname("{{ page.location_link }}")</script></a>
+</div>
+<hr/>
+{% endif %}
+<!-- -------------------------------------- -->
+	
 	
 {% if page.resource_links %}
 <div class="relatedSection">

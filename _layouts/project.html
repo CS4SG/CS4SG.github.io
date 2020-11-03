@@ -170,11 +170,12 @@ layout: default
   
   {% if counter.size > 0 %}
     <h3>Funding</h3>
-      <ul class="menu">
+    <p style="font-style: italic">This project is supported by generous funding by:</p>
+      <ul class="noBullets">
         {% for grant in site.funding %}
           {% if grant.tagged_projects contains page.key %}
             <li>
-              <a href="{{ grant.url }}">{{ grant.organization }}</a>: US$ {{ grant.grants }}
+              <a href="{{ grant.org_link }}">{{ grant.organization }}</a> (<a href="{{ grant.url }}">{{ grant.grant_title }}</a>)
             </li>
           {% endif %}
         {% endfor %}
