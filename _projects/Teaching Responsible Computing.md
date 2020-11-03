@@ -18,7 +18,7 @@ While most of our work in this project has been in incorporating responsible com
 We have currently targeted a mix of courses: three required courses (spanning the first year, sophomore and senior year) for the BS Computer Science degree, one popular elective and created one new elective. Here is a quick overview of the courses that we targeted:
 
 - _Required courses_
-    - First year seminar ([CSE 199](https://cse.buffalo.edu/faculty/ahunt/classes/internet/)): Module on history, society and diversity and module on social media and machine learning were targeted. Each module is a two week long combination of lectures and in-class activities. CSE 199 is required for BS Computer Science and BS Computer Engineering programs.
+    - First year seminar ([CSE 199](https://cse.buffalo.edu/faculty/ahunt/classes/internet/)): Module on history, society and diversity and module on societal computing were targeted. Each module is a two week long combination of lectures and in-class activities. CSE 199 is required for BS Computer Science and BS Computer Engineering programs.
     - Algorithms course ([CSE 331](http://www-student.cse.buffalo.edu/~atri/cse331/fall19/index.html)): Homework assignments and a project based on access to high-speed Internet in WNY were introduced. CSE 331 is required for the BS Computer Science program.
     - Capstone course ([CSE 442](https://cse.buffalo.edu/~mhertz/2019fall/cse442/)): Students review a made-up dossier of government data to identify if an individual should be added to the government’s No-Fly list. Students must then discuss biases in the data provided and, finally, how they would respond if their job assigned them to the team automating this analysis.  A second assignment asks students to document the ethical implications of the capstone project they chose. CSE 442 is the capstone course for the BS Computer Science program.
 - _Existing elective_
@@ -54,23 +54,28 @@ Here are all the relevant material for week 2 of the module:
 * [Lecture slides for week 2](https://drive.google.com/drive/folders/1Oht3EaDvrxrpRGyX_1LgOLnXpiVUz_rP?usp=sharing) _(Link needs to be updated to specific slides for just the week 2 lecture)_
 * [Material for week 2 activity](https://drive.google.com/drive/folders/13yfQG_ukE_bOQYfCyfyqXiOITY65pL2W?usp=sharing)
 
-#### Social Media and Machine Learning module
+#### Societal Computing 
 
-_(Description text needed: please provide a brief overview of the module)_
+The Societal Computing module of CSE199 introduces students to the idea of Societal Computing, which we define as computing for, in, and ideally, with, society. (We note that this is our own definition of societal computing, but it is _not_ our term. The concept originates in various places, including as the namesake of [Carnegie Mellon's Societal Computing Ph.D. program](https://sc.cs.cmu.edu/).)
 
 ##### Week 1 material
 
-_(Description text needed: please provide a brief overview of the week 1 material)_
+In the first week, we cover the idea of societal computing and how it can be used as a critical lens through which we can understand today's applications of machine learning technologies.
+
 
 Here are all the relevant material for week 1 of the module:
-* _(Links needed for the material: ideally at least lecture slides and some activity material)_
+* [Lecture Slides for week 1]({{ site.url | append: "assets/resources/cse199/societal-computing/week_1_slides.pdf"}})
+* [Week 1 assignment](https://docs.google.com/document/d/1VJysWektxtvgN3dCEw27hbm-qtMLC8RTEYquUUxEdvA/edit)
+* [Week 1 recitation activity](https://docs.google.com/document/d/1F5TFkLTMWxkAvpA_azIlYBH1yB6Blms0OIeOzGdROjY/edit)
 
 ##### Week 2 material
 
-_(Description text needed: please provide a brief overview of the week 2 material)_
+In the second week, we turn to social media, taking another critical lens as we chart the history of social media, its benefits (e.g. as a space for [networked counterpublics](https://onlinelibrary.wiley.com/doi/abs/10.1111/jcom.12185)) and its many, many failings.
 
 Here are all the relevant material for week 2 of the module:
-* _(Links needed for the material: ideally at least lecture slides and some activity material)_
+* [Lecture Slides for week 1]({{ site.url | append: "assets/resources/cse199/societal-computing/week_2_slides.pdf"}})
+* [Week 2 assignment](https://docs.google.com/document/d/1ceubk3sRtbOfluykNZtWQbQaZS2_X0O2ccEcEIJ_vxw/edit)
+* [Week 2 recitation activity](https://docs.google.com/document/d/10N7VnfAPHU4SPGfuBq4DlIefNmpSQPwUzmPUgnZnqKI/edit)
 
 ### <a name="cse331">Algorithms course (CSE 331)</a>
 
