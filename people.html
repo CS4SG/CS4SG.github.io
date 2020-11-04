@@ -53,7 +53,7 @@ title: People
 <div class="row">
 {% assign title_string = "" %}
 
-<!-- -------------Internal Faculty Section--------------- -->
+<!-- -------------Internal Faculty Section------------------>
 {% if status_array contains "UB faculty" %}
   <h2 id="subhead"><span><strong>Internal Faculty</strong></span></h2>
 
@@ -84,7 +84,7 @@ title: People
 {% endif %}
 <br/><br/>
 <div class="myData" data-x='{{ title_string }}'></div>
-<!-- -------------External Faculty Section--------------- -->
+<!-- -------------External Faculty Section------------------>
 {% if status_array contains "External collaborator" %}
   <h2 id="subhead"><span><strong>External Collaborators</strong></span></h2>
 
@@ -111,7 +111,7 @@ title: People
 
 {% if status_array contains "Current student" %}
 <h2 id="subhead"><span><strong>Current Students</strong></span></h2>
-<!-- -------------Students Section--------------- -->
+<!-- -------------Students Section------------------>
 {% for peop in site.people %}
     {% if peop.category == "Current student" %}
   <div class="col-lg-4 col-md-6">
@@ -136,7 +136,7 @@ title: People
     
 {% if status_array contains "Former student" %}
 <h2 id="subhead"><span><strong>Former Students</strong></span></h2>
-<!-- -------------Students Section--------------- -->
+<!----------------Students Section------------------>
 {% for peop in site.people %}
     {% if peop.category == "Former student" %}
   <div class="col-lg-4 col-md-6">
