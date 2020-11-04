@@ -19,13 +19,24 @@ title: Projects
 <div class="row">
   {% assign sorted = site.projects | sort: 'date' | reverse %}
     {% for project in sorted %}
+    <!-- <p>{{ project.title.size }}</p> -->
+      {% if project.title.size < 20 %}
+        {% assign maxTitle = 20 %}
+        {% assign maxDesc = 100 %}
+      {% elsif project.title.size < 30 %}
+        {% assign maxTitle = 30 %}
+        {% assign maxDesc = 85 %}
+      {% else %}
+        {% assign maxTitle = 40 %}
+        {% assign maxDesc = 60 %}
+      {% endif %}
       <label>
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '{{ project.url }}';" style="cursor: pointer;">
           <div class="icon-box" data-aos="fade-up">
             <div class="icon"><i class='bx bxs-report'></i></div>
-              <h3 class="title"><a>{{ project.title }}</a></h3>
+              <h3 class="title"><a>{{ project.title | truncate: maxTitle }}</a></h3>
                 <h4 class="hide">Description</h4>
-                <div id="textbox"><p class="description">{{ project.description | markdownify }}</p></div>
+                <div id="textbox"><p class="description" style="font-size:0.5em">{{ project.description | truncate: maxDesc | markdownify }}</p></div>
           </div>
         </div>
 
