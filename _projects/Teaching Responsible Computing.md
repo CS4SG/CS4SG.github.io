@@ -19,7 +19,7 @@ We have currently targeted a mix of courses: three required courses (spanning th
 
 - _Required courses_
     - First year seminar ([CSE 199](https://cse.buffalo.edu/faculty/ahunt/classes/internet/)): Module on history, society and diversity and module on societal computing were targeted. Each module is a two week long combination of lectures and in-class activities. CSE 199 is required for BS Computer Science and BS Computer Engineering programs.
-    - Algorithms course ([CSE 331](http://www-student.cse.buffalo.edu/~atri/cse331/fall19/index.html)): Homework assignments and a project based on access to high-speed Internet in WNY were introduced. CSE 331 is required for the BS Computer Science program.
+    - Algorithms course ([CSE 331](http://www-student.cse.buffalo.edu/~atri/cse331/fall19/index.html)): Homework assignments and a project based on access to high-speed Internet in Western New York (WNY) were introduced. CSE 331 is required for the BS Computer Science program.
     - Capstone course ([CSE 442](https://cse.buffalo.edu/~mhertz/2019fall/cse442/)): Students review a made-up dossier of government data to identify if an individual should be added to the government’s No-Fly list. Students must then discuss biases in the data provided and, finally, how they would respond if their job assigned them to the team automating this analysis.  A second assignment asks students to document the ethical implications of the capstone project they chose. CSE 442 is the capstone course for the BS Computer Science program.
 - _Existing elective_
     - Machine learning course ([CSE 474](http://www.cse.buffalo.edu/~chandola/machinelearning.html)): Students worked in a group project exploring bias in data driven criminal risk assessment
@@ -34,24 +34,23 @@ The first year seminar is composed of  six two-weeks modules (consisting of four
 
 #### History, Society and Diversity module
 
-_(Description text needed: please provide a brief overview of the module)_
+It is easy to take for granted how much computers are part of our life. This module explores how we got here and what computing means to modern day life, all with a connection to societal issues and ethics.
 
 ##### Week 1 material
 
-_(Description text needed: please provide a brief overview of the week 1 material)_
+This week the exploration is historical, from the beginning though modern times.
 
 Here are all the relevant material for week 1 of the module:
 * [Lecture videos for week 1](https://ub.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=53f4d538-94d9-4268-8d37-ac150015b63f)
-* [Lecture slides for week 1](https://drive.google.com/drive/folders/1Oht3EaDvrxrpRGyX_1LgOLnXpiVUz_rP?usp=sharing) _(Link needs to be updated to specific slides for just the week 1 lecture)_
+* [Lecture slides for week 1](https://drive.google.com/drive/folders/1gHQAeoXYz9KpGJcsslGZ7bfCRuKloxI_?usp=sharing)
 * [Material for week 1 activity](https://drive.google.com/drive/folders/1YXrFL2iYX9iFJx6Uv-9_aItWtkeduiJh?usp=sharing)
 
 ##### Week 2 material
 
-_(Description text needed: please provide a brief overview of the week 2 material)_
-
+This week looks at the societal issues with computing and modern trends in how computers are part of life.
 Here are all the relevant material for week 2 of the module:
 * [Lecture videos for week 2](https://ub.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=7a1d778a-dd02-45a4-a370-ac4000f5b298)
-* [Lecture slides for week 2](https://drive.google.com/drive/folders/1Oht3EaDvrxrpRGyX_1LgOLnXpiVUz_rP?usp=sharing) _(Link needs to be updated to specific slides for just the week 2 lecture)_
+* [Lecture slides for week 2](https://drive.google.com/drive/folders/1--REPOxagD_dWPtzyc3AJzGW3eRgP5qx?usp=sharing)
 * [Material for week 2 activity](https://drive.google.com/drive/folders/13yfQG_ukE_bOQYfCyfyqXiOITY65pL2W?usp=sharing)
 
 #### Societal Computing 
@@ -106,7 +105,7 @@ Here are [the details on the actual problem statement (with some additional note
 
 #### Coding project
 
-This project was created from scratch. One constraint we put in early was to make sure that the underlying technical concept that was covered early in the course. Given the current course structure the best option seemed to pick something related to the [shortest path problem](https://en.wikipedia.org/wiki/Shortest_path_problem). On the other side, acknowledging that our student population is skewed towards students from WNY (and NYS in general), we wanted to pick a scenario that was local. During the discussion stage someone suggested we look into the [NYS Attorney General’s case against Spectrum](https://ag.ny.gov/sites/default/files/summons_and_complaint.pdf) that alleged serious unethical behavior of Spectrum towards their customer. Given the ubiquity of the Internet in what we do as computing professionals this seemed like a scenario that all of our students would relate to. The choice was finalized when we realized that we could create a programming project related to routing of packets in this context, which would tie directly to the shortest path problem that we had covered in class (and on which students have a programming assignment early in the semester). The programming project has multiple parts where most of them corresponded to potentially unethical ways of routing packets as detailed in NYS AG's complaint. The final part asked the students to route packets under a fairness constraint.
+This project was created from scratch. One constraint we put in early was to make sure that the underlying technical concept that was covered early in the course. Given the current course structure the best option seemed to pick something related to the [shortest path problem](https://en.wikipedia.org/wiki/Shortest_path_problem). On the other side, acknowledging that our student population is skewed towards students from WNY and New Yor State (NYS) in general), we wanted to pick a scenario that was local. During the discussion stage someone suggested we look into the [NYS Attorney General’s case against Spectrum](https://ag.ny.gov/sites/default/files/summons_and_complaint.pdf) that alleged serious unethical behavior of Spectrum towards their customer. Given the ubiquity of the Internet in what we do as computing professionals this seemed like a scenario that all of our students would relate to. The choice was finalized when we realized that we could create a programming project related to routing of packets in this context, which would tie directly to the shortest path problem that we had covered in class (and on which students have a programming assignment early in the semester). The programming project has multiple parts where most of them corresponded to potentially unethical ways of routing packets as detailed in NYS AG's complaint. The final part asked the students to route packets under a fairness constraint.
 
 (Details on the project will appear here soon.)
 
