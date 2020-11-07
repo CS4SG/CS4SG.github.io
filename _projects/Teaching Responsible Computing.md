@@ -140,13 +140,13 @@ The students work on a class assignment (in groups of three) in which they take 
 
 In this role, the students approach this assignment as employees of a large publicly traded corporation. They have a fiduciary duty to their shareholders to deliver strong returns, which can only be done by consistently winning development contracts. To this end, financial considerations are very important, as the engineers want their contracts to be more appealing than your competitors. Additionally, their life relies on the paycheck provided by this job, and making decisions that lose the company money could very quickly get then fired. However, since the corporation is publicly traded, they are still subject to public scrutiny, and thus cannot completely ignore social concerns.
 
-Here is a [link to the project description for this role]({{ site.url | append: "assets/resources/cse474/criminal-justice/PA3_Corporation.pdf"}})
+Here is a [link to the project description for this role]({{ site.url | append: "assets/resources/cse474/criminal-justice/PA3_Corporation.pdf"}}).
 
 #### Role 2 - Volunteer for Non-Governmental Organization
 
 In this role, the students approach this assignment as volunteers of a humanitarian NGO (non-governmental organization). The NGO is a non-profit, and thus the volunteers do not receive a paycheck and are not reliant on this work for money to survive. Each group’s mission revolves around advocating for the fair treatment of individuals within the U.S. criminal justice system. To this end, societal considerations and positive reform are the main concerns. However, it will be difficult to get various local and state governments to adopt the software if the financial concerns are completely disregarded.
 
-Here is a [link to the project description for this role]({{ site.url | append: "assets/resources/cse474/criminal-justice/PA3_NGO.pdf"}})
+Here is a [link to the project description for this role]({{ site.url | append: "assets/resources/cse474/criminal-justice/PA3_NGO.pdf"}}).
 
 ## <a name="rubric">Grading Rubric</a>
 
