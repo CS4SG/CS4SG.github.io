@@ -134,9 +134,19 @@ _(If possible, would be good to add some course material as well)_
 
 The machine learning course introduced a new coding group project exploring bias in data driven criminal risk assessment. We used the [COMPAS recidivism dataset](https://www.propublica.org/datastore/dataset/compas-recidivism-risk-score-data-and-analysis) and data driven criminal risk assessment. There already had been [media coverage of this topic](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) and so we figured we could use the coverage to introduce the topic to the students.
 
-_(Bit more text on what the actual project entails would be good)_
+The students work on a class assignment (in groups of three) in which they take one of two roles. In either role, each group takes the role of machine learning engineers who have been tasked with designing a new system for use in U.S. court systems. They are given three different ML models and must apply five postprocessing techniques onto each of them. Finally, each group must identify a single model and technique to submit, which is then measured against the rest of the class for a chance at extra credit.
 
-_(It  would be good to add (a link) to the relevant project description)_
+#### Role 1 – Employee of a publicly traded corporation
+
+In this role, the students approach this assignment as employees of a large publicly traded corporation. They have a fiduciary duty to their shareholders to deliver strong returns, which can only be done by consistently winning development contracts. To this end, financial considerations are very important, as the engineers want their contracts to be more appealing than your competitors. Additionally, their life relies on the paycheck provided by this job, and making decisions that lose the company money could very quickly get then fired. However, since the corporation is publicly traded, they are still subject to public scrutiny, and thus cannot completely ignore social concerns.
+
+Here is a [link to the project description for this role]({{ site.url | append: "assets/resources/cse474/criminal-justice/PA3_Corporation.pdf"}})
+
+#### Role 2 - Volunteer for Non-Governmental Organization
+
+In this role, the students approach this assignment as volunteers of a humanitarian NGO (non-governmental organization). The NGO is a non-profit, and thus the volunteers do not receive a paycheck and are not reliant on this work for money to survive. Each group’s mission revolves around advocating for the fair treatment of individuals within the U.S. criminal justice system. To this end, societal considerations and positive reform are the main concerns. However, it will be difficult to get various local and state governments to adopt the software if the financial concerns are completely disregarded.
+
+Here is a [link to the project description for this role]({{ site.url | append: "assets/resources/cse474/criminal-justice/PA3_NGO.pdf"}})
 
 ## <a name="rubric">Grading Rubric</a>
 
