@@ -113,22 +113,20 @@ This project was created from scratch. One constraint we put in early was to mak
 
 ### <a name="cse442">Capstone course (CSE 442)</a>
 
-The capstone course includes responsible computing in  at least two components: an in-class activity and the capstone project itself.
+Ethics is covered in bits and pieces throughout the term. In addition, there is an entire week specifically dedicated to ethics,
+ which has two components: an in-class activity and the capstone project itself.
 
 #### In-class activity
 
-Students review a made-up dossier of government data to identify if an individual should be added to the government’s No-Fly list. Students must then discuss biases in the data provided and, finally, how they would respond if their job assigned them to the team automating this analysis.
+Students review a made-up dossier of government data to identify if an individual should be added to the government’s No-Fly list. Students must then discuss biases in the data provided and, finally, how they would respond if their job assigned them to the team automating this analysis. 
 
-_(If need be, the text above can be expanded on)_
+This activity is organized as follows. It (usually) begins with the [in-class activity]({{ site.url | append: "assets/resources/cse442/activity/No-fly-list.pdf"}}) to get them thinking about how these decisions will matter to them. This is then followed up with a [brief lecture]({{ site.url | append: "assets/resources/cse442/activity/lect1.pptx"}}), presentation of the [grading rubric](#rubric),
+and then a discussion of the rubric and lecture.
 
-Here are all the relevant material for the activity:
-* _(Links needed for the material: ideally at least the "sheet" the students get)_
 
 #### Capstone project
 
-_(Description needed)_
-
-_(If possible, would be good to add some course material as well)_
+Finally, we have another activity [as part of a lecture]({{ site.url | append: "assets/resources/cse442/project/lect2.pptx"}}) asking students to discuss the ethics of their project. Students answers to this latter activity are evaluated using the [rubric](#rubric). The results of this latter activity (evaluated using the rubric) are also reported as part of our ABET evaluations. 
 
 ### Machine learning course (CSE 474)
 
@@ -150,10 +148,9 @@ Here is a [link to the project description for this role]({{ site.url | append: 
 
 ## <a name="rubric">Grading Rubric</a>
 
-We created a rubric to assess ethics related assignments, which was then used in both [CSE 331](#cse331) and [CSE 442](#cse442). Somewhat interestingly, when we started assessing student work the rubric was not effective. The problem was not with the rubric or student work, but that the  assignments discussed ethical issues but did not require students perform any analysis. We first used this rubric while rewriting existing assignments and creating ones to make certain they require students respond to the ethical issues they raised. Once this was complete, we then presented the rubric to teach students the different criteria for them to consider when evaluating the ethics of a situation and, finally, to evaluate their responses.
+We created a rubric to assess ethics related assignments, which was then used in both [CSE 331](#cse331) and [CSE 442](#cse442). Somewhat interestingly, when we started assessing student work the rubric was not effective. The problem was not with the rubric or student work, but that the  assignments discussed ethical issues but did not require students perform any analysis. We first used this rubric while rewriting existing assignments and creating ones to make certain they require students respond to the ethical issues they raised. Once this was complete, in [CSE 442](#cse442), we then presented the rubric to teach students the different criteria for them to consider when evaluating the ethics of a situation and, finally, to evaluate their responses.
 
-_(If need be, the text above can be expanded on)_
 
-_(Need a link to the rubric itself)_
+Here is a [link to the ethics grading rubric]({{ site.url | append: "assets/resources/cse442/Ethics-Rubric.pdf"}}).
 
 
