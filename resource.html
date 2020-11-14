@@ -148,8 +148,8 @@ input[type=text] {
             {% for file in collection.files %}
                 {% if file.path contains '/slides/' %}
                 <div id="codes_content">
-                    <input type="text" value="\/_resources/slides/{{ file.name }}" id="{{ file.name }}" style="position:absolute;left:-1000px;top:-1000px;">
-                    <a href="\/_resources/slides/{{ file.name }}" target="_blank">{{ file.name }}</a>&nbsp;&nbsp;<label class="icofont-ui-copy" onclick="copyFunc('{{ file.name }}')" id="linked" title="Click to copy the link"></label>
+                    <input type="text" value="/_resources/slides/{{ file.name }}" id="{{ file.name }}" style="position:absolute;left:-1000px;top:-1000px;">
+                    <a href="/_resources/slides/{{ file.name }}" target="_blank">{{ file.name }}</a>&nbsp;&nbsp;<label class="icofont-ui-copy" onclick="copyFunc('{{ file.name }}')" id="linked" title="Click to copy the link"></label>
                 </div>
                     {% assign lin = file.path %}
                     {% capture slides %}{{ slides | append: lin }}{% endcapture %}
@@ -164,8 +164,8 @@ input[type=text] {
             {% for file in collection.files %}
                 {% if file.path contains '/papers/' %}
                 <div id="codes_content">
-                    <input type="text" value="\/_resources/slides/{{ file.name }}" id="{{ file.name }}" style="position:absolute;left:-1000px;top:-1000px;">
-                    <a href="\/_resources/slides/{{ file.name }}" target="_blank">{{ file.name }}</a>&nbsp;&nbsp;<label class="icofont-ui-copy" onclick="copyFunc('{{ file.name }}')" id="linked" title="Click to copy the link"></label>
+                    <input type="text" value="/_resources/slides/{{ file.name }}" id="{{ file.name }}" style="position:absolute;left:-1000px;top:-1000px;">
+                    <a href="/_resources/slides/{{ file.name }}" target="_blank">{{ file.name }}</a>&nbsp;&nbsp;<label class="icofont-ui-copy" onclick="copyFunc('{{ file.name }}')" id="linked" title="Click to copy the link"></label>
                 </div>
                     {% assign lin = file.path %}
                     {% capture papers %}{{ papers | append: lin }}{% endcapture %}
@@ -248,3 +248,4 @@ input[type=text] {
         document.execCommand("copy");
     }
 </script>
+</html>
