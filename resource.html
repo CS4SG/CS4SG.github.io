@@ -152,7 +152,7 @@ input[type=text] {
                     <input type="text" value="{{ site.url | append: fixedpath }}" id="{{ file.name }}" style="position:absolute;left:-1000px;top:-1000px;">
                     <a href="{{ site.url | append: fixedpath }}" target="_blank">{{ file.name }}</a>&nbsp;&nbsp;<label class="icofont-ui-copy" onclick="copyFunc('{{ file.name }}')" id="linked" title="Click to copy the link"></label>
                 </div>
-                    {% assign lin = file.path %}
+                    {% assign lin = site.url | append: fixedpath %}
                     {% capture slides %}{{ slides | append: lin }}{% endcapture %}
                     {% if forloop.last == false %}
                         {% capture slides %}{{ slides | append: "," }}{% endcapture %}
@@ -169,7 +169,7 @@ input[type=text] {
                     <input type="text" value="{{ site.url | append: fixedpath }}" id="{{ file.name }}" style="position:absolute;left:-1000px;top:-1000px;">
                     <a href="{{ site.url | append: fixedpath }}" target="_blank">{{ file.name }}</a>&nbsp;&nbsp;<label class="icofont-ui-copy" onclick="copyFunc('{{ file.name }}')" id="linked" title="Click to copy the link"></label>
                 </div>
-                    {% assign lin = file.path %}
+                    {% assign lin = site.url | append: fixedpath %}
                     {% capture papers %}{{ papers | append: lin }}{% endcapture %}
                     {% if forloop.last == false %}
                         {% capture papers %}{{ papers | append: "," }}{% endcapture %}
