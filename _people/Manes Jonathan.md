@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Jonathan Manes
-category: UB faculty
+category: Affiliated UB Faculty
 designation: Assistant Clinical Professor, School of Law
 status: active
 link: https://www.law.buffalo.edu/faculty/facultyDirectory/manes-jonathan.html
