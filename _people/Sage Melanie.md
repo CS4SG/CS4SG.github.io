@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Melanie Sage
-category: UB faculty
+category: Affiliated UB Faculty
 designation: Assistant Professor, School of Social Work
 status: active
 link: http://socialwork.buffalo.edu/faculty-research/full-time-faculty/melanie-sage.html
