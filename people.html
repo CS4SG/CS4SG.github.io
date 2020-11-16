@@ -54,7 +54,7 @@ title: People
 {% assign title_string = "" %}
 
 <!-- -------------Internal Faculty Section------------------>
-{% if status_array contains "UB faculty" %}
+{% if status_array contains "Affiliated UB Faculty" %}
   <h2 id="subhead"><span><strong>Internal Faculty</strong></span></h2>
 
 {% for peop in site.people %}
@@ -63,7 +63,7 @@ title: People
         {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
     {% endif %}
     
-    {% if peop.category == "UB faculty" %}
+    {% if peop.category == "Affiliated UB Faculty" %}
     
       <div class="col-lg-4 col-md-6">
         <div class="member" data-aos="fade-up">
