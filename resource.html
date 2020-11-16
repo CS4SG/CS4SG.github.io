@@ -183,8 +183,7 @@ input[type=text] {
 {% endfor %}
 
 
-<div class="myData" data-x='{{ slides }}'></div>
-<div class="myData" data-y='{{ papers }}'></div>
+<div class="myData" data-x='{{ slides }},{{ papers }}'></div>
 
 <script>
     var coll = document.getElementsByClassName("collapsible");
