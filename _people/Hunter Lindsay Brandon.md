@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Lindsay Brandon Hunter
-category: UB faculty
+category: Affiliated UB Faculty
 designation: Assistant Professor, Department of Theatre and Dance
 status: active
 link: https://arts-sciences.buffalo.edu/theatre-dance/faculty/faculty-directory/lindsay-brandon-hunter.html

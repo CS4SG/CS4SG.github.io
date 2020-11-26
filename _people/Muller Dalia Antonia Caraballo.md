@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Dalia Antonia Caraballo Muller
-category: UB faculty
+category: Affiliated UB Faculty
 designation: Associate Professor, Department of History
 status: active
 link: https://arts-sciences.buffalo.edu/history/faculty/faculty-directory/muller-dalia.html
