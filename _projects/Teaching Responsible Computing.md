@@ -107,7 +107,7 @@ Here are [the details on the actual problem statement (with some additional note
 
 This project was created from scratch. One constraint we put in early was to make sure that the underlying technical concept that was covered early in the course. Given the current course structure the best option seemed to pick something related to the [shortest path problem](https://en.wikipedia.org/wiki/Shortest_path_problem). On the other side, acknowledging that our student population is skewed towards students from WNY and New Yor State (NYS) in general), we wanted to pick a scenario that was local. During the discussion stage someone suggested we look into the [NYS Attorney General’s case against Spectrum](https://ag.ny.gov/sites/default/files/summons_and_complaint.pdf) that alleged serious unethical behavior of Spectrum towards their customer. Given the ubiquity of the Internet in what we do as computing professionals this seemed like a scenario that all of our students would relate to. The choice was finalized when we realized that we could create a programming project related to routing of packets in this context, which would tie directly to the shortest path problem that we had covered in class (and on which students have a programming assignment early in the semester). The programming project has multiple parts where most of them corresponded to potentially unethical ways of routing packets as detailed in NYS AG's complaint. The final part asked the students to route packets under a fairness constraint.
 
-(Details on the project will appear here soon.)
+Here are [the details on the actual coding project (with some code templates)]({{ site.url | append: "assets/resources/cse331/coding-project/index.html"}}).
 
 
 
