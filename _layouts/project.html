@@ -9,6 +9,7 @@ layout: default
   }
 
   function extract(data, selected){
+    console.log(selected)
     //Code Source: Prakshal Jain
     var dataStr = {}
     data.split(",").forEach(element => {
@@ -24,7 +25,7 @@ layout: default
         }
         else{
             let name = e.split(":")[0];
-            let relStr = dataStr[name].split("-->");
+            let relStr = (dataStr[name] == undefined) ?  "" : dataStr[name].split("-->");
             obj[name] = "<a href = '"+relStr[0]+"' target='_blank'>"+name+"</a>"+"&nbsp; <label class='peopleTag'><i class='icofont-tag'></i>&nbsp;"+relStr[1]+"</label>";
         }
     }
