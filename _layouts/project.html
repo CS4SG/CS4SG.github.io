@@ -1,12 +1,50 @@
 ---
 layout: default
 ---
-
 <script>
-    function findHostname(url){
-        var hostname = (new URL(url)).hostname;
-        document.write(hostname)
+  function findHostname(url){
+    //Code Source: Prakshal Jain
+    var hostname = (new URL(url)).hostname;
+    document.write(hostname)
+  }
+
+  function extract(data, selected){
+    //Code Source: Prakshal Jain
+    var dataStr = {}
+    data.split(",").forEach(element => {
+      let t = element.split("|");
+      dataStr[t[0]] = t[1]
+    });
+    var obj = {};
+    var arr = selected.split(",");
+    for(let e of arr){
+        let data = e.match(/<a [^>]+>([^<]+)<\/a>/);
+        if(data != null){
+            obj[data[1]] = e;
+        }
+        else{
+            let name = e.split(":")[0];
+            obj[name] = "<a href = '"+dataStr[name]+"' target='_blank'>"+name+"</a>";
+        }
     }
+    let sorted = Object.keys(obj).sort(compare)
+
+    for(let e of sorted){
+      document.getElementById("taggedPeop").innerHTML += "<li>"+obj[e]+"</li>"
+    }
+  }
+
+  function compare(a, b) {
+    //Function Code Source: https://stackoverflow.com/questions/24173245/javascript-array-sort-by-last-name-first-name
+    var splitA = a.split(" ");
+    var splitB = b.split(" ");
+    var lastA = splitA[splitA.length - 1];
+    var lastB = splitB[splitB.length - 1];
+
+    if (lastA < lastB) return -1;
+    if (lastA > lastB) return 1;
+    return 0;
+  }
 </script>
 
 <h2 class="hide">Page Content</h2> <!-- Hidden heading included for screen readers -->
@@ -22,24 +60,14 @@ layout: default
   <!--People-->
   {% if page.tagged_people %}
     <h3>People</h3>
-    {% assign people_tag = page.tagged_people | split: "," %}
+    {% assign people_tag = page.tagged_people %}
     {% assign peopLis = "" | split: ',' %}
     {% for peop in site.people %}
-      {% assign peopLis = peopLis | push: peop.key %}
+      {% assign innertxt = peop.key | append: '|' | append: peop.link | append: ',' %}
+      {% assign peopLis = peopLis | push: innertxt %}
     {% endfor %}
-      <ul class="noBullets">
-        {% for tag in people_tag %}
-          {% if peopLis contains tag %}
-            {% for peop in site.people %}
-              {% if tag == peop.key %}
-                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
-              {% endif %}
-            {% endfor %}
-          {% else %}
-            <li>{{ tag }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+    <ul id="taggedPeop"></ul>
+    <script>extract("{{ peopLis }}", "{{ people_tag }}")</script>
     <hr>
   {% endif %}
   
