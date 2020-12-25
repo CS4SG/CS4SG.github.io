@@ -40,8 +40,8 @@ title: Publications
         {% if pub.date %}
           <h3>Date:&nbsp;</h3><a>{{ pub.date | date: '%B %d, %Y' }}</a>
         {% endif %}
+        <hr />
     </li>
-    <hr />
     
          <!-- create string with all titles -->
          {% capture publication_string %}{{ publication_string | append: pub.key }}{% endcapture %}
