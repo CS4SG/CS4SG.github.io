@@ -13,7 +13,7 @@ layout: default
     var dataStr = {}
     data.split(",").forEach(element => {
       let t = element.split("|");
-      dataStr[t[0]] = t[1]
+      dataStr[t[0]] = t[1]+"-->"+t[2]
     });
     var obj = {};
     var arr = selected.split(",");
@@ -24,7 +24,8 @@ layout: default
         }
         else{
             let name = e.split(":")[0];
-            obj[name] = "<a href = '"+dataStr[name]+"' target='_blank'>"+name+"</a>";
+            let relStr = dataStr[name].split("-->");
+            obj[name] = "<a href = '"+relStr[0]+"' target='_blank'>"+name+"</a>"+"&nbsp; <label class='peopleTag'><i class='icofont-tag'></i>&nbsp;"+relStr[1]+"</label>";
         }
     }
     let sorted = Object.keys(obj).sort(compare)
@@ -63,7 +64,7 @@ layout: default
     {% assign people_tag = page.tagged_people %}
     {% assign peopLis = "" | split: ',' %}
     {% for peop in site.people %}
-      {% assign innertxt = peop.key | append: '|' | append: peop.link | append: ',' %}
+      {% assign innertxt = peop.key | append: '|' | append: peop.link | append: '|' | append: peop.category | append: ',' %}
       {% assign peopLis = peopLis | push: innertxt %}
     {% endfor %}
     <ul id="taggedPeop"></ul>
