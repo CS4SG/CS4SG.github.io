@@ -13,7 +13,7 @@ title: Guest Speakers (External Talks)
         {% capture talk_string %}{{ talk_string | append: "," }}{% endcapture %}
       {% endif %}
       
-      <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '{{ talk.url }}';" style="cursor: pointer;">
+      <div class="gridObj" onclick="window.location.href = '{{ talk.url }}';" style="cursor: pointer;">
         <h2 class="title"><a>{{ talk.title }}</a></h2>
         
         <table>
