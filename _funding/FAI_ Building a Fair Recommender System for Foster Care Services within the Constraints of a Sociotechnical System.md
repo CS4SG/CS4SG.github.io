@@ -1,5 +1,5 @@
 ---
-grant_title: FAI&#58 Building a Fair Recommender System for Foster Care Services within the Constraints of a Sociotechnical System
+grant_title: FAI&#58; Building a Fair Recommender System for Foster Care Services within the Constraints of a Sociotechnical System
 layout: funds
 organization: NSF and Amazon
 org_link: http://www.nsf.gov
@@ -9,6 +9,6 @@ duration: 2022-12-31
 start: 2020-01-01
 tagged_projects: Services for Foster Youth
 tagged_people: Varun Chandola,Huei-Yen ,Krithika Raj Dorai Raj,Yuhao Du,Yanbo Guo,Seventy Hall,Jacqueline Hannan,Prakshal Jain,Isys Johnson,Kenneth Joseph,Hope Kara,Atri Rudra,Melanie Sage,Hannah Wilcox,Connor Wurst,Jason Yan,<a href = 'kennyjoseph.github.io' target='_blank'>Kenneth Joseph</a>&nbsp;(<i>Principal Investigator</i>)
-key: FAI&#58 Building a Fair Recommender System for Foster Care Services within the Constraints of a Sociotechnical System
+key: FAI&#58; Building a Fair Recommender System for Foster Care Services within the Constraints of a Sociotechnical System
 ---
 
