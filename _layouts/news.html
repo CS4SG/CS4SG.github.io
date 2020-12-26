@@ -20,8 +20,14 @@ layout: default
         }
         else{
             let name = e.split(":")[0];
-            let relStr = (dataStr[name] == undefined) ?  "" : dataStr[name].split("-->");
-            obj[name] = "<a href = '"+relStr[0]+"' target='_blank'>"+name+"</a>"+"&nbsp; <label class='peopleTag'><i class='icofont-tag'></i>&nbsp;"+relStr[1]+"</label>";
+            let temp = dataStr[name]
+            if(temp == undefined){
+              obj[name] = name;
+            }
+            else{
+              let relStr = temp.split("-->");
+              obj[name] = "<a href = '"+relStr[0]+"' target='_blank'>"+name+"</a>"+"&nbsp; <label class='peopleTag'><i class='icofont-tag'></i>&nbsp;"+relStr[1]+"</label>";
+            }
         }
     }
     let sorted = Object.keys(obj).sort(compare)
