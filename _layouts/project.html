@@ -223,11 +223,11 @@ layout: default
   
   {% if counter.size > 0 %}
     <h3>Talks</h3>
-      <ul class="menu">
+      <ul>
         {% for talk in site.talks %}
           {% if talk.tagged_projects contains page.key and talk.category == "Internal" %}
             <li>
-              <a href="{{ talk.url }}">{{ talk.title }}</a>
+              <a href="{{ talk.url }}">{{ talk.title }}</a> - {{ talk.date | date: '%B %d, %Y' }} at {{ talk.locus }}
             </li>
           {% endif %}
         {% endfor %}
