@@ -34,13 +34,12 @@ layout: default
             let findMatch = dataStr[onlyName];
             if(findMatch == undefined){
               //Case 1: Person is external with no link
-              obj[onlyName] = onlyName;
+              obj[onlyName] = onlyName+"&nbsp;<i>(Principal Investigator)</i>";
             }
             else{
-              console.log(findMatch);
               //Case 2: Person is internal
               let relStr = findMatch.split("-->");
-              obj[onlyName] = "<a href = '"+relStr[0]+"' target='_blank'>"+onlyName+"</a>"+"&nbsp; <label class='peopleTag'><i class='icofont-tag'></i>&nbsp;"+relStr[1]+"</label>";
+              obj[onlyName] = "<a href = '"+relStr[0]+"' target='_blank'>"+onlyName+"</a>"+"&nbsp;<i>(Principal Investigator)</i>";
             }
           }
           else{
