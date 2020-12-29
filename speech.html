@@ -20,12 +20,18 @@ title: Guest Speakers (External Talks)
           <tr>
           
             <td style="width:30%;">
+              {% assign isInternal=true %}
               {% for peop in site.people %}
                 {% if peop.name == talk.talk_by %}
+                  {%assign isInternal=false%}
                   <h3 class="hide">Speaker photo</h3>
                   <img src="{{ peop.image }}"  style="border-radius: 50%; width:100px; margin-right:60px;"/>
                 {% endif %}
               {% endfor %}
+              {% if isInternal %}
+                <h3 class="hide">Default Speaker photo</h3>
+                <img src="./assets/img/team/default.png"  style="border-radius: 50%; width:100px; margin-right:60px;"/>
+              {% endif %}
             </td>
             
             <td>
@@ -36,7 +42,7 @@ title: Guest Speakers (External Talks)
                       <i class="icofont-ui-calendar"></i> {{ talk.date | date: '%B %d, %Y' }}
                   </li>
                   <li>
-                    <h3 style="display:inline; font-size:1em">Speaker: </h3><label style="text-decoration: none;">{{ talk.talk_by }}</label>
+                    <h3 style="display:inline; font-size:1em">Speaker: </h3>{{ talk.talk_by }}
                   </li>
                 </ul>
               </div>
