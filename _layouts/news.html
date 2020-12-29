@@ -133,6 +133,25 @@ layout: default
   </div>
   {% endif %}
   
+  <!--Talks-->
+  {% if page.tagged_talks %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    {% assign tag_array = page.tagged_talks | split: "," %}
+    <h3>Talks</h3>
+      <ul>
+        {% for tag in tag_array %}
+          {% for talk in site.talks %}
+            {% if tag == talk.key and talk.category == "Internal" %}
+              <li>
+                <a href="{{ talk.url }}">{{ talk.title }}</a> - {{ talk.date | date: '%B %d, %Y' }} at {{ talk.locus }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+  {% endif %} 
+  
   <!--Code-->
   {% if page.tagged_code %}
   <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -216,24 +235,6 @@ layout: default
   </div>
   {% endif %}
   
-  <!--Talks-->
-  {% if page.tagged_talks %}
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-    {% assign tag_array = page.tagged_talks | split: "," %}
-    <h3>Talks</h3>
-      <ul class="menu">
-        {% for tag in tag_array %}
-          {% for talk in site.talks %}
-            {% if tag == talk.key and talk.category == "Internal" %}
-              <li>
-                <a href="{{ talk.url }}">{{ talk.title }}</a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
-      </ul>
-  </div>
-  {% endif %} 
   
   <!--Blog Posts-->
   {% assign counter = "" %}
