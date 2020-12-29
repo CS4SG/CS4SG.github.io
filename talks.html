@@ -13,19 +13,25 @@ title: Internal Talks
         {% capture talk_string %}{{ talk_string | append: "," }}{% endcapture %}
       {% endif %}
       
-      <div class="gridObj" onclick="window.location.href = '{{ talk.url }}';" style="cursor: pointer;">
+      <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '{{ talk.url }}';" style="cursor: pointer;">
         <h2 class="title"><a>{{ talk.title }}</a></h2>
         
         <table>
           <tr>
           
             <td style="width:30%;">
+              {% assign isInternal=true %}
               {% for peop in site.people %}
                 {% if peop.name == talk.talk_by %}
+                  {%assign isInternal=false%}
                   <h3 class="hide">Speaker photo</h3>
                   <img src="{{ peop.image }}"  style="border-radius: 50%; width:100px; margin-right:60px;"/>
                 {% endif %}
               {% endfor %}
+              {% if isInternal %}
+                <h3 class="hide">Default Speaker photo</h3>
+                <img src="./assets/img/team/default.png"  style="border-radius: 50%; width:100px; margin-right:60px;"/>
+              {% endif %}
             </td>
             
             <td>
