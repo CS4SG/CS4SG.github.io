@@ -2010,12 +2010,3 @@ section {
   }
 }
 /* -------------------------------- */
-
-/* -----------Tags with no special effects----------- */
-.noDecor{
-color: black;
-text-decoration: none;
-}
-.noDecor:hover{
-color: black;
-}
