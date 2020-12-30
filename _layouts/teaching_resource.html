@@ -100,6 +100,28 @@ layout: default
     <hr>
   {% endif %}
   
+  <!--Talks-->
+  {% assign counter = "" %}
+  {% for talk in site.talks %}
+    {% if talk.tagged_teaching contains page.key and talk.category == "Internal" %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Talks</h3>
+      <ul>
+        {% for talk in site.talks %}
+          {% if talk.tagged_teaching contains page.key and talk.category == "Internal" %}
+            <li>
+              <a href="{{ talk.url }}">{{ talk.title }}</a> - {{ talk.date | date: '%B %d, %Y' }} at {{ talk.locus }}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
   <!--Code-->
   {% if page.tagged_code %}
     {% assign tag_array = page.tagged_code | split: "," %}
@@ -161,28 +183,6 @@ layout: default
           {% if grant.tagged_teaching contains page.key %}
             <li>
               <a href="{{ grant.url }}">{{ grant.organization }}</a>: US$ {{ grant.grants }}
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    <hr>
-  {% endif %}
-
-  <!--Talks-->
-  {% assign counter = "" %}
-  {% for talk in site.talks %}
-    {% if talk.tagged_teaching contains page.key and talk.category == "Internal" %}
-      {% assign counter = counter | append: "1" %}
-    {% endif %}
-  {% endfor %}
-  
-  {% if counter.size > 0 %}
-    <h3>Talks</h3>
-      <ul class="menu">
-        {% for talk in site.talks %}
-          {% if talk.tagged_teaching contains page.key and talk.category == "Internal" %}
-            <li>
-              <a href="{{ talk.url }}">{{ talk.title }}</a>
             </li>
           {% endif %}
         {% endfor %}

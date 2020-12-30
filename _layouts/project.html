@@ -101,6 +101,28 @@ layout: default
     <hr>
   {% endif %}
   
+  <!--Talks-->
+  {% assign counter = "" %}
+  {% for talk in site.talks %}
+    {% if talk.tagged_projects contains page.key and talk.category == "Internal" %}
+      {% assign counter = counter | append: "1" %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if counter.size > 0 %}
+    <h3>Talks</h3>
+      <ul>
+        {% for talk in site.talks %}
+          {% if talk.tagged_projects contains page.key and talk.category == "Internal" %}
+            <li>
+              <a href="{{ talk.url }}">{{ talk.title }}</a> - {{ talk.date | date: '%B %d, %Y' }} at {{ talk.locus }}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <hr>
+  {% endif %}
+  
   <!--Resources-->
   {% assign counter = "" %}
   {% for resource in site.resource_links %}
@@ -219,27 +241,6 @@ layout: default
     <hr>
   {% endif %}
     
-  <!--Talks-->
-  {% assign counter = "" %}
-  {% for talk in site.talks %}
-    {% if talk.tagged_projects contains page.key and talk.category == "Internal" %}
-      {% assign counter = counter | append: "1" %}
-    {% endif %}
-  {% endfor %}
-  
-  {% if counter.size > 0 %}
-    <h3>Talks</h3>
-      <ul>
-        {% for talk in site.talks %}
-          {% if talk.tagged_projects contains page.key and talk.category == "Internal" %}
-            <li>
-              <a href="{{ talk.url }}">{{ talk.title }}</a> - {{ talk.date | date: '%B %d, %Y' }} at {{ talk.locus }}
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    <hr>
-  {% endif %}
   
   <!--Events (News & External Talks)-->
   {% assign counter = "" %}
