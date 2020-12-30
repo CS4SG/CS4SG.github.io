@@ -21,7 +21,7 @@ layout: default
         if(data != null){
             //Case when external principal investigator with link
             if(e.includes("==>>Principal_Investigator")){
-              obj[data[1]] = data[0]+"&nbsp;<i>(Principal Investigator)</i>"
+              obj[data[1]] = data[0]+"&nbsp;<i>(PI)</i>"
             }
             else{
               obj[data[1]] = e;
@@ -34,12 +34,12 @@ layout: default
             let findMatch = dataStr[onlyName];
             if(findMatch == undefined){
               //Case 1: Person is external with no link
-              obj[onlyName] = onlyName+"&nbsp;<i>(Principal Investigator)</i>";
+              obj[onlyName] = onlyName+"&nbsp;<i>(PI)</i>";
             }
             else{
               //Case 2: Person is internal
               let relStr = findMatch.split("-->");
-              obj[onlyName] = "<a href = '"+relStr[0]+"' target='_blank'>"+onlyName+"</a>"+"&nbsp;<i>(Principal Investigator)</i>";
+              obj[onlyName] = "<a href = '"+relStr[0]+"' target='_blank'>"+onlyName+"</a>"+"&nbsp;<i>(PI)</i>"+"&nbsp; <label class='peopleTag'><i class='icofont-tag'></i>&nbsp;"+relStr[1]+"</label>";
             }
           }
           else{
