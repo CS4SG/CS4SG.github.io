@@ -1,6 +1,7 @@
 ---
 layout: publication
 title: Check Author Order
+venue: 
 authors: Jacqueline Hannan,Atri Rudra,Melanie Sage,Prakshal Jain,Yuhao Du,<a href = 'https://www.w3schools.com/' target='_blank'>Jonathan Wu</a>
 published_in: Buffalo Lab
 tagged_projects: Teaching Responsible Computing,Services for Foster Youth,Education 1
