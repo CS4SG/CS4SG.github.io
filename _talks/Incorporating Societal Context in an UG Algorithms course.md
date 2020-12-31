@@ -5,6 +5,7 @@ category: External
 locus:  Integrating Ethics and Social Responsibility in Computing Curricula Symposium @ SIGCSE
 location_link: https://zoom.us/
 resource_links: 
+abs_links: 
 talk_by: Atri Rudra
 date: March 11, 2020
 tagged_projects: Teaching Responsible Computing
