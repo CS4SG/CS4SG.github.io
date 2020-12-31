@@ -62,13 +62,24 @@ layout: default
 {% if page.authors %}
 <div class="relatedSection">
 <h3>Authors</h3>
+{% assign tag_people = page.authors | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
-  {% assign innertxt = peop.key | append: '|' | append: peop.link | append: '|' | append: peop.category | append: ',' %}
-  {% assign all_peop = all_peop | push: innertxt %}
+    {% assign all_peop = all_peop | push: peop.key %}
 {% endfor %}
-<ul class="noBullets" id="taggedPeop"></ul>
-<script>extract("{{ all_peop }}", "{{ page.authors }}","taggedPeop")</script>
+<ul class="noBullets">
+{% for tag in tag_people %}
+    {% if all_peop contains tag %}
+        {% for peop in site.people %}
+            {% if tag == peop.key %}
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+    <li><p>{{ tag }}</p></li>
+    {% endif %}
+{% endfor %}
+</ul>
 </div>
 <hr>
 {% endif %}

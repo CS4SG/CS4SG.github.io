@@ -38,7 +38,10 @@ title: Publications
           <h3>Abstract:&nbsp;</h3><div id="desc" style="display:inline">{{ pub.abstract }}</div><br>
         {% endif %}
         {% if pub.date %}
-          <h3>Date:&nbsp;</h3><a>{{ pub.date | date: '%B %d, %Y' }}</a>
+          <h3>Date:&nbsp;</h3><a>{{ pub.date | date: '%B %d, %Y' }}</a><br>
+        {% endif %}
+        {% if pub.venue %}
+          <h3>Venue:&nbsp;</h3><a>{{ pub.venue }}</a>
         {% endif %}
         <hr />
     </li>
