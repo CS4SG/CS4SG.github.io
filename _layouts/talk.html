@@ -67,7 +67,7 @@ function findHostname(url){
 <!-- -------------------------------------- -->
 	
 	
-{% if page.resource_links %}
+{% if page.resource_links or page.abs_links %}
 <div class="relatedSection">
 {% assign tag_res = page.resource_links | split: "," %}
 <h3><b>Resources</b></h3>
