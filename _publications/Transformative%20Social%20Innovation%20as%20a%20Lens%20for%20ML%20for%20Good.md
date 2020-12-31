@@ -2,7 +2,7 @@
 layout: publication
 title: Transformative Social Innovation as a Lens for ML for Good
 authors: Melanie Sage,Atri Rudra,Kenneth Joseph,Huei-Yen Chen,Varun Chandola
-published_in: CSCW 2020 Workshop'\:' Collective Organizing and Social Responsibility
+published_in: CSCW 2020 Workshop&#x3a; Collective Organizing and Social Responsibility
 tagged_projects: Services for Foster Youth
 tagged_people:
 date: 2020-10-15
