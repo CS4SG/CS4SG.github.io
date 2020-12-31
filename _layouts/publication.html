@@ -170,27 +170,36 @@ layout: default
   {% endif %}
 
   <!--Resources-->
-  {% assign counter = "" %}
-  {% for resource in site.resource_links %}
-    {% if resource.tagged_publications contains page.key %}
-      {% assign counter = counter | append: "1" %}
-    {% endif %}
+  {% if page.resource_links or page.abs_links %}
+  <div class="relatedSection">
+  {% assign tag_res = page.resource_links | split: "," %}
+  <h3><b>Resources</b></h3>
+  <ol>
+  {% for tag in tag_res %}
+    {% for resource in site.resource_links %}
+            {% if tag == resource.key %}
+            {% assign res_links_array = resource.link | split: "," %}
+            <li>
+                {{ resource.description }}
+            <ul class="menu">
+            {% for lin in res_links_array %}
+              <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+            {% endfor %}
+            </ul>
+            </li>
+          {% endif %}
+    {% endfor %}
   {% endfor %}
   
-  {% if counter.size > 0 %}
-    <h3>Resources</h3>
-      <ul class="noBullets">
-        {% for resource in site.resource_links %}
-          {% if resource.tagged_publications contains page.key %}
-            {% assign res_links_array = resource.link | split: "," %}
-              {% for lin in res_links_array %}
-                <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
-              {% endfor %}
-          {% endif %}
-        {% endfor %}
-      </ul>
-    <hr>
+  {% assign abs_resources = page.abs_links | split: "," %}
+  {% for lin in abs_resources %}
+    <li><a href="{{ lin }}" target="_blank">{{ lin }}</a></li>
+  {% endfor %}
+  </ol>
+  </div>
+  <hr/>
   {% endif %}
+  <!-- -------------------------------------- -->
 
   <!--Code-->
   {% assign counter = "" %}
