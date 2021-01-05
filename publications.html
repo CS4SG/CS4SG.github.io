@@ -31,7 +31,7 @@ title: Publications
 {% for pub in site.publications %}
     <li>
       <h2 style="font-size:1.5em"><a href="{{ pub.url }}">{{ pub.title }}</a></h2>
-        {% if pub.authors %}
+        {% if pub.authors | split: "," | join: ", " %}
           <h3>Author(s):&nbsp;</h3><a>{{ pub.authors }}</a><br/>
         {% endif %}
         {% if pub.abstract %}
