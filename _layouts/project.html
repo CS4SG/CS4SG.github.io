@@ -89,15 +89,19 @@ layout: default
   
   {% if counter.size > 0 %}
     <h3>Publications</h3>
-      <ul class="noBullets">
+      <ol class="noBullets">
         {% for pub in site.publications %}
           {% if pub.tagged_projects contains page.key %}
             <li>
-              <a href="{{ pub.url }}">{{ pub.title }}</a>
+              <!-- Need to change authors later to include author's pub_name -->
+              {{ pub.authors | split: "," | join: ", " }}, 
+              <a href="{{ pub.url }}">{{ pub.title }}</a>,
+              {% if pub.venue %}{{ pub.venue }}, {% endif %}
+              {{ pub.date | date: '%Y' }}
             </li>
           {% endif %}
         {% endfor %}
-      </ul>
+      </ol>
     <hr>
   {% endif %}
   
