@@ -1,0 +1,155 @@
+I"�<style>
+    input[type=text] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+</style>
+
+<h2 class="hide">Search</h2>
+<p><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by entering a project's title or title keywords. (Example: Bias) etc." title="Type in Project Title" /></p>
+
+<div id="myUL">
+
+<div class="row">
+  
+    
+    <!-- <p>11</p> -->
+      
+      <label>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '/projects/Education%201.html';" style="cursor: pointer;">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxs-report"></i></div>
+              <h3 class="title"><a>Education 1</a></h3>
+                <h4 class="hide">Description</h4>
+                <div id="textbox"><p class="description" style="font-size:0.5em"><p>short description</p>
+</p></div>
+          </div>
+        </div>
+
+         <!-- create string with all titles -->
+         
+         
+         <!-- -------------------------------->
+     </label>
+     
+    <!-- <p>30</p> -->
+      
+      <label>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '/projects/Teaching%20Responsible%20Computing.html';" style="cursor: pointer;">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxs-report"></i></div>
+              <h3 class="title"><a>Teaching Responsible Computing</a></h3>
+                <h4 class="hide">Description</h4>
+                <div id="textbox"><p class="description" style="font-size:0.5em"><p>Incorporating responsible computing and ethics in computi…</p>
+</p></div>
+          </div>
+        </div>
+
+         <!-- create string with all titles -->
+         
+         
+         <!-- -------------------------------->
+     </label>
+     
+    <!-- <p>25</p> -->
+      
+      <label>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '/projects/Services%20for%20Foster%20Youth.html';" style="cursor: pointer;">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxs-report"></i></div>
+              <h3 class="title"><a>Services for Foster Youth</a></h3>
+                <h4 class="hide">Description</h4>
+                <div id="textbox"><p class="description" style="font-size:0.5em"><p>FAI grant from NSF and Amazon</p>
+</p></div>
+          </div>
+        </div>
+
+         <!-- create string with all titles -->
+         
+         
+         <!-- -------------------------------->
+     </label>
+     
+    <!-- <p>14</p> -->
+      
+      <label>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '/projects/Sample%2520Project.html';" style="cursor: pointer;">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxs-report"></i></div>
+              <h3 class="title"><a>Sample Project</a></h3>
+                <h4 class="hide">Description</h4>
+                <div id="textbox"><p class="description" style="font-size:0.5em"><p>Some text</p>
+</p></div>
+          </div>
+        </div>
+
+         <!-- create string with all titles -->
+         
+         
+         <!-- -------------------------------->
+     </label>
+     
+    <!-- <p>11</p> -->
+      
+      <label>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '/projects/Education%203.html';" style="cursor: pointer;">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxs-report"></i></div>
+              <h3 class="title"><a>Education 3</a></h3>
+                <h4 class="hide">Description</h4>
+                <div id="textbox"><p class="description" style="font-size:0.5em"><p>desc desc desc</p>
+</p></div>
+          </div>
+        </div>
+
+         <!-- create string with all titles -->
+         
+         
+         <!-- -------------------------------->
+     </label>
+     
+    <!-- <p>11</p> -->
+      
+      <label>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '/projects/Education%202.html';" style="cursor: pointer;">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxs-report"></i></div>
+              <h3 class="title"><a>Education 2</a></h3>
+                <h4 class="hide">Description</h4>
+                <div id="textbox"><p class="description" style="font-size:0.5em"><p>really long description. really long description. really long description. really long descriptio…</p>
+</p></div>
+          </div>
+        </div>
+
+         <!-- create string with all titles -->
+         
+         
+         <!-- -------------------------------->
+     </label>
+     
+ </div>
+</div>
+<div class="myData" data-x="Education 1,Teaching Responsible Computing,Services for Foster Youth,Sample Project,Education 3,Education 2"></div>
+
+<script>
+    function myFunction() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("label");
+      for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+          }
+      }
+  }
+ </script>
+
+:ET

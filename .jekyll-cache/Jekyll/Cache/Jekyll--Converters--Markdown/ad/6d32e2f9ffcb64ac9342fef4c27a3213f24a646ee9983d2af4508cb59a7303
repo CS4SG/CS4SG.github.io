@@ -1,0 +1,488 @@
+I"Ê <script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
+
+<div class="postimagebyline">
+
+  <img class="postimage" src="https://cs4sg.github.io/assets/img/c.jpg" alt="Ink blots" />
+
+<br /><br />
+
+<!---------------------------->
+<h2 class="hide">Byline (Authors &amp; Date)</h2>
+  
+  
+  
+  <div class="postbyline">
+    <p class="postdate">July 08, 2020</p>
+    <br />
+    
+    <p>By&nbsp;</p>
+      
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <p><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/kenny-joseph.html" target="_blank">Kenneth Joseph</a></p>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        ,&nbsp;
+      
+        
+          <p>Person 2</p>
+        
+        
+          
+    
+  </div>
+</div>
+
+<!---------------------------->
+<h2 class="hide">Page Content</h2>
+<p><p>Excerpt test: The post excerpt should end here.<!--end--> Additional post content on the same line.</p>
+
+<p>New line.</p>
+</p>
+<hr />
+
+<!---------------------------->
+<h2 style="font-size:1em; text-align:center">Tags</h2>
+<div class="relatedSection postsections">
+
+  <!--People-->
+  
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <h3>People</h3>
+    
+    
+    
+      <ul class="noBullets">
+        
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                <li><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/atri-rudra.html" target="_blank">Atri Rudra</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;Affiliated UB Faculty</label></li>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          
+        
+      </ul>
+  </div>
+  
+
+  <!--Projects-->
+  
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    
+    <h3>Projects</h3>
+      <ul class="menu">
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+          
+            
+              <li>
+                <a href="/projects/Education%201.html">Education 1</a>
+              </li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+          
+            
+          
+            
+          
+            
+              <li>
+                <a href="/projects/Education%203.html">Education 3</a>
+              </li>
+            
+          
+            
+          
+            
+          
+            
+          
+        
+      </ul>
+  </div>
+  
+    
+  <!--Publications-->
+  
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    
+    <h3>Publications</h3>
+      <ul class="menu">
+        
+          
+            
+              <li>
+                <a href="/publications/Publication%201.html">Publication 1</a>
+              </li>
+            
+          
+            
+          
+            
+          
+            
+          
+        
+          
+            
+          
+            
+              <li>
+                <a href="/publications/Paper3.html">Paper3</a>
+              </li>
+            
+          
+            
+          
+            
+          
+        
+      </ul>
+  </div>
+  
+  
+  <!--Talks-->
+  
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    
+    <h3>Talks</h3>
+      <ul>
+        
+          
+            
+          
+            
+          
+            
+          
+            
+              <li>
+                <a href="/talks/Impacts%20of%20AI.html">Impacts of AI</a> - June 25, 2020 at UB, Buffalo, New York, US
+              </li>
+            
+          
+            
+          
+        
+      </ul>
+  </div>
+  
+  
+  <!--Code-->
+  
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    
+    <h3>Code Resources</h3>
+      <ol class="codetags">
+        
+          
+            
+              
+              <li>
+                This is a sample code which need to be implemented into the research project. We can tag projects!
+                <ul class="menu">
+                  
+                    <li><a href="https://www.w3schools.com/" target="_blank"><script>findHostname("https://www.w3schools.com/")</script></a></li>
+                  
+                    <li><a href="https://www.mozilla.org/en-US/exp/" target="_blank"><script>findHostname("https://www.mozilla.org/en-US/exp/")</script></a></li>
+                  
+                </ul>
+              </li>
+            
+          
+            
+          
+        
+          
+            
+          
+            
+              
+              <li>
+                This is the second code. Just a sample.
+                <ul class="menu">
+                  
+                    <li><a href="https://www.w3schools.com/" target="_blank"><script>findHostname("https://www.w3schools.com/")</script></a></li>
+                  
+                    <li><a href="https://www.mozilla.org/en-US/exp/" target="_blank"><script>findHostname("https://www.mozilla.org/en-US/exp/")</script></a></li>
+                  
+                </ul>
+              </li>
+            
+          
+        
+      </ol>
+  </div>
+  
+  
+  <!--Teaching Resources-->
+  
+  
+  <!--Courses-->
+  
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    
+    <h3>Courses</h3>
+      <ul class="menu">
+        
+          
+            
+              <li>
+                <a href="\courses.html#AAA 101">AAA 101 - Course 1</a>
+              </li>
+            
+          
+            
+          
+        
+      </ul>
+  </div>
+  
+    
+    
+  <!--Funding-->
+  
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    
+    <h3>Funding</h3>
+      <ul class="menu">
+        
+          
+            
+          
+            
+          
+            
+              <li>
+                <a href="/funding/The%20best%20gift%20ever.html">C4SG</a>: US$ 100000
+              </li>
+            
+          
+            
+          
+            
+          
+        
+      </ul>
+  </div>
+  
+  
+  <!--Talks-->
+  
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    
+    <h3>Talks</h3>
+      <ul class="menu">
+        
+          
+            
+          
+            
+          
+            
+          
+            
+              <li>
+                <a href="/talks/Impacts%20of%20AI.html">Impacts of AI</a>
+              </li>
+            
+          
+            
+          
+        
+      </ul>
+  </div>
+  
+  
+  <!--Events (News & External Talks)-->
+  
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    
+    
+    <h3>Events</h3>
+      <ul class="menu">
+        
+          
+            
+              <li>
+                <a href="/event/news%201.html">news 1</a>
+              </li>
+            
+          
+            
+          
+            
+          
+        
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+      </ul>
+  </div>
+  
+
+
+
+</div>
+
+:ET

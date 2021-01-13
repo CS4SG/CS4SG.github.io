@@ -1,0 +1,294 @@
+I"<style>
+h3 {
+  display: inline-block;
+  margin: 5px 0px 5px 0px;
+  font-size: 1.1em;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul.noBullets {
+  margin: 0px 0px -5px 0px;
+}
+
+p {
+  margin: 5px 0px 5px 0px;
+}
+</style>
+
+<div id="AAA 101">
+
+    <!-------------------- Course prefix & title --------------------------------------->
+    <h2>AAA 101 - Course 1</h2>
+    
+    <!-------------------- Course catalog link ----------------------------------------->
+    <h3 class="hide">Link to Course in UB Course Catalog</h3>
+        <p><a href="https://scholar.google.com/">UB Course Catalog Page</a></p>
+
+    <!-------------------- Past website links ------------------------------------------>
+    
+      <h3>Webpages from past sessions:&nbsp;</h3>
+      <ul class="menu" style="display:inline-block;margin-bottom:5px;padding-left:0px">
+        
+            
+            <li><a href="https://www.google.com/" target="_blank"> Sample Link</a></li>
+        
+      </ul>
+      <br />
+    
+            
+    <!-------------------- Instructors ------------------------------------------------->
+    
+    
+    
+    
+    <h3>Instructors:</h3>
+    <ul class="noBullets">
+    
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/david-doermann.html" target="_blank">David Doermann</a> &nbsp; <label class="peopleTag">Affiliated UB Faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li><a href="https://www.law.buffalo.edu/faculty/facultyDirectory/manes-jonathan.html" target="_blank">Jonathan Manes</a> &nbsp; <label class="peopleTag">Affiliated UB Faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    
+    </ul>
+    
+    
+    <!-------------------- Typical semesters ------------------------------------------>
+    
+    <h3>Typical semesters offered:&nbsp;</h3><p style="display:inline-block">Fall, Spring</p>
+    
+    <br />
+    <!-------------------- Course description ----------------------------------------->
+    
+    <h3>Description:&nbsp;</h3><p style="display:inline-block">short description</p>
+    
+
+</div>
+
+<p><br /></p>
+
+<div id="CSE 331">
+
+    <!-------------------- Course prefix & title --------------------------------------->
+    <h2>CSE 331 - Algorithms and Complexity</h2>
+    
+    <!-------------------- Course catalog link ----------------------------------------->
+    <h3 class="hide">Link to Course in UB Course Catalog</h3>
+        <p><a href="https://catalog.buffalo.edu/courses/?abbr=CSE&amp;num=331">UB Course Catalog Page</a></p>
+
+    <!-------------------- Past website links ------------------------------------------>
+    
+      <h3>Webpages from past sessions:&nbsp;</h3>
+      <ul class="menu" style="display:inline-block;margin-bottom:5px;padding-left:0px">
+        
+            
+            <li><a href="http://www-student.cse.buffalo.edu/~atri/cse331/fall19/index.html" target="_blank">CSE 331 Fall 2019</a></li>
+        
+            
+            <li><a href="https://cse.buffalo.edu/~erdem/cse331/spring20/policies/syllabus.html" target="_blank">CSE 331 Spring 2020</a></li>
+        
+      </ul>
+      <br />
+    
+            
+    <!-------------------- Instructors ------------------------------------------------->
+    
+    
+    
+    
+    <h3>Instructors:</h3>
+    <ul class="noBullets">
+    
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/atri-rudra.html" target="_blank">Atri Rudra</a> &nbsp; <label class="peopleTag">Affiliated UB Faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    
+    </ul>
+    
+    
+    <!-------------------- Typical semesters ------------------------------------------>
+    
+    <h3>Typical semesters offered:&nbsp;</h3><p style="display:inline-block">Spring</p>
+    
+    <br />
+    <!-------------------- Course description ----------------------------------------->
+    
+    <h3>Description:&nbsp;</h3><p style="display:inline-block">Introduces paradigms for designing algorithms and fundamental limitations to what algorithms can do. Covers basic algorithm design paradigms of greedy algorithms, divide and conquer algorithms and dynamic programming, as well as a selection of advanced algorithmic topics, such as randomized algorithms, algorithms for distributed systems and basic algorithms for machine learning. Topics related to limitations of algorithms include NP-completeness and undecidability. Coverage includes analyzing algorithms via proofs and programming assignments to implement algorithms.</p>
+    
+
+</div>
+
+<p><br /></p>
+
+<div class="myData" data-x="AAA101,CSE331" style="display: none;"></div>
+:ET

@@ -1,0 +1,180 @@
+I"H<html>
+  
+<script>
+  function findHostname(url){
+    var hostname = (new URL(url)).hostname;
+    document.write(hostname)
+  }
+</script>
+
+  <h2 class="hide">Description</h2>
+    <p><p>Nec sagittis aliquam malesuada bibendum arcu vitae. Fringilla ut morbi tincidunt augue interdum velit. Phasellus faucibus scelerisque eleifend donec pretium vulputate. Porttitor eget dolor morbi non. Tristique magna sit amet purus gravida quis blandit turpis. Vel risus commodo viverra maecenas accumsan lacus vel. Eget nunc scelerisque viverra mauris in. Odio pellentesque diam volutpat commodo. Etiam non quam lacus suspendisse faucibus. Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Ornare arcu dui vivamus arcu felis. Arcu ac tortor dignissim convallis aenean et tortor at risus.</p>
+</p>
+  
+  <h2 class="hide">Files</h2>
+    <ul class="noBullets">
+      <!-- Files that have yaml front matter aka have their own page on the website -->
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+      <!-- Files that have no yaml front matter e.g. images, zip files, plain text files -->
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+          
+            
+          
+            
+              
+              <li><i class="bx bxs-right-arrow"></i>&nbsp;<a href="http://localhost:4000/teaching_resources/Resource2/Black-White-Grid.png" target="_blank">Black-White-Grid</a></li>
+            
+          
+            
+              
+              <li><i class="bx bxs-right-arrow"></i>&nbsp;<a href="http://localhost:4000/teaching_resources/Resource2/Lorem Ipsum.txt" target="_blank">Lorem Ipsum</a></li>
+            
+          
+            
+              
+              <li><i class="bx bxs-right-arrow"></i>&nbsp;<a href="http://localhost:4000/teaching_resources/Resource2/Open_Sans.zip" target="_blank">Open_Sans</a></li>
+            
+          
+        
+      
+    </ul>
+
+<!---------------------------->
+<div class="relatedSection">
+
+  <!--People-->
+  
+  
+  <!--Projects-->
+  
+    
+    <hr />
+    <h3>Projects</h3>
+      <ul class="menu">
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+          
+            
+              <li>
+                <a href="/projects/Education%201.html">Education 1</a>
+              </li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+      </ul>
+    <hr />
+  
+  
+  <!--Publications-->
+  
+  
+  <!--Talks-->
+  
+  
+  
+  
+  
+  <!--Code-->
+  
+  
+  <!--Courses-->
+  
+  
+  
+  
+
+  <!--Funding-->
+  
+  
+  
+  
+	
+  <!--Events (News & External Talks)-->
+  
+  
+  
+  
+  
+
+  <!--Blog Posts-->
+  
+  
+  
+  
+  
+</div>
+</html>
+
+:ET

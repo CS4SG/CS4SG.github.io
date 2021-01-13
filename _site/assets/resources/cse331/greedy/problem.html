@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>High Speed Internet Problem</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Callout css from Chris Pratt: http://cpratt.co/twitter-bootstrap-callout-css-styles/--->
+    <link href="css/callout.css" rel="stylesheet">
+    <!-- Font awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+        <div id="nav-content"></div>
+
+    <!-- TOC -->
+    <div id="toc"></div>
+
+    <div class="container theme-showcase" role="main">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>High Speed Internet</h1>
+            <p>Greedy algorithm problem.</p>
+            <p>Here are <a href="notes.html">some extra notes</a> that can be used in a recitation</p>
+            <p><i>Material Developed by:</i> <a href="https://cse.buffalo.edu/faculty/atri/">Atri Rudra</a></p>
+      </div>
+
+
+     <div class="page-header">
+
+<!--
+  <div class="footnotes"><ol>
+        <li class="footnote" id="fn:1">
+                    <p>Lest you think I have anything against liberals, let me assure you that my brother-in-law has “termed" me and my wife as
+being liberal elites.</p>
+        </li>
+    </ol>
+  </div>
+-->
+
+            <div class="bs-callout bs-callout-warning">
+                <h4>Context of this assignment</h4>
+                <p>This problem is part of a series of assignments in an <a href="http://www-student.cse.buffalo.edu/~atri/cse331/fall19/index.html">UG algorithms course <i class="fa fa-external-link fa-sm"></i></a> that are all related to access to high speed Internet. 
+                </p>
+                <p>Here are some <a href="http://www-student.cse.buffalo.edu/~atri/cse331/fall19/SIGCSE2020.pptx">slides <i class="fa fa-external-link fa-sm"></i></a> from a talk that gives an overview of these assignments.
+                </p>
+            </div>
+
+
+            <div class="bs-callout bs-callout-primary">
+            <h4>The Problem</h4>
+
+                <p>We come back to the issue of many USA regions not having high speed internet. In this question, you will consider an algorithmic problem that you would need to solve to help out a (fictional) place get high speed Internet.</p>
+                <p>You are the algorithms whiz in the effort to bring high speed Internet to <code>SomePlaceInUSA</code>. After lots of rounds of discussions and public feedback, it was decided that the most cost-effective way to bring high speed internet to <code>SomePlaceInUSA</code> was to install high speed cell towers to connect all houses in <code>SomePlaceInUSA</code> to high speed internet. There are two things in your favor:
+                    <ol>
+                        <li>It just so happens that all of  the $n$ houses in <code>SomePlaceInUSA</code> are on the side of a straight road that runs through the town.</li>
+                        <li>The above implies that you only need cell towers that only need to broadcast their signal in a narrow range, which means one cell tower can provide high speed internet access to all houses within $100$ miles <i>ahead</i> (rather than the usual <a href="https://en.wikipedia.org/wiki/Cell_site#Range" target="_blank">45 mile range <i class="fa fa-external-link fa-sm"></i></a>) on the road from its location (we are assuming that these cell towers will be on the side of the road). These cell towers are unidirectional so they can provide connection to only houses that are ahead of it.</li>
+                    </ol>
+                    Due to various logistical reasons, the cell towers have to be on the side of the straight road and right next to a house.
+                </p>
+                <p> None of your team-mates attended the class on greedy algorithms, so
+in this problem you will design an efficient algorithm for them, which your team can use to figure out which houses  should have cell towers installed next to them so as to <i>use the minimum number of cell towers</i>.</p>
+
+                <p>With an eye on the future, the cell towers have to be placed so that there is continuous cell coverage on the road from the first and the last house on the road. I.e. it should never be the case that you are on the road (between the first and the last house) such that you are
+strictly more than $100$ miles <i>ahead</i> of the closest cell tower.  You can assume that you have to put a cell tower at the first house on the road in <code>SomePlaceInUSA</code>.
+                </p>
+                    <div class="bs-callout bs-callout-warning">
+                        <h4>Note</h4>
+                            <p>You should assume the following for your algorithm:
+                                <ul>
+                                    <li>No two consecutive houses are more than $99$ miles apart. Note that this implies there always exists a feasible way to assign cell towers to houses. Further, note that houses can be much closer than $99$ miles to each other.</li>
+                                    <li>The input to your algorithm is a list of houses along with their distance (in miles) from the very first house. You cannot assume that this list is sorted in any way.</li>
+                                </ul>
+                            </p>
+                    </div>
+
+                <p>Here are the two two parts of the problem:
+                    <ul>
+                        <li> Part <kbd>(a)</kbd>: Assume that we relax the condition that the cell towers have to be next to house: i.e. you can place a cell tower anywhere on the road (the $100$ mile coverage restriction on the cell towers still applies). Design an $O(n)$ time algorithm to solve this related problem.</p>
+                        <li> Part <kbd>(b)</kbd>: Design an $O(n\log{n})$ time algorithm to solve the original problem (i.e. where the cell towers have to be next to a house). Prove the correctness of your algorithm and analyze its running time.</li>
+                    </ul>
+
+
+
+            </p>
+
+
+            </div>
+
+            <div class="bs-callout bs-callout-success">
+            <h4><i class="fa fa-key"></i> Hint</h4>
+            <p>Think of a greedy way to decide on which houses to pick for cell tower installation. It might help to forget about the scheduling algorithms we have seen in class and just think of a greedy algorithm
+from "scratch." Then try to analyze the algorithm using similar arguments to one we have seen in class.
+                </p>
+            </div>
+
+                <div class="bs-callout bs-callout-danger">
+                    <h4><i class="fa fa-ban"></i> Common Mistake</h4>
+                        <p>One common mistake is to present a correct greedy algorithm to solve this problem but then not proving that their algorithm is optimal, i.e. among all feasible assignments of cell towers to houses (i.e. all allocations that result in high speed internet in all houses in <code>SomePlaceInUSA</code>) the algorithms output should have the fewest number of cell towers in them.</p>
+                </div>
+
+                <h3>Walkthrough video</h3>
+
+                <p>Here is the walkthrough video (thanks to <a href="https://www.linkedin.com/in/imanabdul/" target="_blank">Iman Abdul-Rashed <i class="fa fa-external-link fa-sm"></i></a> for the video):
+
+
+            <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" width="50%" src="https://www.youtube.com/embed/VvforeWWXhE" allowfullscreen></iframe>
+                            </div>
+                    </div>
+            </div>
+
+                </p>
+
+
+
+
+
+
+    </div> <!-- /container -->
+
+<!--- Footer --->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footer-copyright wow fadeIn">
+                        <p>Copyright &copy 2020 Atri Rudra <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+                    </div>
+                    <div class="col-sm-5 footer-social wow fadeIn">
+                    </div>
+                </div>
+            </div>
+        </footer>
+<!--
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Built with <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="http://p5js.org/">p5</a> and <a href="http://www.bigfootjs.com/">bigfoot</a>.</p>
+      </div>
+    </footer>
+-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--<script src="../../assets/js/docs.min.js"></script>-->
+
+  <!--- Google prettify for syntax highlighting-->
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+  <!--- MathJax for LaTeX-->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+  <!-- JS for Tocify -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="../../js/jquery.tocify.min.js"></script>
+<!--  <script type="text/javascript">
+    $("#toc").tocify();
+  </script>
+-->
+
+  <!-- Bigfoot for footnotes-->
+  <script type="text/javascript" src="../../../support/js/bigfoot.js"></script>
+  <script type="text/javascript">
+        $.bigfoot();
+  </script>
+
+  <!-- uncomment lines below to include extra p5 libraries -->
+        <!--<script language="javascript" src="../addons/p5.dom.js"></script>-->
+    <!--<script language="javascript" src="../addons/p5.sound.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.6/p5.js"></script>
+
+  </body>
+</html>

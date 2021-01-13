@@ -1,0 +1,521 @@
+I"Ïl<!-- <script src="assets/js/cropper.js"></script>
+<script>
+    recrop("team_picture", 600, 600);
+</script> -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Foster</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="/"><img src="/assets/img/logo2.png" alt="" class="img-fluid" /></a>
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/people.html">People</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li class="drop-down"><a href="">Talks</a>
+              <ul>
+                <li><a href="/talks.html">Internal Talks</a></li>
+                <li><a href="/speech.html">External Talks</a></li>
+              </ul>
+          </li>
+          <li><a href="/news.html">News</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li class="drop-down"><a href="">Resources</a>
+            <ul>
+              <li><a href="/publications.html">Publications</a></li>
+              <li><a href="/code.html">Code</a></li>
+              <li><a href="/teaching_resources.html">Teaching Resources</a></li>
+              <li><a href="/courses.html">Courses</a></li>
+              <li><a href="/funding.html">Funding</a></li>
+              <li><a href="/resourceLinks.html">Resource Links</a></li>
+            </ul>
+          </li>
+          <li><a href="/#contact">Join us</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header>
+<!-- End Header -->
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+      <h1>Welcome to C4SG@UB</h1>
+      <h2>Computing for Social Good</h2>
+      <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+    </div>
+  </section>
+<!-- End Hero -->
+
+<!-- ======= Research Section ======= -->
+<style>
+.scrollTemplate {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  background-color: #67b0d1;
+  color:white;
+  font-weight: bold;
+  z-index: 1;
+  margin: 5px;
+  display:inline-block;
+  text-align: center;
+  min-width: 125px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.description {
+    overflow: hidden;
+    max-width: 74ch;
+    margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .description {
+        max-width: 30ch;
+    }
+}
+
+#event_content {
+    padding: 9px;
+    font: 17px Calibri;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align:center;
+    word-wrap: break-word;
+    margin: 20px 0;
+    }
+</style>
+
+<section id="about" class="about">
+    <div class="container" style="text-align:center">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>Projects</h2>
+        </div>
+        <div style="padding-bottom: 6px;">Our faculty and students actively work on projects covering a broad range of exciting, cutting-edge topics including AI, big data, bioinformatics, cloud services, computing research, crypto-currency, cyber security, machine learning, Internet of Things, self-driving cars, smartphones, and 5G wireless.</div> 
+        <br />
+        <div class="owl-carousel testimonials-carousel">
+            
+                <div class="scrollTemplate" onclick="window.open('/projects/Education%201.html', '_self');" style="cursor: pointer;">Education 1</div>
+            
+                <div class="scrollTemplate" onclick="window.open('/projects/Education%202.html', '_self');" style="cursor: pointer;">Education 2</div>
+            
+                <div class="scrollTemplate" onclick="window.open('/projects/Education%203.html', '_self');" style="cursor: pointer;">Education 3</div>
+            
+                <div class="scrollTemplate" onclick="window.open('/projects/Sample%2520Project.html', '_self');" style="cursor: pointer;">Sample Project</div>
+            
+                <div class="scrollTemplate" onclick="window.open('/projects/Services%20for%20Foster%20Youth.html', '_self');" style="cursor: pointer;">Services for Foster Youth</div>
+            
+                <div class="scrollTemplate" onclick="window.open('/projects/Teaching%20Responsible%20Computing.html', '_self');" style="cursor: pointer;">Teaching Responsible Computing</div>
+            
+        </div><br />
+        <a href="/projects.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">Projects Page <i class="icofont-circled-right"></i></a>
+    </div>
+</section>
+
+<!-- ======= Education Section =======
+<section id="educate" class="educate">
+    <div class="container">
+        <div class="row no-gutters">
+        <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="content">
+            <h3>Education and Courses</h3>
+            <p><i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Addressing retention, diversity, and persistence in computing through educational approaches are targeted. Overall, the objective is developing a skilled and diverse workforce in computing for Social Good for the future.
+            </p><p><a href="https://engineering.buffalo.edu/computer-science-engineering/research/research-areas/computing-education.html" style="text-decoration:none;" target="_blank">~ Department of Computer Science and Engineering, UB</a></p><br>
+            <a href="\education.html" class="educate-btn">Learn more <i class="bx bx-chevron-right"></i></a>
+            </div>
+        </div>
+        <div class="col-xl-7 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+            <div class="row">
+                
+                
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('https://scholar.google.com/', '_blank');" style="cursor: pointer;">
+                <i class="icofont-read-book-alt"></i>
+                <h4>Course 1</h4>
+                <p class="description">short description</p>
+                </div>
+                
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('https://catalog.buffalo.edu/courses/?abbr=CSE&num=331', '_blank');" style="cursor: pointer;">
+                <i class="icofont-read-book-alt"></i>
+                <h4>Algorithms and Complexity</h4>
+                <p class="description">Introduces paradigms for designing algorithms and fundamental limitatio...</p>
+                </div>
+                
+
+            </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </section> End Education Section -->
+
+<!-- ======= Events Section ======= -->
+<section id="testimonials" class="testimonials ">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>Events</h2>
+        
+        <center>
+            <div class="owl-carousel testimonials-carousel">
+            
+            <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('/event/news%20two.html', '_self');">
+                
+                <img src="/assets/img/default_news.png" alt="news two" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+                
+                <div class="container">
+                    <b>news two</b>
+                    <p>July 08, 2020</p>
+                </div>
+            </div>
+            
+            <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('/event/third%20news.html', '_self');">
+                
+                <img src="/assets/img/default_news.png" alt="third news" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+                
+                <div class="container">
+                    <b>third news</b>
+                    <p>June 30, 2020</p>
+                </div>
+            </div>
+            
+            <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('/event/news%201.html', '_self');">
+                
+                <img src="http://www.buffalo.edu/content/www/reporter/campus/jcr:content/par/image.img.894.auto.q65.jpg/1594034299222.jpg" alt="news 1" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+                
+                <div class="container">
+                    <b>news 1</b>
+                    <p>June 21, 2020</p>
+                </div>
+            </div>
+            
+            </div>
+            <br />
+            <a href="/event.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">All Events <i class="icofont-circled-right"></i></a>
+        </center>
+      </div>
+    </div>
+</section>
+
+<!-- ======= Blog Section ======= -->
+<section id="educate" class="educate">
+    <div class="container">
+        <div class="row no-gutters">
+        <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="content">
+            <h3>Our Blog</h3>
+            <p><i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Addressing retention, diversity, and persistence in computing through educational approaches are targeted. Overall, the objective is developing a skilled and diverse workforce in computing for Social Good for the future.
+            </p><p><a href="https://engineering.buffalo.edu/computer-science-engineering/research/research-areas/computing-education.html" style="text-decoration:none;" target="_blank">~ Department of Computer Science and Engineering, UB</a></p><br />
+            <a href="/blog.html" class="educate-btn">See all blog posts <i class="bx bx-chevron-right"></i></a>
+            </div>
+        </div>
+        <div class="col-xl-7 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+            <h4>Latest posts</h4>
+            <div class="row">
+                
+                
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('/2020/07/08/Post-2.html', '_self');" style="cursor: pointer;">
+                <i class="icofont-book"></i>
+                <h4>Post 2</h4>
+                <p class="description"><p>Excerpt test: The post excerpt should end here.</p>
+</p>
+                </div>
+                
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('/2020/07/08/Post-1.html', '_self');" style="cursor: pointer;">
+                <i class="icofont-book"></i>
+                <h4>Post 1</h4>
+                <p class="description"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</p>
+                </div>
+                
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('/2020/03/19/Old-Post-2.html', '_self');" style="cursor: pointer;">
+                <i class="icofont-book"></i>
+                <h4>Old Post 2</h4>
+                <p class="description"><p>First part of the post.</p>
+</p>
+                </div>
+                
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('/2020/01/01/Old-Post-1.html', '_self');" style="cursor: pointer;">
+                <i class="icofont-book"></i>
+                <h4>Old Post 1</h4>
+                <p class="description"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excerpt should end here.</p>
+</p>
+                </div>
+                
+
+            </div>
+            </div><!-- End .content-->
+        </div>
+        </div>
+
+    </div>
+</section>
+<!-- End Education Section -->
+
+<!-- ======= People Section ======= -->
+
+<style>
+    .polaroid {
+      width: 210px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+      display:inline-block;
+      margin: 10px;
+    }
+    
+    .container {
+      padding: 4px;
+    }
+</style>
+
+<section id="testimonials" class="testimonials section-bg" style="background-color:white;">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>People</h2>
+        </div>
+        <center>
+    <div class="owl-carousel testimonials-carousel">
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('http://engineering.buffalo.edu/industrial-systems/people/faculty-directory/bolton-matthew.html', '_blank');">
+        <img src="/assets/img/team/team-7.jpg" alt="Matthew Bolton" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Matthew Bolton</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/varun-chandola.html', '_blank');">
+        <img src="/assets/img/team/team-4.png" alt="Varun Chandola" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Varun Chandola</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('http://engineering.buffalo.edu/industrial-systems/people/faculty-directory/chen-huei-yen-winnie.html', '_blank');">
+        <img src="/assets/img/team/team-2.jpg" alt="Huei-Yen (Winnie) Chen" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Huei-Yen (Winnie) Chen</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/nityacoh', '_blank');">
+        <img src="/assets/img/team/Nitya.jpg" alt="Nitya William Cohen" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Nitya William Cohen</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/david-doermann.html', '_blank');">
+        <img src="/assets/img/team/team-9.jpg" alt="David Doermann" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>David Doermann</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('', '_blank');">
+        <img src="assets/img/team/KrithikaRaj.jpg" alt="Krithika Raj Dorai Raj" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Krithika Raj Dorai Raj</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/yuhaodu', '_blank');">
+        <img src="assets/img/team/Yuhao.JPG" alt="Yuhao Du" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Yuhao Du</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/megeraci', '_blank');">
+        <img src="assets/img/team/Geraci.png" alt="Michael Geraci" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Michael Geraci</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/yanboguo', '_blank');">
+        <img src="assets/img/team/yanbo.JPG" alt="Yanbo Guo" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Yanbo Guo</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/sfhall', '_blank');">
+        <img src="assets/img/team/Seventy.jpg" alt="Seventy Hall" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Seventy Hall</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/jmhannan', '_blank');">
+        <img src="assets/img/team/Jacqueline.JPG" alt="Jacqueline Hannan" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Jacqueline Hannan</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://arts-sciences.buffalo.edu/theatre-dance/faculty/faculty-directory/lindsay-brandon-hunter.html', '_blank');">
+        <img src="/assets/img/team/Lindsay.jpg" alt="Lindsay Brandon Hunter" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Lindsay Brandon Hunter</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/prakshal', '_blank');">
+        <img src="/assets/img/team/Team-10.jpg" alt="Prakshal Jain" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Prakshal Jain</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/isysjohn', '_blank');">
+        <img src="assets/img/team/default.png" alt="Isys Johnson" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Isys Johnson</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/kenny-joseph.html', '_blank');">
+        <img src="/assets/img/team/team-1.jpg" alt="Kenneth Joseph" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Kenneth Joseph</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/hopekara', '_blank');">
+        <img src="assets/img/team/Hope.jpeg" alt="Hope Kara" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Hope Kara</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/ykelkar', '_blank');">
+        <img src="/assets/img/team/KelkarYash.PNG" alt="Yash Kelkar" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Yash Kelkar</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.law.buffalo.edu/faculty/facultyDirectory/manes-jonathan.html', '_blank');">
+        <img src="/assets/img/team/team-8.jpg" alt="Jonathan Manes" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Jonathan Manes</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://arts-sciences.buffalo.edu/history/faculty/faculty-directory/muller-dalia.html', '_blank');">
+        <img src="/assets/img/team/Dalia.jpg" alt="Dalia Antonia Caraballo Muller" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Dalia Antonia Caraballo Muller</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/myr2', '_blank');">
+        <img src="/assets/img/team/Maria.jpg" alt="Maria Y. Rodriguez" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Maria Y. Rodriguez</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/atri-rudra.html', '_blank');">
+        <img src="/assets/img/team/team-3.jpg" alt="Atri Rudra" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Atri Rudra</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('http://socialwork.buffalo.edu/faculty-research/full-time-faculty/melanie-sage.html', '_blank');">
+        <img src="/assets/img/team/team-5.png" alt="Melanie Sage" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Melanie Sage</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('http://ap.buffalo.edu/People/faculty/department-of-architecture-faculty.host.html/content/shared/ap/students-faculty-alumni/faculty/Shepard.detail.html', '_blank');">
+        <img src="/assets/img/team/team6.jpg" alt="Mark Shepard" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Mark Shepard</b>
+            <p>Affiliated UB Faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('', '_blank');">
+        <img src="assets/img/team/Voltaire.PNG" alt="Jan Voltaire Vergara" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Jan Voltaire Vergara</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('', '_blank');">
+        <img src="assets/img/team/Hannah.jpg" alt="Hannah Wilcox" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Hannah Wilcox</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.buffalo.edu/people/cjwurst', '_blank');">
+        <img src="assets/img/team/Connor.jpg" alt="Connor Wurst" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Connor Wurst</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('', '_blank');">
+        <img src="assets/img/team/Jason.jpg" alt="Jason Yan" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture" />
+        <div class="container">
+            <b>Jason Yan</b>
+            <p>Current student</p>
+        </div>
+    </div>
+    
+    </div><br />
+    <a href="\people.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">All People <i class="icofont-circled-right"></i></a>
+        </center>
+    </div>
+</section>
+
+<script>
+    var myDiv = $('#desc');
+    myDiv.text(myDiv.text().substring(0,200)+'...')
+</script>
+
+:ET

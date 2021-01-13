@@ -1,0 +1,140 @@
+I"�<style>
+    h3 {
+      display: inline;
+      font-size: 1em;
+      font-family: "Open Sans", sans-serif;
+    }
+    
+    input[type=text], select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<h2 class="hide">Search</h2>
+<p><select onchange="location = this.value;">
+    <option selected="" value="">-- Select a method to search --</option>
+    <option value="javascript:javascript:decide(0)">Search by Publication Title</option>
+    <option value="javascript:decide(1)">Search by Author name</option>
+    <option value="javascript:decide(2)">Search by Date</option>
+</select></p>
+
+<div id="embed"></div>
+<hr />
+
+<ol id="myUL">
+
+    <li>
+      <h2 style="font-size:1.5em"><a href="/publications/Publication%201.html">Publication 1</a></h2>
+        
+          <h3>Author(s):&nbsp;</h3><a>Person 1</a><br />
+        
+        
+          <h3>Abstract:&nbsp;</h3><div id="desc" style="display:inline">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur.</div><br />
+        
+        
+          <h3>Date:&nbsp;</h3><a>May 28, 2020</a><br />
+        
+        
+        <hr />
+    </li>
+    
+         <!-- create string with all titles -->
+         
+         
+
+    <li>
+      <h2 style="font-size:1.5em"><a href="/publications/Paper3.html">Paper3</a></h2>
+        
+          <h3>Author(s):&nbsp;</h3><a>Author1,Atri Rudra</a><br />
+        
+        
+          <h3>Abstract:&nbsp;</h3><div id="desc" style="display:inline">This is a sample abstract</div><br />
+        
+        
+          <h3>Date:&nbsp;</h3><a>June 08, 2020</a><br />
+        
+        
+        <hr />
+    </li>
+    
+         <!-- create string with all titles -->
+         
+         
+
+    <li>
+      <h2 style="font-size:1.5em"><a href="/publications/Transformative%2520Social%2520Innovation%2520as%2520a%2520Lens%2520for%2520ML%2520for%2520Good.html">Transformative Social Innovation as a Lens for ML for Good</a></h2>
+        
+          <h3>Author(s):&nbsp;</h3><a>Melanie Sage,Atri Rudra,Kenneth Joseph,Huei-Yen Chen,Varun Chandola</a><br />
+        
+        
+          <h3>Abstract:&nbsp;</h3><div id="desc" style="display:inline">Participatory Design (PD) offers a methodological framework for including affected communities in technological design. However PD does not provide a theoretical model of how to ensure lasting social change with the produced technology. As a result projects that include PD may not have long-term viability. We propose the use of Transformative Social Innovation (TSI) theory to guide PD-informed machine learning (ML) projects and specifically “ML for social good” projects towards technology that has the potential to create sustainable social change. In this position paper we discuss how TSI as a theoretical lens intersects with and extends PD.</div><br />
+        
+        
+          <h3>Date:&nbsp;</h3><a>October 15, 2020</a><br />
+        
+        
+        <hr />
+    </li>
+    
+         <!-- create string with all titles -->
+         
+         
+
+    <li>
+      <h2 style="font-size:1.5em"><a href="/publications/Check%2520Author%2520Order.html">Check Author Order</a></h2>
+        
+          <h3>Author(s):&nbsp;</h3><a>Jacqueline Hannan,Atri Rudra,Melanie Sage,Prakshal Jain,Yuhao Du,<a href="https://www.w3schools.com/" target="_blank">Jonathan Wu</a></a><br />
+        
+        
+          <h3>Abstract:&nbsp;</h3><div id="desc" style="display:inline">dfdsfsdfsdfsdf</div><br />
+        
+        
+          <h3>Date:&nbsp;</h3><a>December 16, 2020</a><br />
+        
+        
+        <hr />
+    </li>
+    
+         <!-- create string with all titles -->
+         
+         
+
+</ol>
+
+<div class="myData" data-x="Publication 1,Paper3,Transformative Social Innovation as a Lens for ML for Good,Check Author Order"></div>
+
+<script>
+var myDiv = $('#desc');
+myDiv.text(myDiv.text().substring(0,250)+'...')
+</script>
+
+<script>
+    function myFunction(num) {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[num];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+
+        function decide(n){
+            var l = ["Publication Title", "Author name", "Date"]
+            document.getElementById("embed").innerHTML = '<input type="text" id="myInput" onkeyup="myFunction('+n+')" placeholder="Enter '+l[n]+'" title="Type in a name">'
+        }
+</script>
+
+:ET
