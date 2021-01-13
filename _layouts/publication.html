@@ -72,7 +72,11 @@ layout: default
     {% if all_peop contains tag %}
         {% for peop in site.people %}
             {% if tag == peop.key %}
+              {% if peop.pub_name %}
+                <li><a href="{{ peop.link }}" target="_blank">{{ peop.pub_name }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
+              {% else %}
                 <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag"><i class="icofont-tag"></i>&nbsp;{{ peop.category }}</label></li>
+              {% endif %}
             {% endif %}
         {% endfor %}
     {% else %}

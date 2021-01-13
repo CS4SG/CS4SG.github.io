@@ -1,6 +1,7 @@
 ---
 layout: people
 name: Huei-Yen (Winnie) Chen
+pub_name: Huei-Yen Winnie Chen
 category: Affiliated UB Faculty
 designation: Assistant Professor, Industrial and Systems Engineering
 status: active
