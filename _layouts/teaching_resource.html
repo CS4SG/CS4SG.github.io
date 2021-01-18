@@ -82,7 +82,7 @@ layout: default
         {% endif %}
       {% endfor %}
     </ul>
-
+<hr>
 <!---------------------------->
 <div class="relatedSection">
 
@@ -103,7 +103,6 @@ layout: default
   <!--Projects-->
   {% if page.tagged_projects %}
     {% assign tag_array = page.tagged_projects | split: "," %}
-    <hr>
     <h3>Projects</h3>
       <ul class="menu">
         {% for tag in tag_array %}
