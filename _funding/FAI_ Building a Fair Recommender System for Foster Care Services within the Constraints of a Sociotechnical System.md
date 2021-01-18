@@ -4,7 +4,7 @@ layout: funds
 organization: NSF and Amazon
 org_link: http://www.nsf.gov
 grant_notice: https://www.nsf.gov/awardsearch/showAward?AWD_ID=1939579&HistoricalAwards=false
-grants: 816,000
+grants: 816,000.00
 duration: 2022-12-31
 start: 2020-01-01
 tagged_projects: Services for Foster Youth
