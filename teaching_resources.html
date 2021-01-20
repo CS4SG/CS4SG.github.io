@@ -2,11 +2,18 @@
 layout: default
 title: Teaching Resources
 ---
-
+{% assign teach = "" %}
 {% for resource in site.teaching_resources %}
   {% if resource.path contains "index.html" %}
   <h2><a href="{{ resource.url }}">{{ resource.key }}</a></h2>
   {{ resource.content | markdownify | truncatewords: 60 }}
   <br>
+ <!-- create string with all titles -->
+ {% capture teach %}{{ teach | append: resource.key }}{% endcapture %}
+ {% if forloop.last == false %}
+     {% capture teach %}{{ teach | append: "," }}{% endcapture %}
+ {% endif %}
+ <!-- -------------------------------->
   {% endif %}
 {% endfor %}
+<div class="myData" data-x='{{ teach }}'></div>
