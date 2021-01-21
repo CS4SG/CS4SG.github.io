@@ -2,7 +2,7 @@
 layout: project
 title: Services for Foster Youth
 description: FAI grant from NSF and Amazon
-tagged_people: Varun Chandola,Huei-Yen (Winnie) Chen,Krithika Raj Dorai Raj,Yuhao Du,Yanbo Guo,Seventy Hall,Jacqueline Hannan,Prakshal Jain,Isys Johnson,Kenneth Joseph,Hope Kara,Atri Rudra,Melanie Sage,Hannah Wilcox,Connor Wurst,Jason Yan
+tagged_people: Varun Chandola,Huei-Yen (Winnie) Chen,Krithika Raj Dorai Raj,Yuhao Du,Yanbo Guo,Seventy Hall,Jacqueline Hannan,Prakshal Jain,Isys Johnson,Kenneth Joseph,Hope Kara,Atri Rudra,Melanie Sage,Hannah Wilcox,Connor Wurst,Jason Yan,Maria Y. Rodriguez
 key: Services for Foster Youth
 ---
 
