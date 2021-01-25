@@ -3,7 +3,7 @@ layout: default
 title: Funding
 ---
 
-
+<script type = "text/JavaScript" src = "https://MomentJS.com/downloads/moment.js"></script>
 <!-- -----------------Scripts & Styles----------------- -->
 <style>
 .container {
@@ -70,7 +70,7 @@ p {
 
 <script>
   function find_status(datess){
-    var date = new Date();
+    var date = moment()._d;
     mydate=new Date(datess);
     if(date < mydate)
     {
