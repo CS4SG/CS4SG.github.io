@@ -3,7 +3,6 @@ layout: default
 title: Funding
 ---
 
-<script type = "text/JavaScript" src = "https://MomentJS.com/downloads/moment.js"></script>
 <!-- -----------------Scripts & Styles----------------- -->
 <style>
 .container {
@@ -99,26 +98,23 @@ p {
     <div class="tabs-panel active" id="panel-1">
       <ol>
         {% for fund in site.funding %}
-        <script>if (find_status("{{ fund.duration | date: '%m-%d-%Y' }}")){
-          document.write(
-             '<li>\
-              <h3><a href="{{ fund.url }}">{{ fund.grant_title }}</a></h3>\
-            <ul>\
-            <li>\
-              <h4>Funding organization:&nbsp;</h4><p>{{ fund.organization }}</p>\
-            </li>\
-            <li>\
-              <h4>Grant amount:&nbsp;</h4><p>${{ fund.grants }}</p>\
-            </li>\
-            <li>\
-              <h4>Grant date (range):&nbsp;</h4><p>{{ fund.start | date: "%B %d, %Y" }} - {{ fund.duration | date: "%B %d, %Y" }}</p>\
-            </li>\
-            </ul>\
-            </li>\
-            <hr />'
-          )
-        }
-        </script>
+          {% if fund.isCurrent == true %}
+          <li>
+            <h3><a href="{{ fund.url }}">{{ fund.grant_title }}</a></h3>
+            <ul>
+              <li>
+                <h4>Funding organization:&nbsp;</h4><p>{{ fund.organization }}</p>
+              </li>
+              <li>
+                <h4>Grant amount:&nbsp;</h4><p>${{ fund.grants }}</p>
+              </li>
+              <li>
+                <h4>Grant date (range):&nbsp;</h4><p>{{ fund.start | date: "%B %d, %Y" }} - {{ fund.duration | date: "%B %d, %Y" }}</p>
+              </li>
+            </ul>
+          </li>
+          <hr />
+          {% endif %}
         {% capture fund_string %}{{ fund_string | append: fund.key }}{% endcapture %}
         {% if forloop.last == false %}
             {% capture fund_string %}{{ fund_string | append: "," }}{% endcapture %}
@@ -131,26 +127,23 @@ p {
     <div class="tabs-panel" id="panel-2">
     <ol>
       {% for fund in site.funding %}
-      <script>if (!(find_status("{{ fund.duration | date: '%m-%d-%Y' }}"))){
-        document.write(
-          '<li>\
-            <h3><a href="{{ fund.url }}">{{ fund.grant_title }}</a></h3>\
-          <ul>\
-          <li>\
-            <h4>Funding organization:&nbsp;</h4><p>{{ fund.organization }}</p>\
-          </li>\
-          <li>\
-            <h4>Grant amount:&nbsp;</h4><p>${{ fund.grants }}</p>\
-          </li>\
-          <li>\
-            <h4>Grant date (range):&nbsp;</h4><p>{{ fund.start | date: "%B %d, %Y" }} - {{ fund.duration | date: "%B %d, %Y" }}</p>\
-          </li>\
-          </ul>\
-          </li>\
-          <hr />'
-        )
-      }
-      </script>
+        {% if fund.isCurrent == false %}
+        <li>
+          <h3><a href="{{ fund.url }}">{{ fund.grant_title }}</a></h3>
+          <ul>
+            <li>
+              <h4>Funding organization:&nbsp;</h4><p>{{ fund.organization }}</p>
+            </li>
+            <li>
+              <h4>Grant amount:&nbsp;</h4><p>${{ fund.grants }}</p>
+            </li>
+            <li>
+              <h4>Grant date (range):&nbsp;</h4><p>{{ fund.start | date: "%B %d, %Y" }} - {{ fund.duration | date: "%B %d, %Y" }}</p>
+            </li>
+          </ul>
+        </li>
+        <hr />
+        {% endif %}
       {% endfor %}
     </ol>
     </div>

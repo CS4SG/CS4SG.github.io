@@ -1,0 +1,80 @@
+I"h
+<style>
+    input[type=text] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+</style>
+
+<h2 class="hide">Search</h2>
+<p><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by entering a project's title or title keywords. (Example: Bias) etc." title="Type in Project Title" /></p>
+
+<div id="myUL">
+
+<div class="row">
+  
+    
+    <!-- <p>25</p> -->
+      
+      <label>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '/projects/Services%20for%20Foster%20Youth.html';" style="cursor: pointer;">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxs-report"></i></div>
+              <h3 class="title"><a>Services for Foster Youth</a></h3>
+                <h4 class="hide">Description</h4>
+                <div id="textbox"><p class="description" style="font-size:0.5em"><p>FAI grant from NSF and Amazon</p>
+</p></div>
+          </div>
+        </div>
+
+         <!-- create string with all titles -->
+         
+         
+         <!-- -------------------------------->
+     </label>
+     
+    <!-- <p>30</p> -->
+      
+      <label>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '/projects/Teaching%20Responsible%20Computing.html';" style="cursor: pointer;">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxs-report"></i></div>
+              <h3 class="title"><a>Teaching Responsible Computing</a></h3>
+                <h4 class="hide">Description</h4>
+                <div id="textbox"><p class="description" style="font-size:0.5em"><p>Incorporating responsible computing and ethics in computi…</p>
+</p></div>
+          </div>
+        </div>
+
+         <!-- create string with all titles -->
+         
+         
+         <!-- -------------------------------->
+     </label>
+     
+ </div>
+</div>
+<div class="myData" data-x="Services for Foster Youth,Teaching Responsible Computing"></div>
+
+<script>
+    function myFunction() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("label");
+      for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+          }
+      }
+  }
+ </script>
+
+:ET

@@ -1,0 +1,243 @@
+I"Õ<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="assets/js/cropper.js"></script>
+
+<script>
+    recrop("speaker_picture", 30, 30);
+</script>
+
+<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
+
+<div id="speak_content">
+
+
+
+<div class="relatedSection">
+<center>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <img src="/assets/img/team/team-3.jpg" class="speaker_picture" style="border-radius: 50%; width:140px;" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <br />
+<h3 style="display:inline"><b>Speaker: </b></h3>Atri Rudra<br />
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<i style="font-size: small;">Professor, Computer Science and Engineering<br />(Affiliated UB Faculty)</i>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</center>
+</div><br /><br />
+
+<!-- -------------------------------------- -->
+
+
+<h2 class="hide">Page Content</h2> <!-- Hidden heading included for screen readers -->
+<p>The mock-class <a href="https://drive.google.com/open?id=1rjgIlrsNWyoq305NJxNQKbkTy-sTceiD" target="_blank">showcases activities </a>from the undergraduate algorithms course related to high speed Internet access. The first activity would be an in-class exercise where students think about the technical and ethical issues related to increasing  access to the Internet in a Western New York county. Follow-up assignments include a video and coding project where students go through various routing problems related to working for a high-speed internet service provider.</p>
+
+<hr />
+<!-- -------------------------------------- -->
+
+
+
+<div class="relatedSection">
+<h3 style="display:inline"><b>Date:</b></h3> March 11, 2020
+</div>
+<hr />
+
+<!-- -------------------------------------- -->
+
+
+<div class="relatedSection">
+<h3 style="display:inline"><b>Location: </b></h3>Integrating Ethics and Social Responsibility in Computing Curricula Symposium @ SIGCSE
+</div>
+<hr />
+
+<!-- -------------------------------------- -->
+
+
+<div class="relatedSection">
+<h3 style="display:inline"><b>Location Link: </b></h3><a href="https://zoom.us/"><script>findHostname("https://zoom.us/")</script></a>
+</div>
+<hr />
+
+<!-- -------------------------------------- -->
+	
+	
+
+<!-- -------------------------------------- -->
+	
+<div class="relatedSection">
+
+  <!--Projects-->
+  
+    
+    <h3>Projects</h3>
+      <ul class="menu">
+        
+          
+            
+          
+            
+              <li>
+                <a href="/projects/Teaching%20Responsible%20Computing.html">Teaching Responsible Computing</a>
+              </li>
+            
+          
+        
+      </ul>
+    <hr />
+  
+  
+  <!--Publications-->
+  
+  
+  <!--Code-->
+  
+  
+  <!--Teaching Resources-->
+  
+  
+  <!--Courses-->
+  
+  
+  <!--Funding-->
+  
+
+  <!--Events (News & External Talks)-->
+  
+  
+
+  
+
+  <!--Blog Posts-->
+  
+  
+  
+  
+  
+</div>
+<!-- -------------------------------------- -->
+</div>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=lVdzB2jO"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div id="speech_options" style="float:right; border: 1px solid #67b0d1; border-radius: 8px; padding: 8px;">
+    <center><b>Narration Options</b></center>
+    <a onclick="responsiveVoice.speak($('#speak_content').text());" style="cursor: pointer;"><i class="icofont-play-alt-1"></i> Play</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.pause();" style="cursor: pointer;"><i class="icofont-pause"></i> Pause</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.resume();" style="cursor: pointer;"><i class="icofont-play-pause"></i> Resume</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.cancel();" style="cursor: pointer;"><i class="icofont-ui-close"></i> Cancel</a> 
+</div>
+<p><br /></p>
+:ET

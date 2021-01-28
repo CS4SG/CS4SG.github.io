@@ -7,6 +7,7 @@ grant_notice: https://www.nsf.gov/awardsearch/showAward?AWD_ID=1939579&Historica
 grants: 816,000.00
 duration: 2022-12-31
 start: 2020-01-01
+isCurrent: true
 tagged_projects: Services for Foster Youth
 tagged_people: Varun Chandola,Huei-Yen (Winnie) Chen,Krithika Raj Dorai Raj,Yuhao Du,Yanbo Guo,Seventy Hall,Jacqueline Hannan,Prakshal Jain,Isys Johnson,Hope Kara,Atri Rudra,Melanie Sage,Hannah Wilcox,Connor Wurst,Jason Yan,Kenneth Joseph==>>Principal_Investigator
 key: FAI&#58; Building a Fair Recommender System for Foster Care Services within the Constraints of a Sociotechnical System
