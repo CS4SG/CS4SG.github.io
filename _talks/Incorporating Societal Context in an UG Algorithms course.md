@@ -1,7 +1,7 @@
 ---
 layout: talk
 title: Incorporating Societal Context in an UG Algorithms course
-category: External
+category: Internal
 locus:  Integrating Ethics and Social Responsibility in Computing Curricula Symposium @ SIGCSE
 location_link: https://zoom.us/
 resource_links: 

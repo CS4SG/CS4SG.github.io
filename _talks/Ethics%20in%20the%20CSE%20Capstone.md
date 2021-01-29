@@ -1,7 +1,7 @@
 ---
 layout: talk
 title: Ethics in the CSE Capstone
-category: External
+category: Internal
 locus: Integrating Ethics and Social Responsibility in Computing Curricula Symposium @ SIGCSE 
 resource_links: 
 abs_links: https://cs4sg.github.io/resources/slides/2020-ethics-SIGCSE.pptx
