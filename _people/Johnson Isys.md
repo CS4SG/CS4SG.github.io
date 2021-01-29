@@ -2,7 +2,7 @@
 layout: people
 name: Isys Johnson
 category: Current student
-designation: Student, Computer Science
+designation: Ph.D. Student, Computer Science
 status: active
 link: https://www.buffalo.edu/people/isysjohn
 image: assets/img/team/default.png
