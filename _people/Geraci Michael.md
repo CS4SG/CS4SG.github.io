@@ -2,7 +2,7 @@
 layout: people
 name: Michael Geraci
 category: Current student
-designation: Student, Computer Science BS 
+designation: Student, Computer Science and Engineering
 status: active
 link: https://www.buffalo.edu/people/megeraci
 image: assets/img/team/Geraci.png

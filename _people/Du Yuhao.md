@@ -2,7 +2,7 @@
 layout: people
 name: Yuhao Du
 category: Current student
-designation: PhD Student, Computer Science
+designation: PhD Student, Computer Science and Engineering
 degrees: 
 courses: 
 status: active

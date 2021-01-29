@@ -2,7 +2,7 @@
 layout: people
 name: Yanbo Guo
 category: Current student
-designation: PhD Student, Computer Science
+designation: PhD Student, Computer Science and Engineering
 status: active
 link: https://www.buffalo.edu/people/yanboguo
 image: assets/img/team/yanbo.JPG

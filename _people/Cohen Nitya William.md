@@ -2,7 +2,7 @@
 layout: people
 name: Nitya William Cohen
 category: Current student
-designation: Student, Computer Science
+designation: Student, Computer Science and Engineering
 status: active
 link: https://www.buffalo.edu/people/nityacoh
 image: /assets/img/team/Nitya.jpg

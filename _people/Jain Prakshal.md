@@ -2,7 +2,7 @@
 layout: people
 name: Prakshal Jain
 category: Current student
-designation: Student, Computer Science
+designation: Student, Computer Science and Engineering
 status: active
 link: https://www.buffalo.edu/people/prakshal
 image: /assets/img/team/Team-10.jpg

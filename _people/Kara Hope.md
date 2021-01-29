@@ -2,7 +2,7 @@
 layout: people
 name: Hope Kara
 category: Current student
-designation: Student, Computer Science
+designation: Student, Computer Science and Engineering
 status: active
 link: https://www.buffalo.edu/people/hopekara
 image: assets/img/team/Hope.jpeg

@@ -2,7 +2,7 @@
 layout: people
 name: Jan Voltaire Vergara
 category: Current student
-designation: Computer Science 
+designation: Computer Science and Engineering
 status: active
 link: 
 image: assets/img/team/Voltaire.PNG

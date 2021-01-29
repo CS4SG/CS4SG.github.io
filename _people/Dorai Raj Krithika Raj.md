@@ -2,7 +2,7 @@
 layout: people
 name: Krithika Raj Dorai Raj
 category: Current student
-designation: Student, Computer Science
+designation: Student, Computer Science and Engineering
 status: active
 link: 
 image: assets/img/team/KrithikaRaj.jpg
