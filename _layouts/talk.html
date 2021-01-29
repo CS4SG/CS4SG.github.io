@@ -90,7 +90,12 @@ function findHostname(url){
 
 {% assign abs_resources = page.abs_links | split: "," %}
 {% for lin in abs_resources %}
-  <li><a href="{{ lin }}" target="_blank">{{ lin }}</a></li>
+  {% assign ppt = lin | slice: -5, 5 %}
+  {% if ppt == ".pptx" %}
+    <li><a href="{{ lin }}" target="_blank">Slides (PPTX)</a></li>
+  {% else %}
+    <li><a href="{{ lin }}" target="_blank">{{ lin }}</a></li>
+  {% endif %}
 {% endfor %}
 </ol>
 </div>
