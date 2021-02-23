@@ -1,7 +1,7 @@
 ---
 layout: talk
 title: No Longer an Afterthought&#44; Infusing Ethics Synergistically Into Courses
-category: Internal 
+category: Internal
 locus: WE20
 resource_links: 
 abs_links: https://cs4sg.github.io//resources/slides/WE20-winikus.pptx
