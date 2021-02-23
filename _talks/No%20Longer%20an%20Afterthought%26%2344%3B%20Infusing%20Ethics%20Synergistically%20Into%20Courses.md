@@ -3,6 +3,7 @@ layout: talk
 title: No Longer an Afterthought&#44; Infusing Ethics Synergistically Into Courses
 category: Internal
 locus: WE20
+location_link: https://we20.swe.org/
 resource_links: 
 abs_links: https://cs4sg.github.io//resources/slides/WE20-winikus.pptx
 talk_by: <a href = 'https://cse.buffalo.edu/~jwinikus/' target='_blank' class='noDecor'>Jennifer Winikus</a>
