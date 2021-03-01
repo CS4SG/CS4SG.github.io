@@ -64,8 +64,8 @@ In the first week, we cover the idea of societal computing and how it can be use
 
 Here are all the relevant material for week 1 of the module:
 * [Lecture Slides for week 1]({{ site.url | append: "assets/resources/cse199/societal-computing/week_1_slides.pdf"}})
-* [Week 1 assignment](https://docs.google.com/document/d/1VJysWektxtvgN3dCEw27hbm-qtMLC8RTEYquUUxEdvA/edit)
-* [Week 1 recitation activity](https://docs.google.com/document/d/1F5TFkLTMWxkAvpA_azIlYBH1yB6Blms0OIeOzGdROjY/edit)
+* [Week 1 assignment] ({{ site.url | append: "assets/resources/cse199/societal-computing/assignment1.pdf"}})
+* [Week 1 recitation activity] ({{ site.url | append: "assets/resources/cse199/societal-computing/activity1.pdf"}})
 
 ##### Week 2 material
 
@@ -73,8 +73,8 @@ In the second week, we turn to social media, taking another critical lens as we 
 
 Here are all the relevant material for week 2 of the module:
 * [Lecture Slides for week 2]({{ site.url | append: "assets/resources/cse199/societal-computing/week_2_slides.pdf"}})
-* [Week 2 assignment](https://docs.google.com/document/d/1ceubk3sRtbOfluykNZtWQbQaZS2_X0O2ccEcEIJ_vxw/edit)
-* [Week 2 recitation activity](https://docs.google.com/document/d/10N7VnfAPHU4SPGfuBq4DlIefNmpSQPwUzmPUgnZnqKI/edit)
+* [Week 2 assignment] ({{ site.url | append: "assets/resources/cse199/societal-computing/assignment2.pdf"}})
+* [Week 2 recitation activity] ({{ site.url | append: "assets/resources/cse199/societal-computing/activity2.pdf"}})
 
 ### <a name="cse331">Algorithms course (CSE 331)</a>
 
