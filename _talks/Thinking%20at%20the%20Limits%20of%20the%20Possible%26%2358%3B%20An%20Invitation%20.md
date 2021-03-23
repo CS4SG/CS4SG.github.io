@@ -6,7 +6,7 @@ locus: Creative Mornings
 resource_links: https://creativemornings.com/talks/dalia-antonia-caraballo-muller
 abs_links: 
 talk_by: Dalia Antonia Caraballo Muller
-date: 11/13/2020
+date: 2020-11-13
 tagged_projects: Impossible Project
 key: Thinking at the Limits of the Possible&#58; An Invitation 
 ---
