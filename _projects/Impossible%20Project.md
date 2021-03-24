@@ -43,7 +43,7 @@ Dr. Caraballo Muller is the author of Cuban Émigrés and Independence in the Ni
 
 #### Contact information
 
-Email: daliamul@buffalo.edu 
+Email: <a href="mailto:daliamul@buffalo.edu">daliamul@buffalo.edu</a>
 
 ## Ongoing Collaborations
 

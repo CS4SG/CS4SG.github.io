@@ -11,3 +11,4 @@ tagged_projects: Impossible Project
 key: Unlearning Antiblackness
 ---
 
+Link to the <a href="https://pitt.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f3a72cf4-7aa7-4f8e-a557-ace201477b7a">webinar</a>.

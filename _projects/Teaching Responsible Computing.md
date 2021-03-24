@@ -26,6 +26,8 @@ We have currently targeted a mix of courses: three required courses (spanning th
 - _New course_
     - [Algorithms and Society](http://www-student.cse.buffalo.edu/~atri/algo-and-society/spr20/index.html): This course has separate sections for CSE and non-CSE majors (but seated in the same room). The goal is to give non-CSE students a non-trivial understanding of various stages of the ML pipeline and for CSE students to get a deep dive into societal implications of machine learning systems. The class is a [mix of lectures and discussions](http://www-student.cse.buffalo.edu/~atri/algo-and-society/spr20/schedule.html).
 
+<b><a href="#materials">Interested in using any of the above material in your class?</a></b>
+
 Next, we provide bit more details on the ethical and/or responsible computing assignments that we created as part of our existing courses:
 
 ### First year seminar (CSE 199)
@@ -153,4 +155,10 @@ We created a rubric to assess ethics related assignments, which was then used in
 
 Here is a [link to the ethics grading rubric]({{ site.url | append: "assets/resources/cse442/Ethics-Rubric.pdf"}}).
 
+### <a name="materials">Interested in using any of the above materials?</a>
 
+We encourage you to use the material posted above in your classes. However, we request that you <a href="mailto:atri@buffalo.edu">let us know</a> if you have used any of the material above so that we can keep track (in the list below) of schools that have used this material.
+
+#### Other schools using this material.
+
+Be the first :-)
