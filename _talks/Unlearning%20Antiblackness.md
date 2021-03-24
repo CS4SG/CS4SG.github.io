@@ -2,7 +2,7 @@
 layout: talk
 title: Unlearning Antiblackness
 category: Internal
-locus: Transnational Dialogues in Afrolatinidad: Education and Anti-Blackness
+locus: Transnational Dialogues in Afrolatinidad&#x3a; Education and Anti-Blackness
 resource_links: https://michelereidvazquez.com/afrolatinidad-projects/
 abs_links: 
 talk_by: Dalia Antonia Caraballo Muller
