@@ -6,8 +6,8 @@ tagged_people: Dalia Antonia Caraballo Muller
 key: Impossible Project
 ---
 
-![Credit: Mani Mehrvarz, UB Arts Collaboratory]({{ site.url | append: "assets/resources/IP/IP-2019.jpg"}})<br>
-<font size="-2">_(Credit: Mani Mehrvarz, UB Arts Collaboratory)_</font>
+![Credit: Mani Mehrvarz, UB Arts Collaboratory]({{ site.url | append: "assets/resources/IP/IP-2019.jpg"}})
+<font size="-2"><i>(Credit: Mani Mehrvarz, UB Arts Collaboratory)</i></font>
 ## Mission 
 
 The Impossible Project is a learning experience that prepares students to take on grand challenges by teaching them to BEND: _Build_ collective resilience, _Enhance_ creative critical thinking, _Nurture_ collaboration and _Discover_ purpose through dedication to social and planetary good. 
