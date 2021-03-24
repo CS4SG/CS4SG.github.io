@@ -6,6 +6,7 @@ tagged_people: Dalia Antonia Caraballo Muller
 key: Impossible Project
 ---
 
+## Mission
 
 The Impossible Project is a learning experience that prepares students to take on grand challenges by teaching them to BEND: _Build_ collective resilience, _Enhance_ creative critical thinking, _Nurture_ collaboration and _Discover_ purpose through dedication to social and planetary good. 
 
@@ -50,7 +51,7 @@ Email: <a href="mailto:daliamul@buffalo.edu">daliamul@buffalo.edu</a>
 #### Computing for Social Good (C4SG), UB Computer Science and Engineering
 
 Impossible Project: Making Computing Anti-racist (course redesign) <br>
-Faculty partners: Atri Rudra and Kenny Joseph
+Faculty partners: Kenny Joseph and Atri Rudra
 
 #### Arts Management UB, College of Arts and Sciences
 
