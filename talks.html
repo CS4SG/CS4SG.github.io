@@ -17,8 +17,8 @@ title: Internal Talks
 {% assign talk_string = "" %}
 <div class="row">
   <div class="d-flex flex-wrap justify-content-center">
-  
-    {% for talk in site.talks %}
+    {% assign sorted = site.talks | sort: 'date' | reverse %}
+    {% for talk in sorted %}
     {% if talk.category == 'Internal' %}
       {% capture talk_string %}{{ talk_string | append: talk.title }}{% endcapture %}
       {% if forloop.last == false %}
