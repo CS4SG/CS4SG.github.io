@@ -82,6 +82,8 @@ function findHostname(url){
           {% for lin in res_links_array %}
             <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
           {% endfor %}
+          {% else %}
+          <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
           </ul>
           </li>
         {% endif %}
