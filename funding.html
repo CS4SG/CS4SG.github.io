@@ -99,7 +99,8 @@ p {
   <div class="tabs-content">
     <div class="tabs-panel active" id="panel-1">
       <ol>
-        {% for fund in site.funding %}
+        {% assign sorted = site.funding | sort: 'start' | reverse %}
+        {% for fund in sorted %}
           {% if fund.isCurrent == true %}
           <li>
             <h3><a href="{{ fund.url }}">{{ fund.grant_title }}</a></h3>
@@ -128,7 +129,7 @@ p {
     
     <div class="tabs-panel" id="panel-2">
     <ol>
-      {% for fund in site.funding %}
+      {% for fund in sorted %}
         {% if fund.isCurrent == false %}
         <li>
           <h3><a href="{{ fund.url }}">{{ fund.grant_title }}</a></h3>
