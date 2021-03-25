@@ -86,7 +86,7 @@ function findHostname(url){
           </li>
         {% endif %}
   {% endfor %} -->
-  <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+  <li><a href="{{ tag }}" target="_blank"><script>findHostname("{{ tag }}")</script></a></li>
 {% endfor %}
 
 {% assign abs_resources = page.abs_links | split: "," %}
