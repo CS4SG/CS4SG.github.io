@@ -1,0 +1,193 @@
+I"¢<script>
+  function findHostname(url){
+    var hostname = (new URL(url)).hostname;
+    document.write(hostname)
+  }
+
+  function extract(data, selected){
+    //Code Source: Prakshal Jain
+    var dataStr = {}
+    data.split(",").forEach(element => {
+      let t = element.split("|");
+      dataStr[t[0]] = t[1]+"-->"+t[2]
+    });
+    var obj = {};
+    var arr = selected.split(",");
+    for(let e of arr){
+        let data = e.match(/<a [^>]+>([^<]+)<\/a>/);
+        if(data != null){
+            //Case when external principal investigator with link
+            if(e.includes("==>>Principal_Investigator")){
+              obj[data[1]] = data[0]+"&nbsp;<i>(PI)</i>"
+            }
+            else{
+              obj[data[1]] = e;
+            }
+        }
+        else{
+          //Case when internal principal investigator
+          if(e.includes("==>>Principal_Investigator")){
+            let onlyName = e.split("==>>")[0];
+            let findMatch = dataStr[onlyName];
+            if(findMatch == undefined){
+              //Case 1: Person is external with no link
+              obj[onlyName] = onlyName+"&nbsp;<i>(PI)</i>";
+            }
+            else{
+              //Case 2: Person is internal
+              let relStr = findMatch.split("-->");
+              obj[onlyName] = "<a href = '"+relStr[0]+"' target='_blank'>"+onlyName+"</a>"+"&nbsp;<i>(PI)</i>"+"&nbsp; <label class='peopleTag'><i class='icofont-tag'></i>&nbsp;"+relStr[1]+"</label>";
+            }
+          }
+          else{
+            let name = e.split(":")[0];
+            let temp = dataStr[name]
+            if(temp == undefined){
+              obj[name] = name;
+            }
+            else{
+              let relStr = temp.split("-->");
+              obj[name] = "<a href = '"+relStr[0]+"' target='_blank'>"+name+"</a>"+"&nbsp; <label class='peopleTag'><i class='icofont-tag'></i>&nbsp;"+relStr[1]+"</label>";
+            }
+          }
+        }
+    }
+    let sorted = Object.keys(obj).sort(compare)
+    for(let e of sorted){
+      document.getElementById("taggedPeop").innerHTML += "<li>"+obj[e]+"</li>"
+    }
+  }
+
+  function compare(a, b) {
+    //Function Code Source: https://stackoverflow.com/questions/24173245/javascript-array-sort-by-last-name-first-name
+    var splitA = a.split(" ");
+    var splitB = b.split(" ");
+    var lastA = splitA[splitA.length - 1];
+    var lastB = splitB[splitB.length - 1];
+
+    if (lastA < lastB) return -1;
+    if (lastA > lastB) return 1;
+    return 0;
+  }
+</script>
+
+<div id="speak_content">
+  
+<h2 class="hide">Page Content</h2> <!-- Hidden heading included for screen readers -->
+
+
+<hr />
+
+<div class="relatedSection">
+
+
+<h3 style="display:inline">Funding organization: </h3><a href="http://www.nsf.gov" target="_blank">NSF and Amazon <i class="icofont-external-link"></i></a>
+<hr />
+
+
+<!---------------------------->
+
+<h3 style="display:inline">Grant award notice: </h3><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1939579&amp;HistoricalAwards=false" target="_blank">Click here to see NSF and Amazon grant notice <i class="icofont-external-link"></i></a>
+<hr />
+
+
+<!---------------------------->
+
+
+<!---------------------------->
+
+<h3 style="display:inline">Grant amount: </h3>$816,000.00
+<hr />
+
+
+<!---------------------------->
+
+<h3 style="display:inline">Grant date (range): </h3> January 01, 2020 - December 31, 2022
+<hr />
+
+
+</div>
+<!---------------------------->
+<div class="relatedSection">
+
+  <!--People-->
+  
+    <h3>People</h3>
+    
+    
+    
+    <ul id="taggedPeop"></ul>
+    <script>extract("Matthew Bolton|http://engineering.buffalo.edu/industrial-systems/people/faculty-directory/bolton-matthew.html|Affiliated UB Faculty,Varun Chandola|https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/varun-chandola.html|Affiliated UB Faculty,Huei-Yen (Winnie) Chen|http://engineering.buffalo.edu/industrial-systems/people/faculty-directory/chen-huei-yen-winnie.html|Affiliated UB Faculty,Nitya William Cohen|https://www.buffalo.edu/people/nityacoh|Current student,David Doermann|https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/david-doermann.html|Affiliated UB Faculty,Krithika Raj Dorai Raj||Current student,Drake Jessenta D|https://www.buffalo.edu/people/jessenta|Current student,Yuhao Du|https://www.buffalo.edu/people/yuhaodu|Current student,Michael Geraci|https://www.buffalo.edu/people/megeraci|Current student,Yanbo Guo|https://www.buffalo.edu/people/yanboguo|Current student,Seventy Hall|https://www.buffalo.edu/people/sfhall|Current student,Jacqueline Hannan|https://www.buffalo.edu/people/jmhannan|Current student,Lindsay Brandon Hunter|https://arts-sciences.buffalo.edu/theatre-dance/faculty/faculty-directory/lindsay-brandon-hunter.html|Affiliated UB Faculty,Prakshal Jain|https://www.buffalo.edu/people/prakshal|Current student,Isys Johnson|https://www.buffalo.edu/people/isysjohn|Current student,Kenneth Joseph|https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/kenny-joseph.html|Affiliated UB Faculty,Hope Kara|https://www.buffalo.edu/people/hopekara|Current student,Yash Kelkar|https://www.buffalo.edu/people/ykelkar|Current student,Jonathan Manes|https://www.law.buffalo.edu/faculty/facultyDirectory/manes-jonathan.html|Affiliated UB Faculty,Dalia Antonia Caraballo Muller|https://arts-sciences.buffalo.edu/history/faculty/faculty-directory/muller-dalia.html|Affiliated UB Faculty,Rodriguez Maria Y|https://www.buffalo.edu/people/myr2|Affiliated UB Faculty,Atri Rudra|https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/atri-rudra.html|Affiliated UB Faculty,Melanie Sage|http://socialwork.buffalo.edu/faculty-research/full-time-faculty/melanie-sage.html|Affiliated UB Faculty,Sankhe Pranav|https://www.buffalo.edu/people/pranavgi|Current student,Mark Shepard|http://ap.buffalo.edu/People/faculty/department-of-architecture-faculty.host.html/content/shared/ap/students-faculty-alumni/faculty/Shepard.detail.html|Affiliated UB Faculty,Sims Holliday|https://www.buffalo.edu/people/hesims|Current student,Jan Voltaire Vergara||Current student,Hannah Wilcox||Current student,Connor Wurst|https://www.buffalo.edu/people/cjwurst|Current student,Jason Yan||Current student,", "Varun Chandola,Huei-Yen (Winnie) Chen,Krithika Raj Dorai Raj,Yuhao Du,Yanbo Guo,Seventy Hall,Jacqueline Hannan,Prakshal Jain,Isys Johnson,Hope Kara,Atri Rudra,Melanie Sage,Hannah Wilcox,Connor Wurst,Jason Yan,Kenneth Joseph==>>Principal_Investigator")</script>
+    <hr />
+  
+  
+  <!--Projects-->
+  
+    
+    <h3>Projects</h3>
+      <ul class="menu">
+        
+          
+            
+          
+            
+              <li>
+                <a href="/projects/Services%20for%20Foster%20Youth.html">Services for Foster Youth</a>
+              </li>
+            
+          
+            
+          
+        
+      </ul>
+    <hr />
+  
+  
+  <!--Publications-->
+  
+  
+  <!--Talks-->
+  
+  
+  
+  
+  
+  <!--Code-->
+  
+  
+  <!--Teaching Resources-->
+  
+  
+  <!--Courses-->
+  
+  
+  <!--Events (News & External Talks)-->
+  
+  
+  
+
+  
+
+  <!--Blog Posts-->
+  
+  
+  
+  
+
+</div>
+<!---------------------------->
+
+</div>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=lVdzB2jO"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div id="speech_options" style="float:right; border: 1px solid #67b0d1; border-radius: 8px; padding: 8px;">
+    <center><b>Narration Options</b></center>
+    <a onclick="responsiveVoice.speak($('#speak_content').text());" style="cursor: pointer;"><i class="icofont-play-alt-1"></i> Play</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.pause();" style="cursor: pointer;"><i class="icofont-pause"></i> Pause</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.resume();" style="cursor: pointer;"><i class="icofont-play-pause"></i> Resume</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.cancel();" style="cursor: pointer;"><i class="icofont-ui-close"></i> Cancel</a> 
+</div>
+<p><br /></p>
+:ET

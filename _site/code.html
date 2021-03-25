@@ -168,7 +168,9 @@ input[type=text] {
 }
 
 .tabs li.active {
-  background-color: #eee;
+  background-color: #67b0d1;
+  color: white;
+  font-weight: bold;
 }
 
 .tabs li > a {
@@ -205,66 +207,15 @@ function findHostname(url){
 </script>
 
 <h2 class="hide">GitHub Page Link</h2>
-<p style="text-align: center;">Link to organization's GitHub page: <a href="https://github.com/c4sgub" target="_blank">https://github.com/c4sgub</a></p>
+<p style="text-align: center;"><a href="https://github.com/c4sgub" target="_blank">Our group's GitHub repository</a></p>
 <!-- ----------------------------------------------- -->
-<div class="container">
-  <ul class="tabs">
-    <li class="active" data-target="panel-1">
-      <h2 class="hide">External Code</h2>
-      External Code
-    </li>
-    <li data-target="panel-2">
-      <h2 class="hide">CS4SG GitHub Code</h2>
-      Organization's GitHub Code
-    </li>
-  </ul>
-<!-- ----------------------------------------------- -->
-  <div class="tabs-content">
-    <div class="tabs-panel active" id="panel-1">
+
 <center>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by entering Code Title" title="Type in Code Title" />
 <div id="myUL">
 
 </div>
 </center>
-</div>
-
-
-<!-- ------------Organization Github Repos-------------- -->
-<div class="tabs-panel" id="panel-2">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-<div class="row">
-  <div class="d-flex flex-wrap justify-content-center">
-    <div id="repo"></div>
-  </div>
-</div>
-<div class="myData" data-x="" style="display:none;"></div>
-<script>
-  var code_string = "";
-  var code_array = code_string.split(",")
-
-  $.ajax({
-  url: "https://api.github.com/users/c4sgub/repos",
-  jsonp: true,
-  method: "GET",
-  dataType: "json",
-  success: function(res) {
-    for (let e of res){
-      code_array = code_array.push(e.name)
-      document.getElementById("repo").innerHTML += '<div class="gridObj" data-aos="fade-up" style="cursor: pointer;" onclick="window.open(`'+e.clone_url+'`)">\
-    <h6 style="text-align:center;"><b>'+e.name+'</b></h6>\
-    <center><p style="font-size: medium; font-style: italic;">'+(e.description != null ? e.description : "")+'</p>\
-      <i class="fa fa-code" aria-hidden="true"> '+e.language+'</i>&nbsp; &nbsp;\
-      <i class="fa fa-star" aria-hidden="true"> '+e.watchers_count+'</i>&nbsp; &nbsp;\
-      <i class="fa fa-code-fork" aria-hidden="true"> '+e.forks_count+'</i></span></center></div>'
-    }
-    console.log(code_array.toString())
-    $('#myData').data('x',code_array.toString());
-  }
-});
-</script>
-</div>
-<!-- -------------------------------------- -->
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
@@ -284,29 +235,6 @@ for (i = 0; i < coll.length; i++) {
 </script>
 
 <script>
-  const [tabs, tabsPanels] = [
-    Array.from(document.querySelectorAll(".tabs li")),
-    Array.from(document.querySelectorAll(".tabs-panel"))
-  ];
-  
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const target = document.querySelector(`#${tab.dataset.target}`);
-      removeActiveClass([tabs, tabsPanels]);
-      tab.classList.add("active");
-      target.classList.add("active");
-    });
-  });
-  
-  const removeActiveClass = (el) => {
-    el.forEach((item) => {
-      item.find((e) => e.classList.contains("active")).classList.remove("active");
-    });
-  };
-  
-  </script>
-
-<script>
   function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
@@ -324,7 +252,7 @@ for (i = 0; i < coll.length; i++) {
     }
 }
 </script>
-</div></div>
+
 
     </div>
   </section><footer id="footer">
@@ -356,21 +284,21 @@ for (i = 0; i < coll.length; i++) {
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">Education</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Research</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#testimonials">Speakers Series</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/people.html">People</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/projects.html">Projects</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/news.html">News</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/blog.html">Blog</a></li>
             </ul>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="250">
             <h4></h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="/people.html">People</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#news">News</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Join Us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/talks.html">Internal Talks</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/speech.html">External Talks</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/publications.html">Publications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/courses.html">Courses</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/funding.html">Funding</a></li>
             </ul>
           </div>
 

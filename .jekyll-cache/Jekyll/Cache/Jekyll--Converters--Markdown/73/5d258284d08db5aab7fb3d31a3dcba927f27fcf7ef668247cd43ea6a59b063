@@ -1,0 +1,310 @@
+I"¥<html>
+    <head><title>Resources</title></head>
+
+<style>
+#codes_content{
+    padding: 9px;
+    font: 17px Calibri;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align:center;
+    word-wrap: break-word;
+    margin: 20px 0;
+}
+    
+.menu{
+    list-style: none;
+}
+.menu li{
+    display: inline;
+    padding: 0 10px;
+    border-left: solid 1px black;
+}
+.menu li:first-child{
+    border-left: none;
+}
+</style>
+
+<style>
+.collapsible {
+  background-color: transparent;
+  color: #999999;
+  cursor: pointer;
+  padding: 3px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+.active, .collapsible:hover {
+  color: #000000;
+  outline: none;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+input[type=text] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0rem auto;
+  padding: 0 2rem;
+}
+
+.tabs {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  border: 1px solid #efefef;
+}
+
+.tabs li {
+  text-align: center;
+  background-color: #fcfcfc;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.45s ease-in-out;
+}
+
+.tabs li.active {
+  background-color: #eee;
+}
+
+.tabs li > a {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+.tabs-content {
+  border: 0px solid #eee;
+  border-top: 0;
+}
+
+.tabs-panel {
+  padding: 2rem 1rem;
+  display: none;
+}
+
+.tabs-panel.active {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    grid-template-columns: 1fr;
+  }
+}
+
+#linked {
+    cursor: pointer;
+}
+
+#linked:hover{
+    color: #67b0d1;
+}
+</style>
+
+<!-- ----------------------------------------------- -->
+<div class="container">
+    <ul class="tabs">
+      <li class="active" data-target="panel-1">
+        <h2 class="hide">Slides</h2>
+            Slides
+      </li>
+      <li data-target="panel-2">
+        <h2 class="hide">Papers</h2>
+            Papers
+      </li>
+    </ul>
+<!-- ----------------------------------------------- -->
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <center>
+    <div class="tabs-content">
+        <div class="tabs-panel active" id="panel-1">
+            
+                
+            
+                
+                <div id="codes_content">
+                    
+                    <input type="text" value="https://cs4sg.github.io//resources/slides/2020-algos-SIGCSE.pptx" id="2020-algos-SIGCSE.pptx" style="position:absolute;left:-1000px;top:-1000px;" />
+                    <a href="https://cs4sg.github.io//resources/slides/2020-algos-SIGCSE.pptx" target="_blank">2020-algos-SIGCSE.pptx</a>&nbsp;&nbsp;<label class="icofont-ui-copy" onclick="copyFunc('2020-algos-SIGCSE.pptx')" id="linked" title="Click to copy the link"></label>
+                </div>
+                    
+                    
+                    
+                
+            
+                
+                <div id="codes_content">
+                    
+                    <input type="text" value="https://cs4sg.github.io//resources/slides/2020-ethics-SIGCSE.pptx" id="2020-ethics-SIGCSE.pptx" style="position:absolute;left:-1000px;top:-1000px;" />
+                    <a href="https://cs4sg.github.io//resources/slides/2020-ethics-SIGCSE.pptx" target="_blank">2020-ethics-SIGCSE.pptx</a>&nbsp;&nbsp;<label class="icofont-ui-copy" onclick="copyFunc('2020-ethics-SIGCSE.pptx')" id="linked" title="Click to copy the link"></label>
+                </div>
+                    
+                    
+                    
+                
+            
+                
+                <div id="codes_content">
+                    
+                    <input type="text" value="https://cs4sg.github.io//resources/slides/someTextFile.txt" id="someTextFile.txt" style="position:absolute;left:-1000px;top:-1000px;" />
+                    <a href="https://cs4sg.github.io//resources/slides/someTextFile.txt" target="_blank">someTextFile.txt</a>&nbsp;&nbsp;<label class="icofont-ui-copy" onclick="copyFunc('someTextFile.txt')" id="linked" title="Click to copy the link"></label>
+                </div>
+                    
+                    
+                    
+                
+            
+                
+                <div id="codes_content">
+                    
+                    <input type="text" value="https://cs4sg.github.io//resources/slides/WE20-winikus.pptx" id="WE20-winikus.pptx" style="position:absolute;left:-1000px;top:-1000px;" />
+                    <a href="https://cs4sg.github.io//resources/slides/WE20-winikus.pptx" target="_blank">WE20-winikus.pptx</a>&nbsp;&nbsp;<label class="icofont-ui-copy" onclick="copyFunc('WE20-winikus.pptx')" id="linked" title="Click to copy the link"></label>
+                </div>
+                    
+                    
+                    
+                
+            
+        </div>
+
+        <div class="tabs-panel" id="panel-2">
+            
+                
+                <div id="codes_content">
+                    
+                    <input type="text" value="https://cs4sg.github.io//resources/papers/general.txt" id="general.txt" style="position:absolute;left:-1000px;top:-1000px;" />
+                    <a href="https://cs4sg.github.io//resources/papers/general.txt" target="_blank">general.txt</a>&nbsp;&nbsp;<label class="icofont-ui-copy" onclick="copyFunc('general.txt')" id="linked" title="Click to copy the link"></label>
+                </div>
+                    
+                    
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+    </div>
+</center>
+    
+
+    
+
+    
+
+
+
+<div class="myData" data-x="https://cs4sg.github.io//resources/slides/2020-algos-SIGCSE.pptx,https://cs4sg.github.io//resources/slides/2020-ethics-SIGCSE.pptx,https://cs4sg.github.io//resources/slides/someTextFile.txt,https://cs4sg.github.io//resources/slides/WE20-winikus.pptx,https://cs4sg.github.io//resources/papers/general.txt,"></div>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+    
+    <script>
+      const [tabs, tabsPanels] = [
+        Array.from(document.querySelectorAll(".tabs li")),
+        Array.from(document.querySelectorAll(".tabs-panel"))
+      ];
+      
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const target = document.querySelector(`#${tab.dataset.target}`);
+          removeActiveClass([tabs, tabsPanels]);
+          tab.classList.add("active");
+          target.classList.add("active");
+        });
+      });
+      
+      const removeActiveClass = (el) => {
+        el.forEach((item) => {
+          item.find((e) => e.classList.contains("active")).classList.remove("active");
+        });
+      };
+      
+      </script>
+    
+    <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("font");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+
+    function copyFunc(id) {
+        var copyText = document.getElementById(id);
+        copyText.select();
+        document.execCommand("copy");
+    }
+</script>
+</div>
+</html>
+:ET

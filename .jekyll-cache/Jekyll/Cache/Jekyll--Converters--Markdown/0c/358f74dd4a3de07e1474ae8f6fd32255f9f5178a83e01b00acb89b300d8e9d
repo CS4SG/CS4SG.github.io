@@ -1,0 +1,620 @@
+I"k7<style>
+  /* -----------Tags with no special effects----------- */
+  .noDecor{
+  color: black;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+  }
+  .noDecor:hover{
+  color: black;
+  }
+</style>
+
+<div class="row">
+  <div class="d-flex flex-wrap justify-content-center">
+    
+    
+    
+      
+      
+      
+      <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '/talks/Transforming%2520our%2520Students%2526%252344%253B%2520Transforming%2520Ourselves%2526%252358%253B%2520Teaching%2520for%2520Social%2520Good.html';" style="cursor: pointer;">
+        <h2 class="title"><a>Transforming our Students&#44; Transforming Ourselves&#58; Teaching for Social Good</a></h2>
+        
+        <table>
+          <tr>
+          
+            <td style="width:30%;">
+              
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  
+                  <h3 class="hide">Speaker photo</h3>
+                  <img src="/assets/img/team/Dalia.jpg" style="border-radius: 50%; width:100px; margin-right:60px;" />
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+              
+            </td>
+            
+            <td>
+              <div style="text-align:left; display:inline;">	
+                <ul class="noBullets">
+                  <li>
+                    <h3 class="hide">Date</h3>
+                      <i class="icofont-ui-calendar"></i> March 24, 2021
+                  </li>
+                  <li>
+                    <h3 style="display:inline; font-size:1em">Speaker: </h3>Dalia Antonia Caraballo Muller
+                  </li>
+                </ul>
+              </div>
+            </td>
+            
+          </tr>
+        </table>
+        
+      </div>
+      
+    
+    
+      
+      
+      
+      <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '/talks/Unlearning%2520Antiblackness.html';" style="cursor: pointer;">
+        <h2 class="title"><a>Unlearning Antiblackness</a></h2>
+        
+        <table>
+          <tr>
+          
+            <td style="width:30%;">
+              
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  
+                  <h3 class="hide">Speaker photo</h3>
+                  <img src="/assets/img/team/Dalia.jpg" style="border-radius: 50%; width:100px; margin-right:60px;" />
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+              
+            </td>
+            
+            <td>
+              <div style="text-align:left; display:inline;">	
+                <ul class="noBullets">
+                  <li>
+                    <h3 class="hide">Date</h3>
+                      <i class="icofont-ui-calendar"></i> March 05, 2021
+                  </li>
+                  <li>
+                    <h3 style="display:inline; font-size:1em">Speaker: </h3>Dalia Antonia Caraballo Muller
+                  </li>
+                </ul>
+              </div>
+            </td>
+            
+          </tr>
+        </table>
+        
+      </div>
+      
+    
+    
+      
+      
+      
+      <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '/talks/Thinking%2520at%2520the%2520Limits%2520of%2520the%2520Possible%2526%252358%253B%2520An%2520Invitation%2520.html';" style="cursor: pointer;">
+        <h2 class="title"><a>Thinking at the Limits of the Possible&#58; An Invitation</a></h2>
+        
+        <table>
+          <tr>
+          
+            <td style="width:30%;">
+              
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  
+                  <h3 class="hide">Speaker photo</h3>
+                  <img src="/assets/img/team/Dalia.jpg" style="border-radius: 50%; width:100px; margin-right:60px;" />
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+              
+            </td>
+            
+            <td>
+              <div style="text-align:left; display:inline;">	
+                <ul class="noBullets">
+                  <li>
+                    <h3 class="hide">Date</h3>
+                      <i class="icofont-ui-calendar"></i> November 13, 2020
+                  </li>
+                  <li>
+                    <h3 style="display:inline; font-size:1em">Speaker: </h3>Dalia Antonia Caraballo Muller
+                  </li>
+                </ul>
+              </div>
+            </td>
+            
+          </tr>
+        </table>
+        
+      </div>
+      
+    
+    
+      
+      
+      
+      <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '/talks/No%2520Longer%2520an%2520Afterthought%2526%252344%253B%2520Infusing%2520Ethics%2520Synergistically%2520Into%2520Courses.html';" style="cursor: pointer;">
+        <h2 class="title"><a>No Longer an Afterthought&#44; Infusing Ethics Synergistically Into Courses</a></h2>
+        
+        <table>
+          <tr>
+          
+            <td style="width:30%;">
+              
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+              
+                <h3 class="hide">Default Speaker photo</h3>
+                <img src="./assets/img/team/default.png" style="border-radius: 50%; width:100px; margin-right:60px;" />
+              
+            </td>
+            
+            <td>
+              <div style="text-align:left; display:inline;">	
+                <ul class="noBullets">
+                  <li>
+                    <h3 class="hide">Date</h3>
+                      <i class="icofont-ui-calendar"></i> November 10, 2020
+                  </li>
+                  <li>
+                    <h3 style="display:inline; font-size:1em">Speaker: </h3><a href="https://cse.buffalo.edu/~jwinikus/" target="_blank" class="noDecor">Jennifer Winikus</a>
+                  </li>
+                </ul>
+              </div>
+            </td>
+            
+          </tr>
+        </table>
+        
+      </div>
+      
+    
+    
+      
+      
+      
+      <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '/talks/Ethics%2520in%2520the%2520CSE%2520Capstone.html';" style="cursor: pointer;">
+        <h2 class="title"><a>Ethics in the CSE Capstone</a></h2>
+        
+        <table>
+          <tr>
+          
+            <td style="width:30%;">
+              
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+              
+                <h3 class="hide">Default Speaker photo</h3>
+                <img src="./assets/img/team/default.png" style="border-radius: 50%; width:100px; margin-right:60px;" />
+              
+            </td>
+            
+            <td>
+              <div style="text-align:left; display:inline;">	
+                <ul class="noBullets">
+                  <li>
+                    <h3 class="hide">Date</h3>
+                      <i class="icofont-ui-calendar"></i> March 11, 2020
+                  </li>
+                  <li>
+                    <h3 style="display:inline; font-size:1em">Speaker: </h3><a href="https://cse.buffalo.edu/~mhertz/" target="_blank" class="noDecor">Matthew Hertz</a>
+                  </li>
+                </ul>
+              </div>
+            </td>
+            
+          </tr>
+        </table>
+        
+      </div>
+      
+    
+    
+      
+      
+      
+      <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '/talks/Incorporating%20Societal%20Context%20in%20an%20UG%20Algorithms%20course.html';" style="cursor: pointer;">
+        <h2 class="title"><a>Incorporating Societal Context in an UG Algorithms course</a></h2>
+        
+        <table>
+          <tr>
+          
+            <td style="width:30%;">
+              
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  
+                  <h3 class="hide">Speaker photo</h3>
+                  <img src="/assets/img/team/team-3.jpg" style="border-radius: 50%; width:100px; margin-right:60px;" />
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+              
+            </td>
+            
+            <td>
+              <div style="text-align:left; display:inline;">	
+                <ul class="noBullets">
+                  <li>
+                    <h3 class="hide">Date</h3>
+                      <i class="icofont-ui-calendar"></i> March 11, 2020
+                  </li>
+                  <li>
+                    <h3 style="display:inline; font-size:1em">Speaker: </h3>Atri Rudra
+                  </li>
+                </ul>
+              </div>
+            </td>
+            
+          </tr>
+        </table>
+        
+      </div>
+      
+    
+    
+  </div>
+</div>
+<div class="myData" data-x="Transforming our Students&#44; Transforming Ourselves&#58; Teaching for Social Good,Unlearning Antiblackness,Thinking at the Limits of the Possible&#58; An Invitation,No Longer an Afterthought&#44; Infusing Ethics Synergistically Into Courses,Ethics in the CSE Capstone,Incorporating Societal Context in an UG Algorithms course"></div>
+:ET
