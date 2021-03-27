@@ -5,13 +5,8 @@ description: Learning to think at the limits of the possible&#44; together&#46;
 tagged_people: Dalia Antonia Caraballo Muller
 key: Impossible Project
 ---
-<style>
-.p3 {
-  font-family: "Lucida Handwriting",  cursive;
-}
-</style>
-<p class="p3" style="font-size:1.5em; text-align: center;"><b>Learning to think at the limits of the possible, together</b></p>
 
+<p style="text-align: center;"><b><i>Learning to think at the limits of the possible, together</i></b></p>
 
 ## Mission
 
