@@ -63,6 +63,7 @@ Faculty partners: Kenny Joseph and Atri Rudra
 
 Impossible Project: Decolonizing the Brooklyn Museum (workshop)<br>
 Faculty partner: Miriam Paeslack
+Administrative partner: Kevin Leary
 
 #### UB School of Management, CLOE Global 
 
