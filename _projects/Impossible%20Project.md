@@ -62,7 +62,7 @@ Faculty partners: Kenny Joseph and Atri Rudra
 #### Arts Management UB, College of Arts and Sciences
 
 Impossible Project: Decolonizing the Brooklyn Museum (workshop)<br>
-Faculty partner: Miriam Paeslack
+Faculty partner: Miriam Paeslack<br>
 Administrative partner: Kevin Leary
 
 #### UB School of Management, CLOE Global 
