@@ -198,4 +198,4 @@ We encourage you to use the material posted above in your classes. However, we r
 
 #### Other schools using this material.
 
-Be the first :-)
+* [Alfred University](https://www.garegin.info/blog/17/) who also co-developed the data structures assignment.
