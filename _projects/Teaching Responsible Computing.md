@@ -2,7 +2,7 @@
 layout: project
 title: Teaching Responsible Computing
 description: Incorporating responsible computing and ethics in computing courses
-tagged_people: Matthew Bolton,Varun Chandola,Kenneth Joseph,Jonathan Manes,Dalia Antonia Caraballo Muller,Atri Rudra,Mark Shepard,<a href="https://www.linkedin.com/in/kimberlyboulden" target='_blank'>Kimberly Boulden</a>,<a href = 'https://cse.buffalo.edu/~hartloff/index.html' target='_blank'>Jesse Hartloff</a>,<a href = 'https://cse.buffalo.edu/~mhertz/' target='_blank'>Matthew Hertz</a>,<a href="https://odin.cse.buffalo.edu/people/oliver_kennedy.html" target='_blank'>Oliver Kennedy</a>,<a href = 'https://nsr.cse.buffalo.edu/?page_id=272' target='_blank'>Steve Ko</a>,<a href = 'https://cse.buffalo.edu/~jwinikus/' target='_blank'>Jennifer Winikus</a>
+tagged_people: Matthew Bolton,Varun Chandola,Kenneth Joseph,Jonathan Manes,Dalia Antonia Caraballo Muller,Atri Rudra,Mark Shepard,<a href='https://www.linkedin.com/in/kimberlyboulden' target='_blank'>Kimberly Boulden</a>,<a href = 'https://cse.buffalo.edu/~hartloff/index.html' target='_blank'>Jesse Hartloff</a>,<a href = 'https://cse.buffalo.edu/~mhertz/' target='_blank'>Matthew Hertz</a>,<a href='https://odin.cse.buffalo.edu/people/oliver_kennedy.html' target='_blank'>Oliver Kennedy</a>,<a href = 'https://nsr.cse.buffalo.edu/?page_id=272' target='_blank'>Steve Ko</a>,<a href = 'https://cse.buffalo.edu/~jwinikus/' target='_blank'>Jennifer Winikus</a>
 key: Teaching Responsible Computing
 ---
 
