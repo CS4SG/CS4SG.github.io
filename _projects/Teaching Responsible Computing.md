@@ -2,7 +2,7 @@
 layout: project
 title: Teaching Responsible Computing
 description: Incorporating responsible computing and ethics in computing courses
-tagged_people: Matthew Bolton,Varun Chandola,Kenneth Joseph,Jonathan Manes,Atri Rudra,Mark Shepard,<a href = 'https://cse.buffalo.edu/~hartloff/index.html' target='_blank'>Jesse Hartloff</a>,<a href = 'https://cse.buffalo.edu/~mhertz/' target='_blank'>Matthew Hertz</a>,<a href = 'https://nsr.cse.buffalo.edu/?page_id=272' target='_blank'>Steve Ko</a>,<a href = 'https://cse.buffalo.edu/~jwinikus/' target='_blank'>Jennifer Winikus</a>
+tagged_people: Matthew Bolton,Varun Chandola,Kenneth Joseph,Jonathan Manes,Dalia Antonia Caraballo Muller,Atri Rudra,Mark Shepard,<a href="https://www.linkedin.com/in/kimberlyboulden" target='_blank'>Kimberly Boulden</a>,<a href = 'https://cse.buffalo.edu/~hartloff/index.html' target='_blank'>Jesse Hartloff</a>,<a href = 'https://cse.buffalo.edu/~mhertz/' target='_blank'>Matthew Hertz</a>,<a href="https://odin.cse.buffalo.edu/people/oliver_kennedy.html" target='_blank'>Oliver Kennedy</a>,<a href = 'https://nsr.cse.buffalo.edu/?page_id=272' target='_blank'>Steve Ko</a>,<a href = 'https://cse.buffalo.edu/~jwinikus/' target='_blank'>Jennifer Winikus</a>
 key: Teaching Responsible Computing
 ---
 
@@ -79,6 +79,11 @@ Here are all the relevant material for week 2 of the module:
 * [Week 2 recitation activity]({{ site.url | append: "assets/resources/cse199/societal-computing/activity2.pdf"}})
 
 #### Making Cumputing Anti-Racist
+
+This module was created using <a href="https://www.daliamuller.com/" target="_blank">Dalia Muller</a>'s <a href="https://www.daliamuller.com/impossible-project" target="_blank">Impossible project framework</a>. In CSE 199, students are asked to spend two weeks of their semester imagining what it would take to build a world in which computing could become anti-racist. Starting with the specific case of the use of predictive policing algorithms, they proposed computational and non-computational solutions to the problems exacerbated by technology in society.
+
+
+For more details, please see the CSE 199 [Impossible project webpage](https://www-student.cse.buffalo.edu/cseimpossibleproject/). Below is a video that gives an overview of the module (as well as its development):
 
 <p align="center">
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/741278133?h=3924918b2d" width="640" height="360" frameborder="0" allowfullscreen></iframe>
