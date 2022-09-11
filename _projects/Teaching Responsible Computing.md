@@ -18,7 +18,7 @@ While most of our work in this project has been in incorporating responsible com
 We have currently targeted a mix of courses: three required courses (spanning the first year, sophomore and senior year) for the BS Computer Science degree, one popular elective and created one new elective. Here is a quick overview of the courses that we targeted:
 
 - _Required courses_
-    - First year seminar ([CSE 199](https://cse.buffalo.edu/faculty/ahunt/classes/internet/)): Module on history, society and diversity and module on societal computing were targeted. Each module is a two week long combination of lectures and in-class activities. CSE 199 is required for BS Computer Science and BS Computer Engineering programs.
+    - First year seminar ([CSE 199](https://cse.buffalo.edu/faculty/ahunt/classes/internet/)): Module on history, society and diversity,  module on societal computing and module on making computing anti-racist were targeted. Each module is a two week long combination of lectures and in-class activities. CSE 199 is required for BS Computer Science and BS Computer Engineering programs.
     - Algorithms course ([CSE 331](http://www-student.cse.buffalo.edu/~atri/cse331/fall19/index.html)): Homework assignments and a project based on access to high-speed Internet in Western New York (WNY) were introduced. CSE 331 is required for the BS Computer Science program.
     - Capstone course ([CSE 442](https://cse.buffalo.edu/~mhertz/2019fall/cse442/)): Students review a made-up dossier of government data to identify if an individual should be added to the government’s No-Fly list. Students must then discuss biases in the data provided and, finally, how they would respond if their job assigned them to the team automating this analysis.  A second assignment asks students to document the ethical implications of the capstone project they chose. CSE 442 is the capstone course for the BS Computer Science program.
 - _Existing elective_
@@ -77,6 +77,12 @@ Here are all the relevant material for week 2 of the module:
 * [Lecture Slides for week 2]({{ site.url | append: "assets/resources/cse199/societal-computing/week_2_slides.pdf"}})
 * [Week 2 assignment]({{ site.url | append: "assets/resources/cse199/societal-computing/assignment2.pdf"}})
 * [Week 2 recitation activity]({{ site.url | append: "assets/resources/cse199/societal-computing/activity2.pdf"}})
+
+#### Making Cumputing Anti-Racist
+
+<p align="center">
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/741278133?h=3924918b2d" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+</p>
 
 ### <a name="cse331">Algorithms course (CSE 331)</a>
 
