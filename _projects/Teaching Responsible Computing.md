@@ -78,7 +78,7 @@ Here are all the relevant material for week 2 of the module:
 * [Week 2 assignment]({{ site.url | append: "assets/resources/cse199/societal-computing/assignment2.pdf"}})
 * [Week 2 recitation activity]({{ site.url | append: "assets/resources/cse199/societal-computing/activity2.pdf"}})
 
-#### Making Cumputing Anti-Racist
+#### Making Computing Anti-Racist
 
 This module was created using <a href="https://www.daliamuller.com/" target="_blank">Dalia Muller</a>'s <a href="https://www.daliamuller.com/impossible-project" target="_blank">Impossible project framework</a>. In CSE 199, students are asked to spend two weeks of their semester imagining what it would take to build a world in which computing could become anti-racist. Starting with the specific case of the use of predictive policing algorithms, they proposed computational and non-computational solutions to the problems exacerbated by technology in society.
 
