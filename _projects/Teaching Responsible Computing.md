@@ -84,10 +84,16 @@ Here are all the relevant material for week 2 of the module:
 This module was created using <a href="https://www.daliamuller.com/" target="_blank">Dalia Muller</a>'s <a href="https://www.daliamuller.com/impossible-project" target="_blank">Impossible project framework</a>. In CSE 199, students are asked to spend two weeks of their semester imagining what it would take to build a world in which computing could become anti-racist. Starting with the specific case of the use of predictive policing algorithms, they proposed computational and non-computational solutions to the problems exacerbated by technology in society.
 
 
-For more details, please see the CSE 199 [Impossible project webpage](https://www-student.cse.buffalo.edu/cseimpossibleproject/). Below is a video that gives an overview of the module (as well as its development):
+For more details, please see the CSE 199 [Impossible project webpage](https://www-student.cse.buffalo.edu/cseimpossibleproject/). Below is a ~15 minute video that gives an overview of the module (as well as its development):
 
 <p align="center">
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/741278133?h=3924918b2d" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+</p>
+
+Here is a shorter version (~5 minutes) of the above video in case you are short on time:
+
+<p align="center">
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/741281834?h=d63bbcd3c3" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 </p>
 
 ### Data Structures course (CSE 250 at UB and CSCI 157 at Alfred University)
@@ -98,12 +104,13 @@ A two-part homework module was co-developed at UB and Alfred University and pilo
 
 #### CSE 250 at UB
 
-This project was in Scala and required students to 
-* Load health records and voter records (via `.csv` files)
-* Compute the join of the two datasets using Hashmaps and return only the health records of voters who were uniquely identified in this join.
-* Compute aggregate statistics
+Students completed a project (in Scala) where they de-anonymized obscured (mock) private information using (mock) publicly available datasets.  The project was followed by a reflection piece that encouraged students to explore publicly available government data for potential de-anonymization risks.
 
 [This page has more details](https://github.com/UBOdin/cse250-maps-anonymization).
+
+Here are the resources for the reflections piece:
+* [Reflection questions]({{ site.url | append: "assets/resources/cse250/reflection-Qs.pdf"}})
+* [Grading rubric for reflection questions]({{ site.url | append: "assets/resources/cse250/reflection-rubric.pdf"}})
 
 #### CSCI 157 at Alfred University
 
